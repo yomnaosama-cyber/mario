@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+de5faf2985349c48383d1325278f5c28 CMakeFiles/mario_scene_autogen
+de5faf2985349c48383d1325278f5c28 CMakeFiles/mario_scene_autogen_timestamp_deps
+69e7140f5a4154eee22fcee0eb4167db mario_scene_autogen/timestamp
