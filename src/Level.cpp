@@ -1,6 +1,7 @@
 #include <vector>
 #include <QDebug>
 #include "Level.h"
+#include "PiranhaPlant.h"
 using namespace std;
 
 Level::Level(int rows, int cols) 
@@ -142,4 +143,48 @@ void Level::createTiles() {
         }
     }
     qDebug() << "Total non-empty tiles created:" << tileCount;
+}
+
+void Level::createLevel3Tiles()
+{
+    // Allocate grid 
+    grid = new Tile*[rows];
+    for (int i = 0; i < rows; i++) {
+        grid[i] = new Tile[cols];
+    }
+
+    // Fill empty
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            grid[i][j] = Tile(j, i, Tile::Empty);
+        }
+    }
+
+    // Ground
+    int ground = rows - 2;
+    for (int j = 0; j < cols; j++) {
+        grid[ground][j] = Tile(j, ground, Tile::Grass);
+    }
+
+    // Platforms (Level 3 harder layout)
+    for (int j = 6; j < 12; j++)
+        grid[ground - 3][j] = Tile(j, ground - 3, Tile::Brick);
+
+    for (int j = 18; j < 24; j++)
+        grid[ground - 5][j] = Tile(j, ground - 5, Tile::Brick);
+
+    // Spawn
+    spawnX = 2;
+    spawnY = ground;
+
+    // Flag
+    flagX = cols - 4;
+    flagY = ground;
+
+    grid[flagY][flagX] = Tile(flagX, flagY, Tile::Flag);
+
+    // ENEMIES 
+    enemy.clear();
+    enemy.push_back(new Enemy(15, ground, 12, 17, 0.2f));
+    enemy.push_back(new PiranhaPlant(cols / 2, rows - 2));
 }

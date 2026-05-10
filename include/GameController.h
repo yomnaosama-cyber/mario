@@ -10,9 +10,12 @@
 #include <QTimer>
 #include <QString>
 #include "MarioCharacter.h"
+#include "LuigiCharacter.h"
+#include "PiranhaPlant.h"
 #include "Player.h"
 #include "Enemy.h"
 #include "Level.h"
+
 
 class GameController : public QObject {
     Q_OBJECT
@@ -32,7 +35,6 @@ private:
     int screenHeight;
     int worldWidth;
     bool gameEnded;
-
     bool islevel3;
     
     void setupUI();
@@ -48,6 +50,7 @@ public:
     bool checkCollisions();
     void handleEnemyCollision(Enemy* enemy);
     MarioCharacter* getMario() { return mario; }
+    LuigiCharacter* luigi;   // Level 3 character
 };
 
 #endif

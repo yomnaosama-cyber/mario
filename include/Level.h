@@ -29,6 +29,17 @@ class Level{
   vector<Enemy*> getenemy();
   Tile getTileAt(int row, int col);
   void createTiles();
+  void createLevel3Tiles(); 
+  if (isLevel3) {
+    currentLevel->createLevel3Tiles();   
+} else {
+    currentLevel->createTiles();
+}
+
+
+
+
+
 };
 
 #endif
