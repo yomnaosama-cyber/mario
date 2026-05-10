@@ -429,4 +429,7 @@ CMakeFiles/mario_scene.dir/src/main.cpp.o: /home/yomna/mario/src/main.cpp \
  /home/yomna/mario/include/MarioCharacter.h \
  /home/yomna/mario/include/Player.h /home/yomna/mario/include/Entity.h \
  /home/yomna/mario/include/Enemy.h /home/yomna/mario/include/Level.h \
- /home/yomna/mario/include/Tile.h
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QColor \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qcolor.h \
+ /home/yomna/mario/include/Tile.h /home/yomna/mario/include/Bowser.h \
+ /home/yomna/mario/include/HealthBar.h

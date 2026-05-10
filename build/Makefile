@@ -179,6 +179,30 @@ mario_scene_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.s
 .PHONY : mario_scene_autogen/mocs_compilation.cpp.s
 
+src/Bowser.o: src/Bowser.cpp.o
+.PHONY : src/Bowser.o
+
+# target to build an object file
+src/Bowser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/Bowser.cpp.o
+.PHONY : src/Bowser.cpp.o
+
+src/Bowser.i: src/Bowser.cpp.i
+.PHONY : src/Bowser.i
+
+# target to preprocess a source file
+src/Bowser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/Bowser.cpp.i
+.PHONY : src/Bowser.cpp.i
+
+src/Bowser.s: src/Bowser.cpp.s
+.PHONY : src/Bowser.s
+
+# target to generate assembly for a file
+src/Bowser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/Bowser.cpp.s
+.PHONY : src/Bowser.cpp.s
+
 src/Enemy.o: src/Enemy.cpp.o
 .PHONY : src/Enemy.o
 
@@ -251,6 +275,30 @@ src/GameController.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/GameController.cpp.s
 .PHONY : src/GameController.cpp.s
 
+src/HealthBar.o: src/HealthBar.cpp.o
+.PHONY : src/HealthBar.o
+
+# target to build an object file
+src/HealthBar.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/HealthBar.cpp.o
+.PHONY : src/HealthBar.cpp.o
+
+src/HealthBar.i: src/HealthBar.cpp.i
+.PHONY : src/HealthBar.i
+
+# target to preprocess a source file
+src/HealthBar.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/HealthBar.cpp.i
+.PHONY : src/HealthBar.cpp.i
+
+src/HealthBar.s: src/HealthBar.cpp.s
+.PHONY : src/HealthBar.s
+
+# target to generate assembly for a file
+src/HealthBar.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/HealthBar.cpp.s
+.PHONY : src/HealthBar.cpp.s
+
 src/Level.o: src/Level.cpp.o
 .PHONY : src/Level.o
 
@@ -274,6 +322,126 @@ src/Level.s: src/Level.cpp.s
 src/Level.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/Level.cpp.s
 .PHONY : src/Level.cpp.s
+
+src/Level1.o: src/Level1.cpp.o
+.PHONY : src/Level1.o
+
+# target to build an object file
+src/Level1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/Level1.cpp.o
+.PHONY : src/Level1.cpp.o
+
+src/Level1.i: src/Level1.cpp.i
+.PHONY : src/Level1.i
+
+# target to preprocess a source file
+src/Level1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/Level1.cpp.i
+.PHONY : src/Level1.cpp.i
+
+src/Level1.s: src/Level1.cpp.s
+.PHONY : src/Level1.s
+
+# target to generate assembly for a file
+src/Level1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/Level1.cpp.s
+.PHONY : src/Level1.cpp.s
+
+src/Level2.o: src/Level2.cpp.o
+.PHONY : src/Level2.o
+
+# target to build an object file
+src/Level2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/Level2.cpp.o
+.PHONY : src/Level2.cpp.o
+
+src/Level2.i: src/Level2.cpp.i
+.PHONY : src/Level2.i
+
+# target to preprocess a source file
+src/Level2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/Level2.cpp.i
+.PHONY : src/Level2.cpp.i
+
+src/Level2.s: src/Level2.cpp.s
+.PHONY : src/Level2.s
+
+# target to generate assembly for a file
+src/Level2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/Level2.cpp.s
+.PHONY : src/Level2.cpp.s
+
+src/Level3.o: src/Level3.cpp.o
+.PHONY : src/Level3.o
+
+# target to build an object file
+src/Level3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/Level3.cpp.o
+.PHONY : src/Level3.cpp.o
+
+src/Level3.i: src/Level3.cpp.i
+.PHONY : src/Level3.i
+
+# target to preprocess a source file
+src/Level3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/Level3.cpp.i
+.PHONY : src/Level3.cpp.i
+
+src/Level3.s: src/Level3.cpp.s
+.PHONY : src/Level3.s
+
+# target to generate assembly for a file
+src/Level3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/Level3.cpp.s
+.PHONY : src/Level3.cpp.s
+
+src/Level4.o: src/Level4.cpp.o
+.PHONY : src/Level4.o
+
+# target to build an object file
+src/Level4.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/Level4.cpp.o
+.PHONY : src/Level4.cpp.o
+
+src/Level4.i: src/Level4.cpp.i
+.PHONY : src/Level4.i
+
+# target to preprocess a source file
+src/Level4.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/Level4.cpp.i
+.PHONY : src/Level4.cpp.i
+
+src/Level4.s: src/Level4.cpp.s
+.PHONY : src/Level4.s
+
+# target to generate assembly for a file
+src/Level4.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/Level4.cpp.s
+.PHONY : src/Level4.cpp.s
+
+src/Level5.o: src/Level5.cpp.o
+.PHONY : src/Level5.o
+
+# target to build an object file
+src/Level5.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/Level5.cpp.o
+.PHONY : src/Level5.cpp.o
+
+src/Level5.i: src/Level5.cpp.i
+.PHONY : src/Level5.i
+
+# target to preprocess a source file
+src/Level5.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/Level5.cpp.i
+.PHONY : src/Level5.cpp.i
+
+src/Level5.s: src/Level5.cpp.s
+.PHONY : src/Level5.s
+
+# target to generate assembly for a file
+src/Level5.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/Level5.cpp.s
+.PHONY : src/Level5.cpp.s
 
 src/MarioCharacter.o: src/MarioCharacter.cpp.o
 .PHONY : src/MarioCharacter.o
@@ -385,6 +553,9 @@ help:
 	@echo "... mario_scene_autogen/mocs_compilation.o"
 	@echo "... mario_scene_autogen/mocs_compilation.i"
 	@echo "... mario_scene_autogen/mocs_compilation.s"
+	@echo "... src/Bowser.o"
+	@echo "... src/Bowser.i"
+	@echo "... src/Bowser.s"
 	@echo "... src/Enemy.o"
 	@echo "... src/Enemy.i"
 	@echo "... src/Enemy.s"
@@ -394,9 +565,27 @@ help:
 	@echo "... src/GameController.o"
 	@echo "... src/GameController.i"
 	@echo "... src/GameController.s"
+	@echo "... src/HealthBar.o"
+	@echo "... src/HealthBar.i"
+	@echo "... src/HealthBar.s"
 	@echo "... src/Level.o"
 	@echo "... src/Level.i"
 	@echo "... src/Level.s"
+	@echo "... src/Level1.o"
+	@echo "... src/Level1.i"
+	@echo "... src/Level1.s"
+	@echo "... src/Level2.o"
+	@echo "... src/Level2.i"
+	@echo "... src/Level2.s"
+	@echo "... src/Level3.o"
+	@echo "... src/Level3.i"
+	@echo "... src/Level3.s"
+	@echo "... src/Level4.o"
+	@echo "... src/Level4.i"
+	@echo "... src/Level4.s"
+	@echo "... src/Level5.o"
+	@echo "... src/Level5.i"
+	@echo "... src/Level5.s"
 	@echo "... src/MarioCharacter.o"
 	@echo "... src/MarioCharacter.i"
 	@echo "... src/MarioCharacter.s"

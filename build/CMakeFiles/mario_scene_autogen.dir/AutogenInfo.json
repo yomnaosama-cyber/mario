@@ -311,6 +311,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/yomna/mario/include/Bowser.h",
+			"Mu",
+			"6YEA5652QU/moc_Bowser.cpp",
+			null
+		],
+		[
 			"/home/yomna/mario/include/Enemy.h",
 			"Mu",
 			"6YEA5652QU/moc_Enemy.cpp",
@@ -329,9 +335,45 @@
 			null
 		],
 		[
+			"/home/yomna/mario/include/HealthBar.h",
+			"Mu",
+			"6YEA5652QU/moc_HealthBar.cpp",
+			null
+		],
+		[
 			"/home/yomna/mario/include/Level.h",
 			"Mu",
 			"6YEA5652QU/moc_Level.cpp",
+			null
+		],
+		[
+			"/home/yomna/mario/include/Level1.h",
+			"Mu",
+			"6YEA5652QU/moc_Level1.cpp",
+			null
+		],
+		[
+			"/home/yomna/mario/include/Level2.h",
+			"Mu",
+			"6YEA5652QU/moc_Level2.cpp",
+			null
+		],
+		[
+			"/home/yomna/mario/include/Level3.h",
+			"Mu",
+			"6YEA5652QU/moc_Level3.cpp",
+			null
+		],
+		[
+			"/home/yomna/mario/include/Level4.h",
+			"Mu",
+			"6YEA5652QU/moc_Level4.cpp",
+			null
+		],
+		[
+			"/home/yomna/mario/include/Level5.h",
+			"Mu",
+			"6YEA5652QU/moc_Level5.cpp",
 			null
 		],
 		[
@@ -412,10 +454,17 @@
 	"SETTINGS_FILE" : "/home/yomna/mario/build/CMakeFiles/mario_scene_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "/home/yomna/mario/src/Bowser.cpp", "Mu", null ],
 		[ "/home/yomna/mario/src/Enemy.cpp", "Mu", null ],
 		[ "/home/yomna/mario/src/Entity.cpp", "Mu", null ],
 		[ "/home/yomna/mario/src/GameController.cpp", "Mu", null ],
+		[ "/home/yomna/mario/src/HealthBar.cpp", "Mu", null ],
 		[ "/home/yomna/mario/src/Level.cpp", "Mu", null ],
+		[ "/home/yomna/mario/src/Level1.cpp", "Mu", null ],
+		[ "/home/yomna/mario/src/Level2.cpp", "Mu", null ],
+		[ "/home/yomna/mario/src/Level3.cpp", "Mu", null ],
+		[ "/home/yomna/mario/src/Level4.cpp", "Mu", null ],
+		[ "/home/yomna/mario/src/Level5.cpp", "Mu", null ],
 		[ "/home/yomna/mario/src/MarioCharacter.cpp", "Mu", null ],
 		[ "/home/yomna/mario/src/Player.cpp", "Mu", null ],
 		[ "/home/yomna/mario/src/Tile.cpp", "Mu", null ],

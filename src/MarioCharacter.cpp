@@ -266,3 +266,14 @@ void MarioCharacter::stopUpwardMotion() {
         velocityY = 0;
     }
 }
+
+float MarioCharacter::getVelocityY() const {
+    return velocityY;
+}
+
+void MarioCharacter::bounceUp() {
+    // Give Mario a small upward bounce after stomping Bowser
+    velocityY = -10;
+    isOnGround = false;
+    isJumping = true;
+}

@@ -12,10 +12,20 @@ private:
 public:
     Player(int x, int y);
 
-    // FIX 9: move() is inherited from Entity; override removed (add back with boundary logic if needed)
-
     void addScore(int points);
     void loseLife();
+    void setLives(int newLives);
+
+    void setPosition(int x, int y) { this->x = x; this->y = y; }
+
+    void takeDamage(int amount) { 
+        health -= amount; 
+        if (health < 0) health = 0; 
+    }
+
+    int getHealth() const { return health; }
+
+    void setHealth(int h) { health = h; }
 
     int getLives() const;
     int getScore() const;

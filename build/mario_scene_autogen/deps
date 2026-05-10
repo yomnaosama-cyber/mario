@@ -4,17 +4,31 @@ mario_scene_autogen/timestamp: \
 	/home/yomna/mario/build/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake \
 	/home/yomna/mario/build/CMakeFiles/3.28.3/CMakeSystem.cmake \
 	/home/yomna/mario/build/mario_scene_autogen/moc_predefs.h \
+	/home/yomna/mario/include/Bowser.h \
 	/home/yomna/mario/include/Enemy.h \
 	/home/yomna/mario/include/Entity.h \
 	/home/yomna/mario/include/GameController.h \
+	/home/yomna/mario/include/HealthBar.h \
 	/home/yomna/mario/include/Level.h \
+	/home/yomna/mario/include/Level1.h \
+	/home/yomna/mario/include/Level2.h \
+	/home/yomna/mario/include/Level3.h \
+	/home/yomna/mario/include/Level4.h \
+	/home/yomna/mario/include/Level5.h \
 	/home/yomna/mario/include/MarioCharacter.h \
 	/home/yomna/mario/include/Player.h \
 	/home/yomna/mario/include/Tile.h \
+	/home/yomna/mario/src/Bowser.cpp \
 	/home/yomna/mario/src/Enemy.cpp \
 	/home/yomna/mario/src/Entity.cpp \
 	/home/yomna/mario/src/GameController.cpp \
+	/home/yomna/mario/src/HealthBar.cpp \
 	/home/yomna/mario/src/Level.cpp \
+	/home/yomna/mario/src/Level1.cpp \
+	/home/yomna/mario/src/Level2.cpp \
+	/home/yomna/mario/src/Level3.cpp \
+	/home/yomna/mario/src/Level4.cpp \
+	/home/yomna/mario/src/Level5.cpp \
 	/home/yomna/mario/src/MarioCharacter.cpp \
 	/home/yomna/mario/src/Player.cpp \
 	/home/yomna/mario/src/Tile.cpp \
@@ -392,6 +406,7 @@ mario_scene_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qvariant.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qvarlengtharray.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qversiontagging.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtGui/QColor \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/QPixmap \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qbrush.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qcolor.h \

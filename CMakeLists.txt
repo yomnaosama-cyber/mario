@@ -11,6 +11,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
 
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
+# Automatically find all source files
 file(GLOB SOURCES 
     "${CMAKE_SOURCE_DIR}/src/*.cpp"
 )
@@ -36,6 +37,3 @@ add_custom_command(TARGET mario_scene POST_BUILD
 
 message(STATUS "Source directory: ${CMAKE_SOURCE_DIR}/src")
 message(STATUS "Include directory: ${CMAKE_SOURCE_DIR}/include")
-message(STATUS "Assets directory: ${CMAKE_SOURCE_DIR}/assets")
-message(STATUS "Build directory: ${CMAKE_BINARY_DIR}")
-message(STATUS "Executable will be: ${CMAKE_BINARY_DIR}/mario_scene")
