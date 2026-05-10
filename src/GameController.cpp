@@ -11,7 +11,7 @@
 
 GameController::GameController(QGraphicsScene* s, int worldWidth, int screenH, int tileSize) 
     : scene(s), mario(nullptr), gamePlayer(nullptr), currentLevel(nullptr), finishItem(nullptr), scoreText(nullptr), livesText(nullptr),
-      endMessageText(nullptr), tileSize(tileSize), screenHeight(screenH), worldWidth(worldWidth), gameEnded(false) {
+      endMessageText(nullptr), tileSize(tileSize), screenHeight(screenH), worldWidth(worldWidth), gameEnded(false) , isLevel3(false) {
     
     qDebug() << "GameController constructor started";
     qDebug() << "Screen height:" << screenHeight << "Tile size:" << tileSize;
@@ -210,8 +210,16 @@ void GameController::renderTiles() {
 void GameController::updateGame() {
     if (!mario || mario->getIsDead() || gameEnded) return;
 
+   mario->updatePhysics();
+
+    if (isLevel3) {
+        qDebug() << "Level 3 active";
+        
+    }
+
+
     int previousMarioTop = static_cast<int>(mario->y());
-    mario->updatePhysics();
+   
 
     // Ground collision detection
     int marioHeight = 80;
@@ -268,9 +276,14 @@ void GameController::updateGame() {
         }
     }
 
-    if (!standingOnSomething) {
+  if (!standingOnSomething) {
         mario->setIsOnGround(false);
     }
+
+    checkCollisions();
+    updateUI();
+    mario->nextFrame();
+}
 
     // Allow Mario to stand on the top of the scaled finish image.
     if (finishItem) {

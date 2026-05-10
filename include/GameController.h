@@ -32,6 +32,8 @@ private:
     int screenHeight;
     int worldWidth;
     bool gameEnded;
+
+    bool islevel3;
     
     void setupUI();
     void renderTiles();
