@@ -23,6 +23,7 @@ class GameController : public QObject {
 private:
     QGraphicsScene* scene;
     MarioCharacter* mario;
+    LuigiCharacter* luigi;   // Level 3 character
     Player* gamePlayer;
     Level* currentLevel;
     QList<QGraphicsPixmapItem*> enemyGraphics;
@@ -35,7 +36,7 @@ private:
     int screenHeight;
     int worldWidth;
     bool gameEnded;
-    bool islevel3;
+    bool isLevel3;
     
     void setupUI();
     void renderTiles();
@@ -50,7 +51,6 @@ public:
     bool checkCollisions();
     void handleEnemyCollision(Enemy* enemy);
     MarioCharacter* getMario() { return mario; }
-    LuigiCharacter* luigi;   // Level 3 character
 };
 
 #endif
