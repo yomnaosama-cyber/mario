@@ -10,11 +10,14 @@
 #include <QTimer>
 #include <QString>
 #include "MarioCharacter.h"
+#include "LuigiCharacter.h"
+#include "PiranhaPlant.h"
 #include "Player.h"
 #include "Enemy.h"
 #include "Level.h"
 #include "Bowser.h"
 #include "HealthBar.h"
+
 
 class GameController : public QObject {
     Q_OBJECT
@@ -22,6 +25,7 @@ class GameController : public QObject {
 private:
     QGraphicsScene* scene;
     MarioCharacter* mario;
+    LuigiCharacter* luigi;   // Level 3 character
     Player* gamePlayer;
     Level* currentLevel;
     QList<QGraphicsPixmapItem*> enemyGraphics;
@@ -36,9 +40,13 @@ private:
     int screenHeight;
     int worldWidth;
     bool gameEnded;
+<<<<<<< HEAD
     bool levelCompleted;
     int currentLevelNumber;
     int totalLevels;
+=======
+    bool isLevel3;
+>>>>>>> 96a6d99e6202f04d821aa75f2423721c0ee77443
     
     void setupUI();
     void renderTiles();

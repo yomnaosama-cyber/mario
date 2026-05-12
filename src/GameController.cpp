@@ -13,8 +13,12 @@
 #include <QDir>
 #include <QApplication>
 #include <QScreen>
+#include "PiranhaPlant.h"
+
+
 
 GameController::GameController(QGraphicsScene* s, int worldWidth, int screenH, int tileSize) 
+<<<<<<< HEAD
     : scene(s), mario(nullptr), gamePlayer(nullptr), currentLevel(nullptr), finishItem(nullptr), 
       scoreText(nullptr), livesText(nullptr), levelText(nullptr), endMessageText(nullptr), tileSize(tileSize), 
       screenHeight(screenH), worldWidth(worldWidth), gameEnded(false), currentLevelNumber(1), 
@@ -22,18 +26,213 @@ GameController::GameController(QGraphicsScene* s, int worldWidth, int screenH, i
       canDamageBowser(false), winZoneTimer(nullptr), winZoneItem(nullptr), marioHealthBar(nullptr),
       bowserHealthBar(nullptr) {
 
+=======
+    : scene(s), mario(nullptr), luigi(nullptr), gamePlayer(nullptr), currentLevel(nullptr), finishItem(nullptr), scoreText(nullptr), livesText(nullptr),
+      endMessageText(nullptr), tileSize(tileSize), screenHeight(screenH), worldWidth(worldWidth), gameEnded(false) , isLevel3(true) {
+    
+>>>>>>> 96a6d99e6202f04d821aa75f2423721c0ee77443
     qDebug() << "GameController constructor started";
     qDebug() << "Screen height:" << screenHeight << "Tile size:" << tileSize;
     qDebug() << "Rows:" << ((screenHeight + tileSize - 1) / tileSize) << "Cols:" << (worldWidth / tileSize);
     
+<<<<<<< HEAD
     mario = new MarioCharacter();
-    scene->addItem(mario);
+=======
+    // Let Level create its own tiles based on screen dimensions
+    int rows = (screenHeight + tileSize - 1) / tileSize;
+    int cols = worldWidth / tileSize;
     
+    // Create the level - it will initialize its own grid
+    currentLevel = new Level(rows, cols);
+
+    if (isLevel3) {
+        currentLevel->createLevel3Tiles();
+    } else {
+        currentLevel->createTiles();
+    }
+
+        
+    // Get spawn position from level (in pixels)
+    auto spawn = currentLevel->getSpawn();
+
+    qDebug() << "Spawn position (pixels):" << spawn.first << "," << spawn.second;
+
+    mario = new MarioCharacter();
+
+    int marioHeight = static_cast<int>(mario->boundingRect().height());
+    mario->setPos(spawn.first, spawn.second - marioHeight);
+    
+>>>>>>> 96a6d99e6202f04d821aa75f2423721c0ee77443
+    scene->addItem(mario);
+
+    qDebug() << "Mario positioned at:" << mario->x() << "," << mario->y();
+    
+    //Creating Luigi ONLY in Level3
+    if (isLevel3) {
+    
+    luigi = new LuigiCharacter();
+
+    int luigiHeight = static_cast<int>(luigi->boundingRect().height());
+    
+    luigi->setPos(spawn.first + 100,spawn.second - luigiHeight); 
+
+    scene->addItem(luigi);
+
+    qDebug() << "Luigi added";
+    
+    } 
+    
+<<<<<<< HEAD
     gamePlayer = new Player(0, 0);
+=======
+    // Create player at spawn position
+    gamePlayer = new Player(spawn.first, spawn.second);
+    
+    // Get enemies from level
+    enemies = currentLevel->getenemy();
+
+// =============================
+// LEVEL 3: ADD PIRANHA PLANT
+// =============================
+if (isLevel3) {
+
+    QPixmap plantImg;
+    QString assetsPath;
+    QStringList possiblePaths = {
+        QCoreApplication::applicationDirPath() + "/assets",
+        QCoreApplication::applicationDirPath() + "/../assets",
+        QDir::currentPath() + "/assets"
+    };
+
+    for (const QString& path : possiblePaths) {
+        QDir dir(path);
+        if (dir.exists()) {
+            assetsPath = path;
+            break;
+        }
+    }
+
+    if (!assetsPath.isEmpty()) {
+        plantImg.load(assetsPath + "/piranha.png");
+    }
+
+    // Example position (YOU CAN CHANGE LATER)
+    int plantX = 25 * tileSize;
+    int plantY = (screenHeight / tileSize - 2) * tileSize;
+
+   // Create PiranhaPLant enemy object
+   PiranhaPlant* plant =
+    new PiranhaPlant(plantX / tileSize,
+                     plantY / tileSize);
+
+    // Add to enemies list
+    enemies.push_back(plant);
+
+    // Create graphics item
+    QGraphicsPixmapItem* plantItem;
+
+    if (!plantImg.isNull()) {
+
+        QPixmap scaled =
+            plantImg.scaled(
+                tileSize,
+                tileSize * 2,
+                Qt::KeepAspectRatio,
+                Qt::SmoothTransformation
+            );
+
+        plantItem = scene->addPixmap(scaled);
+
+    } else {
+
+        QPixmap fallback(tileSize, tileSize * 2);
+        fallback.fill(Qt::darkGreen);
+
+        plantItem = scene->addPixmap(fallback);
+    }
+
+    plantItem->setPos(plantX, plantY);
+    plantItem->setZValue(10);
+
+
+    enemyGraphics.push_back(plantItem);
+
+
+    qDebug() << "Piranha Plant added at:" << plantX << plantY;
+}
+>>>>>>> 96a6d99e6202f04d821aa75f2423721c0ee77443
     
     setupUI();
     
+<<<<<<< HEAD
     loadLevel(currentLevelNumber);
+=======
+    // Load enemy image once for ALL enemies
+    QPixmap enemyImage;
+    QString assetsPath;
+    QStringList possiblePaths = {
+        QCoreApplication::applicationDirPath() + "/assets",
+        QCoreApplication::applicationDirPath() + "/../assets",
+        "/home/yomna/mario/assets",
+        QDir::currentPath() + "/assets",
+        QDir::currentPath() + "/../assets"
+    };
+    
+    for (const QString& path : possiblePaths) {
+        QDir dir(path);
+        if (dir.exists()) {
+            assetsPath = path;
+            break;
+        }
+    }
+    
+    if (!assetsPath.isEmpty()) {
+        enemyImage.load(assetsPath + "/enemy.png");
+        qDebug() << "Enemy image loaded from:" << assetsPath + "/enemy.png";
+    } else {
+        qDebug() << "No assets folder found, using fallback green square";
+    }
+    
+    // Create graphics for each enemy (ALL use the same picture)
+    for (Enemy* enemy : enemies) {
+            if (!enemy)
+        continue;
+
+    // Skip Piranha Plant
+    if (dynamic_cast<PiranhaPlant*>(enemy)) {
+        continue;
+    }
+
+    int pixelX =
+        static_cast<int>(
+            enemy->getPreciseX() * tileSize
+        );
+        
+    QGraphicsPixmapItem* enemyItem;
+            
+        if (!enemyImage.isNull()) {
+            // ALL enemies use this same scaled image
+            QPixmap scaled = enemyImage.scaled(tileSize - 5, tileSize - 5, 
+                                           Qt::KeepAspectRatio, Qt::SmoothTransformation);
+            enemyItem = scene->addPixmap(scaled);
+            } else {
+                // Fallback - ALL enemies use this same green square
+                QPixmap fallback(tileSize - 5, tileSize - 5);
+                fallback.fill(Qt::green);
+                enemyItem = scene->addPixmap(fallback);
+            }
+            
+            int enemyHeight = static_cast<int>(enemyItem->boundingRect().height());
+            int pixelY = enemy->getY() * tileSize - enemyHeight;
+            enemyItem->setPos(pixelX, pixelY);
+            enemyItem->setZValue(10);
+            enemyGraphics.append(enemyItem);
+            
+            qDebug() << "Added enemy at tile:" << enemy->getX() << "," << enemy->getY() 
+                     << "pixel:" << pixelX << "," << pixelY;
+        }
+    
+>>>>>>> 96a6d99e6202f04d821aa75f2423721c0ee77443
     
     qDebug() << "GameController constructor finished";
 }
@@ -42,6 +241,7 @@ GameController::~GameController() {
     delete gamePlayer;
     delete currentLevel;
     delete mario;
+    delete luigi;
     
     for (QGraphicsPixmapItem* enemy : enemyGraphics) {
         delete enemy;
@@ -78,6 +278,26 @@ void GameController::setupUI() {
 }
 
 void GameController::renderTiles() {
+    if (isLevel3) {
+    QString path;
+    QStringList possiblePaths = {
+        QCoreApplication::applicationDirPath() + "/assets",
+        QCoreApplication::applicationDirPath() + "/../assets",
+        QDir::currentPath() + "/assets"
+    };
+
+    for (const QString& p : possiblePaths) {
+        QDir dir(p);
+        if (dir.exists()) {
+            path = p;
+            break;
+        }
+    }
+
+    QPixmap bg(path + "/level3.png");
+    scene->setBackgroundBrush(bg);
+}
+
     int rows = (screenHeight + tileSize - 1) / tileSize;
     int cols = worldWidth / tileSize;
     QPixmap backgroundPixmap;
@@ -542,9 +762,20 @@ QString GameController::findAssetsPath() {
 void GameController::updateGame() {
     if (!mario || mario->getIsDead() || gameEnded) return;
 
-    int previousMarioTop = static_cast<int>(mario->y());
-    mario->updatePhysics();
+   mario->updatePhysics();
 
+<<<<<<< HEAD
+=======
+    if (isLevel3) {
+        qDebug() << "Level 3 active";
+        
+    }
+    
+
+    int previousMarioTop = static_cast<int>(mario->y());
+   
+    // Ground collision detection
+>>>>>>> 96a6d99e6202f04d821aa75f2423721c0ee77443
     int marioHeight = 80;
     int marioWidth = 80;
     int marioBottom = static_cast<int>(mario->y()) + marioHeight;
@@ -595,11 +826,21 @@ void GameController::updateGame() {
         }
     }
 
-    if (!standingOnSomething) {
+  if (!standingOnSomething) {
         mario->setIsOnGround(false);
     }
 
+<<<<<<< HEAD
     if (finishItem && currentLevelNumber != 5) {
+=======
+    checkCollisions();
+    updateUI();
+    
+   
+
+    // Allow Mario to stand on the top of the scaled finish image.
+    if (finishItem) {
+>>>>>>> 96a6d99e6202f04d821aa75f2423721c0ee77443
         QRectF finishRect = finishItem->sceneBoundingRect();
         qreal finishTop = finishRect.top();
         qreal marioBottomNow = mario->y() + marioHeight;
@@ -694,7 +935,8 @@ void GameController::updateGame() {
     }
     
     if (mario->x() < 0) mario->setX(0);
-    if (mario->x() > worldWidth - marioWidth) mario->setX(worldWidth - marioWidth);
+    if (mario->x() > worldWidth - marioWidth) 
+    mario->setX(worldWidth - marioWidth);
 
     updateUI();
     mario->nextFrame();
@@ -703,9 +945,19 @@ void GameController::updateGame() {
 bool GameController::checkCollisions() {
     for (size_t i = 0; i < enemies.size(); i++) {
         Enemy* enemy = enemies[i];
+
+        if (!enemy) continue;
+       
+       //Piranha plant does NOT move like normal enemy
+       PiranhaPlant* plant = dynamic_cast<PiranhaPlant*>(enemy);
+
+        if (plant) {
+            plant->update();   // only moves up/down
+        } else {
+            enemy->autoMove(); // normal enemies
+        }
         
         if (enemy && i < static_cast<size_t>(enemyGraphics.size()) && enemyGraphics[i]) {
-            enemy->autoMove();
             
             int pixelX = static_cast<int>(enemy->getPreciseX() * tileSize);
             int enemyHeight = static_cast<int>(enemyGraphics[i]->boundingRect().height());
