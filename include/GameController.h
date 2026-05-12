@@ -24,6 +24,7 @@ private:
     Level* currentLevel;
     QList<QGraphicsPixmapItem*> enemyGraphics;
     std::vector<Enemy*> enemies;
+    std::vector<QGraphicsPixmapItem*> crumblingGraphics;
     QGraphicsPixmapItem* finishItem;
     QGraphicsTextItem* scoreText;
     QGraphicsTextItem* livesText;

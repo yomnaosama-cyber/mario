@@ -12,6 +12,7 @@ class Tile{
     MysteryBox,
     Flag,
     Empty,
+    Door
   };
 
   enum TileEffect {
@@ -19,6 +20,7 @@ class Tile{
     Deadly,
     Prize,
     Next_Level,
+    Key_Collected
   };
    
   Tiletype type;
@@ -58,6 +60,29 @@ class EndTile : public Tile{
   public:
   EndTile(long long x, long long y, Tiletype type);
   TileEffect touch() override;
+};
+
+class LockedDoor : public Tile{
+  public:
+    LockedDoor(long long x, long long y, Tiletype type, int Coinsneeded);
+    TileEffect touch() override;
+    void opendoor(int x);
+
+  private:
+
+  int CoinsNeeded;
+  bool isOpen;
+
+};
+
+class SecretCoinTile : public Tile{
+private:
+    bool collected;
+public:
+    SecretCoinTile(long long x, long long y);
+    TileEffect touch() override;
+
+
 };
 
 #endif
