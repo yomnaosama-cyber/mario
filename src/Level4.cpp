@@ -1,5 +1,9 @@
 #include "Level4.h"
 
+Level4::Level4(int rows, int cols) : Level(rows, cols) {
+    backgroundImagePath = "sky1.jpg";
+}
+
 void Level4::createTiles() {
     // Allocate grid
     grid = new Tile*[rows];

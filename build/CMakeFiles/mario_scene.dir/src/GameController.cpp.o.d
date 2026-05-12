@@ -347,11 +347,14 @@ CMakeFiles/mario_scene.dir/src/GameController.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qdebug.h \
  /home/yomna/mario/include/Player.h /home/yomna/mario/include/Entity.h \
  /home/yomna/mario/include/Enemy.h /home/yomna/mario/include/Level.h \
- /home/yomna/mario/include/Tile.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/QBrush \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qbrush.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QColor \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qcolor.h \
+ /home/yomna/mario/include/Tile.h /home/yomna/mario/include/Bowser.h \
+ /home/yomna/mario/include/HealthBar.h /home/yomna/mario/include/Level1.h \
+ /home/yomna/mario/include/Level2.h /home/yomna/mario/include/Level3.h \
+ /home/yomna/mario/include/Level4.h /home/yomna/mario/include/Level5.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QBrush \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qbrush.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QPen \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpen.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QCoreApplication \

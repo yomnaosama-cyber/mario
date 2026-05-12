@@ -1,7 +1,9 @@
 /home/yomna/mario/build/mario_scene_autogen/6YEA5652QU/moc_GameController.cpp: /home/yomna/mario/include/GameController.h \
   /home/yomna/mario/build/mario_scene_autogen/moc_predefs.h \
+  /home/yomna/mario/include/Bowser.h \
   /home/yomna/mario/include/Enemy.h \
   /home/yomna/mario/include/Entity.h \
+  /home/yomna/mario/include/HealthBar.h \
   /home/yomna/mario/include/Level.h \
   /home/yomna/mario/include/MarioCharacter.h \
   /home/yomna/mario/include/Player.h \
@@ -379,6 +381,7 @@
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qvariant.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qvarlengtharray.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qversiontagging.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/QColor \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QPixmap \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qbrush.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qcolor.h \

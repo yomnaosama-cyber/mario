@@ -41,8 +41,11 @@ public:
     void die();
     void respawn();
     bool getIsDead() const;
+    void setIsDead(bool dead) { isDead = dead; }
     void setIsOnGround(bool ground) { isOnGround = ground; }
     void stopUpwardMotion();
+    float getVelocityY() const;
+    void bounceUp();
 };
 
 #endif

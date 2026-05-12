@@ -63,6 +63,12 @@ protected:
             case Qt::Key_Escape:
                 if (isFullScreen()) showNormal();
                 break;
+            case Qt::Key_Enter:
+            case Qt::Key_Return:
+                if (controller) {
+                    controller->setCanDamageBowser(true);
+                }
+                break;
         }
     }
     
@@ -87,7 +93,6 @@ int main(int argc, char* argv[])
     
     QScreen* screen = QApplication::primaryScreen();
     int SCREEN_HEIGHT = screen->geometry().height();
-    //int SCREEN_HEIGHT = 1050;
     int WORLD_WIDTH = 4000;
     int TILE_SIZE = 50;
     

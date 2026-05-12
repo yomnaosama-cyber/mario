@@ -15,5 +15,9 @@ void Player::loseLife() {
     if (lives < 0) lives = 0;
 }
 
+void Player::setLives(int newLives) {
+    lives = newLives < 0 ? 0 : newLives;
+}
+
 int Player::getLives() const { return lives; }
 int Player::getScore() const { return score; }
