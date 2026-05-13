@@ -198,48 +198,17 @@ void Level4::createTiles() {
         grid[groundLevel - 1][41] = new MovingPlatform(41, groundLevel - 1, 2, (groundLevel - 2) * TS, (tunnelend - 2) * TS, MovingPlatform::Vertical);
     }
 
-    //Crumbling Tile and Moving Platform for second secret key coin
-    /*
-    if (inGrid(rows - 4, 49)) {
-        delete grid[rows - 4][49];
-        grid[rows - 4][49] = new MovingPlatform(49, rows - 4, 2, (tunnel + 2) * TS, (rows - 3) * TS, MovingPlatform::Vertical);
-    }
+    //Secret Key Coins
 
-    if (inGrid(tunnel + 3, 50)) {
-        delete grid[tunnel + 3][50];
-        grid[tunnel + 3][50] = new CrumblingTile(50, tunnel + 3);
-    }*/
-
-    //For third key coin
-    /*
-    if (inGrid(rows - 2, 52)) {
-        delete grid[rows - 2][52];
-        grid[rows - 2][52] = new CrumblingTile(52, rows - 2);
-    }
-
-    if (inGrid(rows - 3, 53)) {
-        delete grid[rows - 3][53];
-        grid[rows - 3][53] = new CrumblingTile(53, rows - 3);
-    }
-
-    if (inGrid(rows - 4, 54)) {
-        delete grid[rows - 4][54];
-        grid[rows - 4][54] = new CrumblingTile(54, rows - 4);
-    }*/
-
-    //Secret key coins
-
-
-
-    if (inGrid(tunnel + 4, 44)) {
+    if (inGrid(tunnel + 3, 44)) {
         delete grid[tunnel + 3][44];
         grid[tunnel + 3][44] = new SecretCoinTile(44, tunnel + 3);
     }
-    if (inGrid(tunnel + 3, 50)) {
+    if (inGrid(tunnel + 2, 50)) {
         delete grid[tunnel + 2][50];
         grid[tunnel + 2][50] = new SecretCoinTile(50, tunnel + 2);
     }
-    if (inGrid(tunnel + 2, 54)) {
+    if (inGrid(tunnel + 1, 54)) {
         delete grid[tunnel + 1][54];
         grid[tunnel + 1][54] = new SecretCoinTile(54, tunnel + 1);
     }
@@ -266,10 +235,10 @@ void Level4::createTiles() {
 
     //LockedDoor where Mario has to have the required keys to pass
     ld = nullptr;
-    if (inGrid(groundLevel-1, 65)) {
-        ld = new LockedDoor(65, groundLevel-1, Tile::Door, 5);
-        delete grid[groundLevel-1][65];
-        grid[groundLevel-1][65] = ld;
+    if (inGrid(groundLevel-1, 64)) {
+        ld = new LockedDoor(64, groundLevel-1, Tile::Door, 5);
+        delete grid[groundLevel-1][64];
+        grid[groundLevel-1][64] = ld;
     }
 
     // Staircase to flag - continuous steps that rest on ground
@@ -284,13 +253,6 @@ void Level4::createTiles() {
         }
     }
 
-    /*
-    if (groundLevel-1 >= 0) {delete grid[groundLevel-1][65]; grid[groundLevel-1][65] = new Tile(65, groundLevel-1, Tile::Brick);}
-    if (groundLevel-2 >= 0) {delete grid[groundLevel-2][68]; grid[groundLevel-2][68] = new Tile(68, groundLevel-2, Tile::Brick);}
-    if (groundLevel-3 >= 0) {delete grid[groundLevel-3][71]; grid[groundLevel-3][71] = new Tile(71, groundLevel-3, Tile::Brick);}
-    if (groundLevel-4 >= 0) {delete grid[groundLevel-4][74]; grid[groundLevel-4][74] = new Tile(74, groundLevel-4, Tile::Brick);}
-*/
-    //if (groundLevel-5 >= 0) grid[groundLevel-5][67] = Tile(67, groundLevel-5, Tile::Brick);
 
     // Flag: place it close to the last stair step so it is reachable
     flagX = 76;

@@ -33,7 +33,7 @@ LuigiCharacter::LuigiCharacter() {
         }
         QPixmap pix;
         if (!assetsPath.isEmpty()) {
-            pix.load(assetsPath + "/l.png");
+            pix.load(assetsPath + "/luigi-Photoroom.png");
         }
         if (pix.isNull()) {
             pix = QPixmap(80, 80);

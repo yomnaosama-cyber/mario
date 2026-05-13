@@ -122,16 +122,7 @@ void GameController::setupUI() {
     levelText->setZValue(100);
     levelText->setFont(font);
 
-    /*
-    / Key coin icon row (5 circles) — shown only on Level 4
-        for (int ki = 0; ki < 5; ki++) {
-        QGraphicsEllipseItem* icon = scene->addEllipse(0, 0, 22, 22,
-                                                       QPen(QColor(160, 110, 0), 2), QBrush(QColor(60, 60, 60)));
-        icon->setZValue(100);
-        icon->setVisible(false);
-        keyIcons.append(icon);
-    }
-*/
+
     updateUI();
 }
 
@@ -232,10 +223,10 @@ void GameController::renderTiles() {
                 QString assetsPath = findAssetsPath();
 
                 if(dynamic_cast<SecretCoinTile*>(tile)){
-                    px.load(assetsPath + "/secret.png");
+                    px.load(assetsPath + "/secret-Photoroom.png");
                 }
                 else if(dynamic_cast<LockedDoor*>(tile)){
-                    px.load(assetsPath + "/d.png");
+                    px.load(assetsPath + "/door-Photoroom.png");
                 }
                 else if(dynamic_cast<CrumblingTile*>(tile) || dynamic_cast<MovingPlatform*>(tile)){
                     px.load(assetsPath + "/brick.png");
@@ -246,6 +237,22 @@ void GameController::renderTiles() {
                     px.fill(tileColor);
                 }else{
                     px = px.scaled(tileSize, tileSize, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+                }
+
+                if (dynamic_cast<LockedDoor*>(tile)) {
+                    // --- A. Scale the Door Picture: One block wide, TWO blocks tall ---
+                    QPixmap tallDoor = px.scaled(tileSize, tileSize * 2, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+                    tile->setPixmap(tallDoor);
+
+                    tile->setPos(j * tileSize, (i - 1) * tileSize);
+
+                } else {
+                    // --- A. Scale standard items (keys, crumbling bricks): 1x1 size ---
+                    QPixmap standardItem = px.scaled(tileSize, tileSize, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+                    tile->setPixmap(standardItem);
+
+                    // --- B. Standard Position: Use original formula ---
+                    tile->setPos(j * tileSize, i * tileSize);
                 }
 
 
@@ -874,6 +881,8 @@ void GameController::updateGame() {
     // Luigi physics (Level 3 only)
     if (luigi && currentLevelNumber == 3 && currentLevel) {
         luigi->updatePhysics();
+
+
         int luigiHeight = 80, luigiWidth = 80;
         int luigiBottom = static_cast<int>(luigi->y()) + luigiHeight;
         int luigiLeft   = static_cast<int>(luigi->x());
@@ -1175,6 +1184,31 @@ bool GameController::checkCollisions() {
                     return true;
                 }
             }
+            if (luigi && enemyGraphics[i]) {
+                QRectF luigiRect = luigi->sceneBoundingRect();
+
+                if (luigiRect.intersects(enemyRect)) {
+                    qreal luigiFeet = luigi->y() + 80;
+                    qreal enemyTop = enemyRect.top();
+                    qreal enemyMid = enemyTop + enemyRect.height() / 2.0;
+
+                    if (luigiFeet <= enemyMid && luigiFeet >= enemyTop - 10) {
+                        delete enemyGraphics[i];
+                        enemyGraphics[i] = nullptr;
+                        delete enemies[i];
+                        enemies[i] = nullptr;
+                        gamePlayer->addScore(100);
+                        updateUI();
+                        qDebug() << "Enemy stomped! Score:" << gamePlayer->getScore();
+
+                        luigi->setY(luigi->y() - 20);
+                    } else {
+
+                        handleEnemyCollision(enemy);
+                        return true;
+                    }
+                }
+            }
         }
     }
 
@@ -1375,6 +1409,8 @@ void GameController::spawnMushrooms() {
 }
 void GameController::checkCoinCollisions() {
     QRectF marioRect = mario->sceneBoundingRect();
+
+
     for (Coin* coin : coins) {
         if (coin->collected || !coin->graphic) continue;
         QRectF coinRect = coin->graphic->sceneBoundingRect();
