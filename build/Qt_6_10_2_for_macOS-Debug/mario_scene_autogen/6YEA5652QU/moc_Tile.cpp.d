@@ -1,4 +1,4 @@
-/Users/hanasoliman/SuperMario/mario/build/Qt_6_10_2_for_macOS-Debug/mario_scene_autogen/6YEA5652QU/moc_CrumblingTile.cpp: /Users/hanasoliman/SuperMario/mario/include/CrumblingTile.h \
+/Users/hanasoliman/SuperMario/mario/build/Qt_6_10_2_for_macOS-Debug/mario_scene_autogen/6YEA5652QU/moc_Tile.cpp: /Users/hanasoliman/SuperMario/mario/include/Tile.h \
   /Users/hanasoliman/SuperMario/mario/build/Qt_6_10_2_for_macOS-Debug/mario_scene_autogen/moc_predefs.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h \
@@ -725,10 +725,7 @@
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/limits.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/ptrcheck.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stdarg.h \
-  /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/QDebug \
-  /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/QList \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/QObject \
-  /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/QTimer \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/q17memory.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/q20functional.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/q20iterator.h \
@@ -737,7 +734,6 @@
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/q20utility.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/q23type_traits.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/q23utility.h \
-  /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qabstracteventdispatcher.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qalgorithms.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qalloc.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qanystringview.h \
@@ -748,7 +744,6 @@
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qatomic.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qatomic_cxx11.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qbasicatomic.h \
-  /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qbasictimer.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qbindingstorage.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qbytearray.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qbytearrayalgorithms.h \
@@ -768,9 +763,7 @@
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qcontiguouscache.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qdarwinhelpers.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qdatastream.h \
-  /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qdeadlinetimer.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qdebug.h \
-  /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qeventloop.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qexceptionhandling.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qflags.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qfloat16.h \
@@ -843,7 +836,6 @@
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qtenvironmentvariables.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qtextstream.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qtformat_impl.h \
-  /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qtimer.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qtmetamacros.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qtnoop.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qtpreprocessorsupport.h \
@@ -880,5 +872,4 @@
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qgraphicsitem.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgets-config.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsexports.h \
-  /Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsglobal.h \
-  /Users/hanasoliman/SuperMario/mario/include/Tile.h
+  /Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsglobal.h

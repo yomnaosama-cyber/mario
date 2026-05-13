@@ -862,6 +862,7 @@
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qversiontagging.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qxptype_traits.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qyieldcpu.h \
+  /Users/hanasoliman/Qt/6.10.2/macos/lib/QtGui.framework/Versions/A/Headers/QColor \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtGui.framework/Versions/A/Headers/QPixmap \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtGui.framework/Versions/A/Headers/qbrush.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtGui.framework/Versions/A/Headers/qcolor.h \
@@ -881,6 +882,8 @@
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtGui.framework/Versions/A/Headers/qtguiglobal.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtGui.framework/Versions/A/Headers/qtransform.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtGui.framework/Versions/A/Headers/qwindowdefs.h \
+  /Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QGraphicsEllipseItem \
+  /Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QGraphicsItem \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QGraphicsPixmapItem \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QGraphicsRectItem \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QGraphicsScene \
@@ -890,9 +893,16 @@
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgets-config.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsexports.h \
   /Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsglobal.h \
+  /Users/hanasoliman/SuperMario/mario/include/Bowser.h \
+  /Users/hanasoliman/SuperMario/mario/include/Coin.h \
   /Users/hanasoliman/SuperMario/mario/include/Enemy.h \
   /Users/hanasoliman/SuperMario/mario/include/Entity.h \
+  /Users/hanasoliman/SuperMario/mario/include/HealthBar.h \
   /Users/hanasoliman/SuperMario/mario/include/Level.h \
+  /Users/hanasoliman/SuperMario/mario/include/LuigiCharacter.h \
   /Users/hanasoliman/SuperMario/mario/include/MarioCharacter.h \
+  /Users/hanasoliman/SuperMario/mario/include/Mushroom.h \
+  /Users/hanasoliman/SuperMario/mario/include/PiranhaPlant.h \
   /Users/hanasoliman/SuperMario/mario/include/Player.h \
-  /Users/hanasoliman/SuperMario/mario/include/Tile.h
+  /Users/hanasoliman/SuperMario/mario/include/Tile.h \
+  /Users/hanasoliman/SuperMario/mario/include/movingplatform.h

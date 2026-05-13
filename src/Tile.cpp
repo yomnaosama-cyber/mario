@@ -1,8 +1,14 @@
 #include "Tile.h"
   
-  Tile :: Tile (long long x, long long y, Tile::Tiletype type) : x(x), y(y), type(type) {}
+  Tile :: Tile (long long x, long long y, Tile::Tiletype type) {
+      this->gridX=x;
+      this->gridY=y;
+      this->type = type;
 
-  Tile :: Tile () : x(0), y(0), type(Empty){}
+      setPos(x * 32, y * 32);
+  }
+
+  Tile :: Tile () : gridX(0), gridY(0), type(Empty){}
 
   Tile::TileEffect Tile::touch(){
     return Tile::None;
@@ -45,10 +51,10 @@
 
 
 
-  LockedDoor :: LockedDoor(long long x, long long y, Tile::Tiletype type, int Coinsneeded) : Tile(x,y,type), CoinsNeeded(Coinsneeded),isOpen(false) {}
+  LockedDoor :: LockedDoor(long long x, long long y, Tile::Tiletype type, int Coinsneeded) : Tile(x,y,type), CoinsNeeded(Coinsneeded),isDOpen(false) {}
 
   Tile::TileEffect LockedDoor::touch() {
-      if(isOpen == false){
+      if(isDOpen == false){
         return Tile::Deadly;
       }
       else{
@@ -58,13 +64,36 @@
 
   }
 
-  void LockedDoor :: opendoor(int x){
-    if(CoinsNeeded == x){
-      isOpen = true;
+  void LockedDoor :: opendoor(){
+    if(CoinsNeeded == keys){
+      isDOpen = true;
     }
   }
 
-  SecretCoinTile :: SecretCoinTile(long long x, long long y) : Tile(x,y,Tile::MysteryBox){}
+  void LockedDoor :: addKey(){
+      keys +=1;
+  }
+
+  int LockedDoor:: getkeyscollected(){
+      return keys;
+  }
+
+  int LockedDoor:: getkeysneeded(){
+      return CoinsNeeded - keys;
+  }
+
+  bool LockedDoor:: isOpen(){
+      return isDOpen;
+  }
+
+  int LockedDoor::getrow(){
+      return static_cast<int>(gridY);
+  }
+
+  int LockedDoor::getcol(){
+      return static_cast<int>(gridX);
+  }
+  SecretCoinTile :: SecretCoinTile(long long x, long long y) : Tile(x,y,Tile::MysteryBox), collected(false){}
 
   SecretCoinTile::TileEffect SecretCoinTile::touch(){
       if(collected == false){

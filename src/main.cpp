@@ -10,6 +10,7 @@
 #include <QCoreApplication>
 #include "MarioCharacter.h"
 #include "GameController.h"
+#include "LuigiCharacter.h"
 
 class GameView : public QGraphicsView
 {
@@ -43,8 +44,14 @@ public:
 protected:
     void keyPressEvent(QKeyEvent* event) override {
         MarioCharacter* mario = controller ? controller->getMario() : nullptr;
+        LuigiCharacter* luigi = controller ? controller->getLuigi() : nullptr;
         if (!mario || mario->getIsDead()) return;
         
+        if(event->key() == Qt::Key_Q){
+            controller->startNextLevel();
+            return;
+        };
+
         switch (event->key()) {
             case Qt::Key_Left:
                 mario->startMovingLeft();
@@ -70,12 +77,41 @@ protected:
                 }
                 break;
         }
+
+        //Luigis events
+        if (luigi) {
+            switch (event->key()) {
+            case Qt::Key_A: luigi->startMovingLeft();  break;
+            case Qt::Key_D: luigi->startMovingRight(); break;
+            case Qt::Key_W: luigi->jump();             break;
+            default: break;
+            }
+        }
+        // View
+        switch (event->key()) {
+        case Qt::Key_F:
+            if (isFullScreen()) showNormal(); else showFullScreen();
+            break;
+        case Qt::Key_Escape:
+            if (isFullScreen()) showNormal();
+            break;
+        default: break;
+        }
+
+
+
     }
+
+
+
+
+
     
     void keyReleaseEvent(QKeyEvent* event) override {
         MarioCharacter* mario = controller ? controller->getMario() : nullptr;
-        if (!mario) return;
-        
+        LuigiCharacter* luigi = controller ? controller->getLuigi() : nullptr;
+
+        if(mario){
         switch (event->key()) {
             case Qt::Key_Left:
                 mario->stopMovingLeft();
@@ -83,7 +119,17 @@ protected:
             case Qt::Key_Right:
                 mario->stopMovingRight();
                 break;
+            }
         }
+
+        if (luigi) {
+            switch (event->key()) {
+            case Qt::Key_A: luigi->stopMovingLeft();  break;
+            case Qt::Key_D: luigi->stopMovingRight(); break;
+                    default: break;
+            }
+        }
+
     }
 };
 
@@ -134,7 +180,7 @@ int main(int argc, char* argv[])
         qDebug() << "Expected sky1.jpg in assets folder";
     }
     
-    GameController controller(&scene, WORLD_WIDTH, SCREEN_HEIGHT, TILE_SIZE);
+    GameController controller(&scene, WORLD_WIDTH, SCREEN_HEIGHT, TILE_SIZE,1,0,3);
     GameView view(&scene, &controller);
     view.show();
     

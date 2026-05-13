@@ -57,6 +57,14 @@ build CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.o: CXX
   OBJECT_DIR = CMakeFiles/mario_scene.dir
   OBJECT_FILE_DIR = CMakeFiles/mario_scene.dir/mario_scene_autogen
 
+build CMakeFiles/mario_scene.dir/src/Bowser.cpp.o: CXX_COMPILER__mario_scene_unscanned_Debug /Users/hanasoliman/SuperMario/mario/src/Bowser.cpp || cmake_object_order_depends_target_mario_scene
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/mario_scene.dir/src/Bowser.cpp.o.d
+  FLAGS = -DQT_QML_DEBUG -Wall -Wextra -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/hanasoliman/SuperMario/mario/build/Qt_6_10_2_for_macOS-Debug/mario_scene_autogen/include -I/Users/hanasoliman/SuperMario/mario/include -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Headers -iframework /Users/hanasoliman/Qt/6.10.2/macos/lib -isystem /Users/hanasoliman/Qt/6.10.2/macos/mkspecs/macx-clang -isystem /Users/hanasoliman/Qt/6.10.2/macos/include -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Headers -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtGui.framework/Headers
+  OBJECT_DIR = CMakeFiles/mario_scene.dir
+  OBJECT_FILE_DIR = CMakeFiles/mario_scene.dir/src
+
 build CMakeFiles/mario_scene.dir/src/CrumblingTile.cpp.o: CXX_COMPILER__mario_scene_unscanned_Debug /Users/hanasoliman/SuperMario/mario/src/CrumblingTile.cpp || cmake_object_order_depends_target_mario_scene
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
   DEP_FILE = CMakeFiles/mario_scene.dir/src/CrumblingTile.cpp.o.d
@@ -89,9 +97,41 @@ build CMakeFiles/mario_scene.dir/src/GameController.cpp.o: CXX_COMPILER__mario_s
   OBJECT_DIR = CMakeFiles/mario_scene.dir
   OBJECT_FILE_DIR = CMakeFiles/mario_scene.dir/src
 
+build CMakeFiles/mario_scene.dir/src/HealthBar.cpp.o: CXX_COMPILER__mario_scene_unscanned_Debug /Users/hanasoliman/SuperMario/mario/src/HealthBar.cpp || cmake_object_order_depends_target_mario_scene
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/mario_scene.dir/src/HealthBar.cpp.o.d
+  FLAGS = -DQT_QML_DEBUG -Wall -Wextra -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/hanasoliman/SuperMario/mario/build/Qt_6_10_2_for_macOS-Debug/mario_scene_autogen/include -I/Users/hanasoliman/SuperMario/mario/include -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Headers -iframework /Users/hanasoliman/Qt/6.10.2/macos/lib -isystem /Users/hanasoliman/Qt/6.10.2/macos/mkspecs/macx-clang -isystem /Users/hanasoliman/Qt/6.10.2/macos/include -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Headers -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtGui.framework/Headers
+  OBJECT_DIR = CMakeFiles/mario_scene.dir
+  OBJECT_FILE_DIR = CMakeFiles/mario_scene.dir/src
+
 build CMakeFiles/mario_scene.dir/src/Level.cpp.o: CXX_COMPILER__mario_scene_unscanned_Debug /Users/hanasoliman/SuperMario/mario/src/Level.cpp || cmake_object_order_depends_target_mario_scene
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
   DEP_FILE = CMakeFiles/mario_scene.dir/src/Level.cpp.o.d
+  FLAGS = -DQT_QML_DEBUG -Wall -Wextra -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/hanasoliman/SuperMario/mario/build/Qt_6_10_2_for_macOS-Debug/mario_scene_autogen/include -I/Users/hanasoliman/SuperMario/mario/include -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Headers -iframework /Users/hanasoliman/Qt/6.10.2/macos/lib -isystem /Users/hanasoliman/Qt/6.10.2/macos/mkspecs/macx-clang -isystem /Users/hanasoliman/Qt/6.10.2/macos/include -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Headers -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtGui.framework/Headers
+  OBJECT_DIR = CMakeFiles/mario_scene.dir
+  OBJECT_FILE_DIR = CMakeFiles/mario_scene.dir/src
+
+build CMakeFiles/mario_scene.dir/src/Level1.cpp.o: CXX_COMPILER__mario_scene_unscanned_Debug /Users/hanasoliman/SuperMario/mario/src/Level1.cpp || cmake_object_order_depends_target_mario_scene
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/mario_scene.dir/src/Level1.cpp.o.d
+  FLAGS = -DQT_QML_DEBUG -Wall -Wextra -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/hanasoliman/SuperMario/mario/build/Qt_6_10_2_for_macOS-Debug/mario_scene_autogen/include -I/Users/hanasoliman/SuperMario/mario/include -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Headers -iframework /Users/hanasoliman/Qt/6.10.2/macos/lib -isystem /Users/hanasoliman/Qt/6.10.2/macos/mkspecs/macx-clang -isystem /Users/hanasoliman/Qt/6.10.2/macos/include -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Headers -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtGui.framework/Headers
+  OBJECT_DIR = CMakeFiles/mario_scene.dir
+  OBJECT_FILE_DIR = CMakeFiles/mario_scene.dir/src
+
+build CMakeFiles/mario_scene.dir/src/Level2.cpp.o: CXX_COMPILER__mario_scene_unscanned_Debug /Users/hanasoliman/SuperMario/mario/src/Level2.cpp || cmake_object_order_depends_target_mario_scene
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/mario_scene.dir/src/Level2.cpp.o.d
+  FLAGS = -DQT_QML_DEBUG -Wall -Wextra -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/hanasoliman/SuperMario/mario/build/Qt_6_10_2_for_macOS-Debug/mario_scene_autogen/include -I/Users/hanasoliman/SuperMario/mario/include -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Headers -iframework /Users/hanasoliman/Qt/6.10.2/macos/lib -isystem /Users/hanasoliman/Qt/6.10.2/macos/mkspecs/macx-clang -isystem /Users/hanasoliman/Qt/6.10.2/macos/include -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Headers -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtGui.framework/Headers
+  OBJECT_DIR = CMakeFiles/mario_scene.dir
+  OBJECT_FILE_DIR = CMakeFiles/mario_scene.dir/src
+
+build CMakeFiles/mario_scene.dir/src/Level3.cpp.o: CXX_COMPILER__mario_scene_unscanned_Debug /Users/hanasoliman/SuperMario/mario/src/Level3.cpp || cmake_object_order_depends_target_mario_scene
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/mario_scene.dir/src/Level3.cpp.o.d
   FLAGS = -DQT_QML_DEBUG -Wall -Wextra -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -fcolor-diagnostics
   INCLUDES = -I/Users/hanasoliman/SuperMario/mario/build/Qt_6_10_2_for_macOS-Debug/mario_scene_autogen/include -I/Users/hanasoliman/SuperMario/mario/include -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Headers -iframework /Users/hanasoliman/Qt/6.10.2/macos/lib -isystem /Users/hanasoliman/Qt/6.10.2/macos/mkspecs/macx-clang -isystem /Users/hanasoliman/Qt/6.10.2/macos/include -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Headers -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtGui.framework/Headers
   OBJECT_DIR = CMakeFiles/mario_scene.dir
@@ -105,9 +145,33 @@ build CMakeFiles/mario_scene.dir/src/Level4.cpp.o: CXX_COMPILER__mario_scene_uns
   OBJECT_DIR = CMakeFiles/mario_scene.dir
   OBJECT_FILE_DIR = CMakeFiles/mario_scene.dir/src
 
+build CMakeFiles/mario_scene.dir/src/Level5.cpp.o: CXX_COMPILER__mario_scene_unscanned_Debug /Users/hanasoliman/SuperMario/mario/src/Level5.cpp || cmake_object_order_depends_target_mario_scene
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/mario_scene.dir/src/Level5.cpp.o.d
+  FLAGS = -DQT_QML_DEBUG -Wall -Wextra -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/hanasoliman/SuperMario/mario/build/Qt_6_10_2_for_macOS-Debug/mario_scene_autogen/include -I/Users/hanasoliman/SuperMario/mario/include -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Headers -iframework /Users/hanasoliman/Qt/6.10.2/macos/lib -isystem /Users/hanasoliman/Qt/6.10.2/macos/mkspecs/macx-clang -isystem /Users/hanasoliman/Qt/6.10.2/macos/include -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Headers -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtGui.framework/Headers
+  OBJECT_DIR = CMakeFiles/mario_scene.dir
+  OBJECT_FILE_DIR = CMakeFiles/mario_scene.dir/src
+
+build CMakeFiles/mario_scene.dir/src/LuigiCharacter.cpp.o: CXX_COMPILER__mario_scene_unscanned_Debug /Users/hanasoliman/SuperMario/mario/src/LuigiCharacter.cpp || cmake_object_order_depends_target_mario_scene
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/mario_scene.dir/src/LuigiCharacter.cpp.o.d
+  FLAGS = -DQT_QML_DEBUG -Wall -Wextra -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/hanasoliman/SuperMario/mario/build/Qt_6_10_2_for_macOS-Debug/mario_scene_autogen/include -I/Users/hanasoliman/SuperMario/mario/include -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Headers -iframework /Users/hanasoliman/Qt/6.10.2/macos/lib -isystem /Users/hanasoliman/Qt/6.10.2/macos/mkspecs/macx-clang -isystem /Users/hanasoliman/Qt/6.10.2/macos/include -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Headers -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtGui.framework/Headers
+  OBJECT_DIR = CMakeFiles/mario_scene.dir
+  OBJECT_FILE_DIR = CMakeFiles/mario_scene.dir/src
+
 build CMakeFiles/mario_scene.dir/src/MarioCharacter.cpp.o: CXX_COMPILER__mario_scene_unscanned_Debug /Users/hanasoliman/SuperMario/mario/src/MarioCharacter.cpp || cmake_object_order_depends_target_mario_scene
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
   DEP_FILE = CMakeFiles/mario_scene.dir/src/MarioCharacter.cpp.o.d
+  FLAGS = -DQT_QML_DEBUG -Wall -Wextra -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/hanasoliman/SuperMario/mario/build/Qt_6_10_2_for_macOS-Debug/mario_scene_autogen/include -I/Users/hanasoliman/SuperMario/mario/include -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Headers -iframework /Users/hanasoliman/Qt/6.10.2/macos/lib -isystem /Users/hanasoliman/Qt/6.10.2/macos/mkspecs/macx-clang -isystem /Users/hanasoliman/Qt/6.10.2/macos/include -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Headers -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtGui.framework/Headers
+  OBJECT_DIR = CMakeFiles/mario_scene.dir
+  OBJECT_FILE_DIR = CMakeFiles/mario_scene.dir/src
+
+build CMakeFiles/mario_scene.dir/src/PiranhaPlant.cpp.o: CXX_COMPILER__mario_scene_unscanned_Debug /Users/hanasoliman/SuperMario/mario/src/PiranhaPlant.cpp || cmake_object_order_depends_target_mario_scene
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/mario_scene.dir/src/PiranhaPlant.cpp.o.d
   FLAGS = -DQT_QML_DEBUG -Wall -Wextra -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -fcolor-diagnostics
   INCLUDES = -I/Users/hanasoliman/SuperMario/mario/build/Qt_6_10_2_for_macOS-Debug/mario_scene_autogen/include -I/Users/hanasoliman/SuperMario/mario/include -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Headers -iframework /Users/hanasoliman/Qt/6.10.2/macos/lib -isystem /Users/hanasoliman/Qt/6.10.2/macos/mkspecs/macx-clang -isystem /Users/hanasoliman/Qt/6.10.2/macos/include -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Headers -isystem /Users/hanasoliman/Qt/6.10.2/macos/lib/QtGui.framework/Headers
   OBJECT_DIR = CMakeFiles/mario_scene.dir
@@ -153,7 +217,7 @@ build CMakeFiles/mario_scene.dir/src/movingplatform.cpp.o: CXX_COMPILER__mario_s
 #############################################
 # Link the executable mario_scene
 
-build mario_scene: CXX_EXECUTABLE_LINKER__mario_scene_Debug CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.o CMakeFiles/mario_scene.dir/src/CrumblingTile.cpp.o CMakeFiles/mario_scene.dir/src/Enemy.cpp.o CMakeFiles/mario_scene.dir/src/Entity.cpp.o CMakeFiles/mario_scene.dir/src/GameController.cpp.o CMakeFiles/mario_scene.dir/src/Level.cpp.o CMakeFiles/mario_scene.dir/src/Level4.cpp.o CMakeFiles/mario_scene.dir/src/MarioCharacter.cpp.o CMakeFiles/mario_scene.dir/src/Player.cpp.o CMakeFiles/mario_scene.dir/src/Tile.cpp.o CMakeFiles/mario_scene.dir/src/main.cpp.o CMakeFiles/mario_scene.dir/src/movingplatform.cpp.o | /Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Users/hanasoliman/Qt/6.10.2/macos/lib/QtGui.framework/Versions/A/QtGui /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/QtCore || mario_scene_autogen mario_scene_autogen_timestamp_deps
+build mario_scene: CXX_EXECUTABLE_LINKER__mario_scene_Debug CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.o CMakeFiles/mario_scene.dir/src/Bowser.cpp.o CMakeFiles/mario_scene.dir/src/CrumblingTile.cpp.o CMakeFiles/mario_scene.dir/src/Enemy.cpp.o CMakeFiles/mario_scene.dir/src/Entity.cpp.o CMakeFiles/mario_scene.dir/src/GameController.cpp.o CMakeFiles/mario_scene.dir/src/HealthBar.cpp.o CMakeFiles/mario_scene.dir/src/Level.cpp.o CMakeFiles/mario_scene.dir/src/Level1.cpp.o CMakeFiles/mario_scene.dir/src/Level2.cpp.o CMakeFiles/mario_scene.dir/src/Level3.cpp.o CMakeFiles/mario_scene.dir/src/Level4.cpp.o CMakeFiles/mario_scene.dir/src/Level5.cpp.o CMakeFiles/mario_scene.dir/src/LuigiCharacter.cpp.o CMakeFiles/mario_scene.dir/src/MarioCharacter.cpp.o CMakeFiles/mario_scene.dir/src/PiranhaPlant.cpp.o CMakeFiles/mario_scene.dir/src/Player.cpp.o CMakeFiles/mario_scene.dir/src/Tile.cpp.o CMakeFiles/mario_scene.dir/src/main.cpp.o CMakeFiles/mario_scene.dir/src/movingplatform.cpp.o | /Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Users/hanasoliman/Qt/6.10.2/macos/lib/QtGui.framework/Versions/A/QtGui /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/QtCore || mario_scene_autogen mario_scene_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -Wall -Wextra -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk
   LINK_LIBRARIES = -Wl,-rpath,/Users/hanasoliman/Qt/6.10.2/macos/lib  /Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Versions/A/QtWidgets  /Users/hanasoliman/Qt/6.10.2/macos/lib/QtGui.framework/Versions/A/QtGui  -framework AppKit  -framework OpenGL  -framework ImageIO  -framework Metal  /Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/QtCore  -framework IOKit  -framework DiskArbitration  -framework UniformTypeIdentifiers
   LINK_PATH = -F/Users/hanasoliman/Qt/6.10.2/macos/lib

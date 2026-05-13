@@ -17,6 +17,10 @@ private:
     QPixmap jumpingFrame;
     QPixmap dyingFrame;
     
+    QPixmap bigStandingFrame;
+    QList<QPixmap> bigRunningFrames;
+    QPixmap bigJumpingFrame;
+
     QTimer *animationTimer;
     int currentFrame;
     QString currentState;
@@ -25,9 +29,11 @@ private:
     bool isMovingRight;
     bool isJumping;
     bool isDead;
+
     
     qreal velocityY;
     bool isOnGround;
+    bool isBig;
     
 public:
     MarioCharacter();
@@ -46,6 +52,11 @@ public:
     void stopUpwardMotion();
     float getVelocityY() const;
     void bounceUp();
+    void growBig();
+    void shrink();
+    bool getIsBig() const { return isBig; }
+    int getWidth() const  { return isBig ? 110 : 80; }
+    int getHeight() const { return isBig ? 110 : 80; }
 };
 
 #endif

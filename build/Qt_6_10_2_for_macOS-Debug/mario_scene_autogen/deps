@@ -861,6 +861,7 @@ mario_scene_autogen/timestamp: \
 	/Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qversiontagging.h \
 	/Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qxptype_traits.h \
 	/Users/hanasoliman/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/Headers/qyieldcpu.h \
+	/Users/hanasoliman/Qt/6.10.2/macos/lib/QtGui.framework/Versions/A/Headers/QColor \
 	/Users/hanasoliman/Qt/6.10.2/macos/lib/QtGui.framework/Versions/A/Headers/QPixmap \
 	/Users/hanasoliman/Qt/6.10.2/macos/lib/QtGui.framework/Versions/A/Headers/qbrush.h \
 	/Users/hanasoliman/Qt/6.10.2/macos/lib/QtGui.framework/Versions/A/Headers/qcolor.h \
@@ -880,6 +881,8 @@ mario_scene_autogen/timestamp: \
 	/Users/hanasoliman/Qt/6.10.2/macos/lib/QtGui.framework/Versions/A/Headers/qtguiglobal.h \
 	/Users/hanasoliman/Qt/6.10.2/macos/lib/QtGui.framework/Versions/A/Headers/qtransform.h \
 	/Users/hanasoliman/Qt/6.10.2/macos/lib/QtGui.framework/Versions/A/Headers/qwindowdefs.h \
+	/Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QGraphicsEllipseItem \
+	/Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QGraphicsItem \
 	/Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QGraphicsPixmapItem \
 	/Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QGraphicsRectItem \
 	/Users/hanasoliman/Qt/6.10.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QGraphicsScene \
@@ -1119,23 +1122,41 @@ mario_scene_autogen/timestamp: \
 	/Users/hanasoliman/SuperMario/mario/build/Qt_6_10_2_for_macOS-Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
 	/Users/hanasoliman/SuperMario/mario/build/Qt_6_10_2_for_macOS-Debug/CMakeFiles/3.30.5/CMakeSystem.cmake \
 	/Users/hanasoliman/SuperMario/mario/build/Qt_6_10_2_for_macOS-Debug/mario_scene_autogen/moc_predefs.h \
+	/Users/hanasoliman/SuperMario/mario/include/Bowser.h \
+	/Users/hanasoliman/SuperMario/mario/include/Coin.h \
 	/Users/hanasoliman/SuperMario/mario/include/CrumblingTile.h \
 	/Users/hanasoliman/SuperMario/mario/include/Enemy.h \
 	/Users/hanasoliman/SuperMario/mario/include/Entity.h \
 	/Users/hanasoliman/SuperMario/mario/include/GameController.h \
+	/Users/hanasoliman/SuperMario/mario/include/HealthBar.h \
 	/Users/hanasoliman/SuperMario/mario/include/Level.h \
+	/Users/hanasoliman/SuperMario/mario/include/Level1.h \
+	/Users/hanasoliman/SuperMario/mario/include/Level2.h \
+	/Users/hanasoliman/SuperMario/mario/include/Level3.h \
 	/Users/hanasoliman/SuperMario/mario/include/Level4.h \
+	/Users/hanasoliman/SuperMario/mario/include/Level5.h \
+	/Users/hanasoliman/SuperMario/mario/include/LuigiCharacter.h \
 	/Users/hanasoliman/SuperMario/mario/include/MarioCharacter.h \
+	/Users/hanasoliman/SuperMario/mario/include/Mushroom.h \
+	/Users/hanasoliman/SuperMario/mario/include/PiranhaPlant.h \
 	/Users/hanasoliman/SuperMario/mario/include/Player.h \
 	/Users/hanasoliman/SuperMario/mario/include/Tile.h \
 	/Users/hanasoliman/SuperMario/mario/include/movingplatform.h \
+	/Users/hanasoliman/SuperMario/mario/src/Bowser.cpp \
 	/Users/hanasoliman/SuperMario/mario/src/CrumblingTile.cpp \
 	/Users/hanasoliman/SuperMario/mario/src/Enemy.cpp \
 	/Users/hanasoliman/SuperMario/mario/src/Entity.cpp \
 	/Users/hanasoliman/SuperMario/mario/src/GameController.cpp \
+	/Users/hanasoliman/SuperMario/mario/src/HealthBar.cpp \
 	/Users/hanasoliman/SuperMario/mario/src/Level.cpp \
+	/Users/hanasoliman/SuperMario/mario/src/Level1.cpp \
+	/Users/hanasoliman/SuperMario/mario/src/Level2.cpp \
+	/Users/hanasoliman/SuperMario/mario/src/Level3.cpp \
 	/Users/hanasoliman/SuperMario/mario/src/Level4.cpp \
+	/Users/hanasoliman/SuperMario/mario/src/Level5.cpp \
+	/Users/hanasoliman/SuperMario/mario/src/LuigiCharacter.cpp \
 	/Users/hanasoliman/SuperMario/mario/src/MarioCharacter.cpp \
+	/Users/hanasoliman/SuperMario/mario/src/PiranhaPlant.cpp \
 	/Users/hanasoliman/SuperMario/mario/src/Player.cpp \
 	/Users/hanasoliman/SuperMario/mario/src/Tile.cpp \
 	/Users/hanasoliman/SuperMario/mario/src/main.cpp \

@@ -9,9 +9,9 @@
 #include <QDebug>
 #include "Tile.h"
 
-class CrumblingTile : public Tile, public QObject{
+class CrumblingTile : public Tile{
 
-    Q_OBJECT
+
 
 
     public:

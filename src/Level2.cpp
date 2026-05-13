@@ -2,18 +2,20 @@
 #include <QDebug>
 
 Level2::Level2(int rows, int cols) : Level(rows, cols) {
-    backgroundImagePath = "sky1.jpg";
+    // Optional art "level2_bonus.jpg"; if missing, meadow tint from backgroundColor
+    backgroundImagePath = QStringLiteral("level2_bonus.jpg");
+    backgroundColor = QColor(175, 220, 185);
 }
 
 void Level2::createTiles() {
-    grid = new Tile*[rows];
+    grid = new Tile**[rows];
     for(int i = 0; i < rows; i++) {
-        grid[i] = new Tile[cols];
+        grid[i] = new Tile*[cols];
     }
 
     for(int i = 0; i < rows; i++) {
         for(int n = 0; n < cols; n++) {
-            grid[i][n] = Tile(n, i, Tile::Empty);
+            grid[i][n] = new Tile(n, i, Tile::Empty);
         }
     }
 
@@ -22,42 +24,50 @@ void Level2::createTiles() {
 
     // Solid ground
     for(int n = 0; n < cols; n++) {
-        grid[groundLevel][n] = Tile(n, groundLevel, Tile::Grass);
-        grid[groundLevel+1][n] = Tile(n, groundLevel+1, Tile::Mud);
+        delete grid[groundLevel][n];
+        delete grid[groundLevel+1][n];
+        grid[groundLevel][n] = new Tile(n, groundLevel, Tile::Grass);
+        grid[groundLevel+1][n] = new Tile(n, groundLevel+1, Tile::Mud);
     }
 
     // Floating platforms
     for(int i = 0; i < 5; i++) {
         if (groundLevel-3 >= 0)
-            grid[groundLevel-3][12 + i] = Tile(12 + i, groundLevel-3, Tile::Brick);
+            delete grid[groundLevel-3][12 + i];
+            grid[groundLevel-3][12 + i] = new Tile(12 + i, groundLevel-3, Tile::Brick);
     }
     
     for(int i = 0; i < 4; i++) {
         if (groundLevel-4 >= 0)
-            grid[groundLevel-4][25 + i] = Tile(25 + i, groundLevel-4, Tile::Brick);
+            delete grid[groundLevel-4][25 + i];
+            grid[groundLevel-4][25 + i] = new Tile(25 + i, groundLevel-4, Tile::Brick);
     }
     
     for(int i = 0; i < 6; i++) {
         if (groundLevel-2 >= 0)
-            grid[groundLevel-2][40 + i] = Tile(40 + i, groundLevel-2, Tile::Brick);
+            delete grid[groundLevel-2][40 + i];
+            grid[groundLevel-2][40 + i] = new Tile(40 + i, groundLevel-2, Tile::Brick);
     }
     
     for(int i = 0; i < 3; i++) {
         if (groundLevel-5 >= 0)
-            grid[groundLevel-5][55 + i] = Tile(55 + i, groundLevel-5, Tile::Brick);
+            delete grid[groundLevel-5][55 + i];
+            grid[groundLevel-5][55 + i] = new Tile(55 + i, groundLevel-5, Tile::Brick);
     }
 
     // Staircase
     for(int i = 0; i < 6; i++) {
         int stepRow = groundLevel - i;
         if (stepRow >= 0)
-            grid[stepRow][68 + i] = Tile(68 + i, stepRow, Tile::Brick);
+            delete grid[stepRow][68 + i];
+            grid[stepRow][68 + i] = new Tile(68 + i, stepRow, Tile::Brick);
     }
 
     flagX = 74;
     flagY = groundLevel - 6;
     if (flagY >= 0 && flagX < cols) {
-        grid[flagY][flagX] = Tile(flagX, flagY, Tile::Flag);
+        delete grid[flagY][flagX];
+        grid[flagY][flagX] = new Tile(flagX, flagY, Tile::Flag);
     }
 
     spawnX = 2;

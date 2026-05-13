@@ -11,14 +11,14 @@ Level5::Level5(int rows, int cols) : Level(rows, cols), isBossFightActive(false)
 }
 
 void Level5::createTiles() {
-    grid = new Tile*[rows];
+    grid = new Tile**[rows];
     for(int i = 0; i < rows; i++) {
-        grid[i] = new Tile[cols];
+        grid[i] = new Tile*[cols];
     }
 
     for(int i = 0; i < rows; i++) {
         for(int n = 0; n < cols; n++) {
-            grid[i][n] = Tile(n, i, Tile::Empty);
+            grid[i][n] = new Tile(n, i, Tile::Empty);
         }
     }
 
@@ -26,17 +26,27 @@ void Level5::createTiles() {
     if (groundLevel < 1) groundLevel = 1;
 
     // Ground floor only
+    int holeColumn = 20;
     for(int n = 0; n < cols; n++) {
-        grid[groundLevel][n] = Tile(n, groundLevel, Tile::Grass);
-        grid[groundLevel+1][n] = Tile(n, groundLevel+1, Tile::Mud);
+        if(n!=holeColumn){
+            delete grid[groundLevel][n];
+            grid[groundLevel][n] = new Tile(n, groundLevel, Tile::Grass);
+
+            delete grid[groundLevel+1][n];
+            grid[groundLevel+1][n] = new Tile(n, groundLevel+1, Tile::Mud);
+        }
     }
 
     // One hole to fall from
-    int holeColumn = 20;
+    /*
+
     if (holeColumn >= 0 && holeColumn < cols) {
-        grid[groundLevel][holeColumn] = Tile(holeColumn, groundLevel, Tile::Empty);
-        grid[groundLevel+1][holeColumn] = Tile(holeColumn, groundLevel+1, Tile::Empty);
-    }
+        delete grid[groundLevel][holeColumn];
+        grid[groundLevel][holeColumn] = new Tile(holeColumn, groundLevel, Tile::Empty);
+
+        delete grid[groundLevel+1][holeColumn];
+        grid[groundLevel+1][holeColumn] = new Tile(holeColumn, groundLevel+1, Tile::Empty);
+    }*/
 
     // One original enemy on this final level
     enemy.push_back(new Enemy(12, groundLevel, 8, 16, 0.20f));
@@ -45,7 +55,8 @@ void Level5::createTiles() {
     int winX = 92;
     int winY = groundLevel;
     if (winY >= 0 && winX < cols) {
-        grid[winY][winX] = Tile(winX, winY, Tile::Flag);
+        delete grid[winY][winX];
+        grid[winY][winX] = new Tile(winX, winY, Tile::Flag);
     }
 
     spawnX = 2;

@@ -17,7 +17,11 @@
 #include "Level.h"
 #include "Bowser.h"
 #include "HealthBar.h"
+#include "Coin.h"
+#include "Mushroom.h"
+#include "movingplatform.h"
 
+class LockedDoor;
 
 class GameController : public QObject {
     Q_OBJECT
@@ -31,6 +35,11 @@ private:
     QList<QGraphicsPixmapItem*> enemyGraphics;
     std::vector<Enemy*> enemies;
     std::vector<QGraphicsPixmapItem*> crumblingGraphics;
+    std::vector<Coin*> coins;           // Ensure Coin.h is included
+    std::vector<Mushroom*> mushrooms;   // Ensure Mushroom.h is included
+    QList<QPair<MovingPlatform*, QGraphicsRectItem*>> movingPlatformGraphics;
+    QGraphicsTextItem* keyText;
+    QGraphicsRectItem* lockedDoorGraphic;
     QGraphicsPixmapItem* finishItem;
     QGraphicsTextItem* scoreText;
     QGraphicsTextItem* livesText;
@@ -40,19 +49,19 @@ private:
     int screenHeight;
     int worldWidth;
     bool gameEnded;
-<<<<<<< HEAD
     bool levelCompleted;
     int currentLevelNumber;
     int totalLevels;
-=======
-    bool isLevel3;
->>>>>>> 96a6d99e6202f04d821aa75f2423721c0ee77443
+    int levelnum;
+    int keysCollected;
+
     
     void setupUI();
     void renderTiles();
     void updateUI();
     void updateOverlayPositions();
 
+    LockedDoor* currentLevelDoor = nullptr;
     Bowser* bowser;
     HealthBar* marioHealthBar;
     HealthBar* bowserHealthBar;
@@ -71,17 +80,24 @@ private:
     bool marioHitCooldown  = false;
 
 public:
-    GameController(QGraphicsScene* s, int worldWidth, int screenH, int tileSize);
+    GameController(QGraphicsScene* s, int worldWidth, int screenH, int tileSize,int levelNum, int startScore, int startLives);
     ~GameController();
 
     void loadLevel(int levelNumber);
     void cleanupCurrentLevel();
     void startNextLevel();
     void updateGame();
+    void checkCollisions4();
     bool checkCollisions();
     void handleEnemyCollision(Enemy* enemy);
     void setCanDamageBowser(bool can) { canDamageBowser = can; }
     MarioCharacter* getMario() { return mario; }
+    void spawnMushrooms();
+    void spawnCoins();
+    void checkCoinCollisions();
+    void checkMushroomCollisions();
+    void skipToNextLevel();
+    LuigiCharacter* getLuigi() const { return luigi; }
 };
 
 #endif

@@ -370,6 +370,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/Users/hanasoliman/SuperMario/mario/include/Bowser.h",
+			"Mu",
+			"6YEA5652QU/moc_Bowser.cpp",
+			null
+		],
+		[
 			"/Users/hanasoliman/SuperMario/mario/include/CrumblingTile.h",
 			"Mu",
 			"6YEA5652QU/moc_CrumblingTile.cpp",
@@ -394,9 +400,33 @@
 			null
 		],
 		[
+			"/Users/hanasoliman/SuperMario/mario/include/HealthBar.h",
+			"Mu",
+			"6YEA5652QU/moc_HealthBar.cpp",
+			null
+		],
+		[
 			"/Users/hanasoliman/SuperMario/mario/include/Level.h",
 			"Mu",
 			"6YEA5652QU/moc_Level.cpp",
+			null
+		],
+		[
+			"/Users/hanasoliman/SuperMario/mario/include/Level1.h",
+			"Mu",
+			"6YEA5652QU/moc_Level1.cpp",
+			null
+		],
+		[
+			"/Users/hanasoliman/SuperMario/mario/include/Level2.h",
+			"Mu",
+			"6YEA5652QU/moc_Level2.cpp",
+			null
+		],
+		[
+			"/Users/hanasoliman/SuperMario/mario/include/Level3.h",
+			"Mu",
+			"6YEA5652QU/moc_Level3.cpp",
 			null
 		],
 		[
@@ -406,9 +436,27 @@
 			null
 		],
 		[
+			"/Users/hanasoliman/SuperMario/mario/include/Level5.h",
+			"Mu",
+			"6YEA5652QU/moc_Level5.cpp",
+			null
+		],
+		[
+			"/Users/hanasoliman/SuperMario/mario/include/LuigiCharacter.h",
+			"Mu",
+			"6YEA5652QU/moc_LuigiCharacter.cpp",
+			null
+		],
+		[
 			"/Users/hanasoliman/SuperMario/mario/include/MarioCharacter.h",
 			"Mu",
 			"6YEA5652QU/moc_MarioCharacter.cpp",
+			null
+		],
+		[
+			"/Users/hanasoliman/SuperMario/mario/include/PiranhaPlant.h",
+			"Mu",
+			"6YEA5652QU/moc_PiranhaPlant.cpp",
 			null
 		],
 		[
@@ -490,6 +538,7 @@
 	"SETTINGS_FILE" : "/Users/hanasoliman/SuperMario/mario/build/Qt_6_10_2_for_macOS-Debug/CMakeFiles/mario_scene_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "/Users/hanasoliman/SuperMario/mario/src/Bowser.cpp", "Mu", null ],
 		[
 			"/Users/hanasoliman/SuperMario/mario/src/CrumblingTile.cpp",
 			"Mu",
@@ -502,10 +551,25 @@
 			"Mu",
 			null
 		],
+		[ "/Users/hanasoliman/SuperMario/mario/src/HealthBar.cpp", "Mu", null ],
 		[ "/Users/hanasoliman/SuperMario/mario/src/Level.cpp", "Mu", null ],
+		[ "/Users/hanasoliman/SuperMario/mario/src/Level1.cpp", "Mu", null ],
+		[ "/Users/hanasoliman/SuperMario/mario/src/Level2.cpp", "Mu", null ],
+		[ "/Users/hanasoliman/SuperMario/mario/src/Level3.cpp", "Mu", null ],
 		[ "/Users/hanasoliman/SuperMario/mario/src/Level4.cpp", "Mu", null ],
+		[ "/Users/hanasoliman/SuperMario/mario/src/Level5.cpp", "Mu", null ],
+		[
+			"/Users/hanasoliman/SuperMario/mario/src/LuigiCharacter.cpp",
+			"Mu",
+			null
+		],
 		[
 			"/Users/hanasoliman/SuperMario/mario/src/MarioCharacter.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/Users/hanasoliman/SuperMario/mario/src/PiranhaPlant.cpp",
 			"Mu",
 			null
 		],

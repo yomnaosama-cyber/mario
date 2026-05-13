@@ -1,29 +1,17 @@
 #ifndef PIRANHA_PLANT_H
 #define PIRANHA_PLANT_H
+#include "Enemy.h"
 
-#include "Entity.h"
-
-class PiranhaPlant : public Entity {
+class PiranhaPlant : public Enemy {
 private:
-    int baseY;
-    bool goingUp;
+    float bobOffset = 0.f;
+    float bobVelocity = -1.5f;
 
 public:
-    PiranhaPlant(int x, int y);
-        : Enemy(x, y, x, x, 0), baseY(y), goingUp(true) {}
+    PiranhaPlant(int x_pos, int y_pos);
 
-    void update() {
-        // simple up/down movement
-        if (goingUp) {
-            setY(getY() - 1);
-            if (getY() < baseY - 2)
-                goingUp = false;
-        } else {
-            setY(getY() + 1);
-            if (getY() > baseY)
-                goingUp = true;
-        }
-    }
+    void update();
+    float getBobPixelOffset() const { return bobOffset; }
 };
 
 #endif

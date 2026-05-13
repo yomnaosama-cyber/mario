@@ -10,8 +10,9 @@
 using namespace std;
 
 class Level {
+    friend class GameController;
 protected:
-    Tile** grid;
+    Tile*** grid;
     long spawnX;
     long spawnY;
     long flagX;
@@ -21,47 +22,29 @@ protected:
     int cols;
     QColor backgroundColor;
     QString backgroundImagePath;
-    QColor tileColors[7];
-    
+    QColor tileColors[8];
+
 public:
     Level(int rows, int cols);
-    Level(Tile** grid, long spawnX, long spawnY, long flagX, long flagY, int rows, int cols);
+    Level(Tile*** grid, long spawnX, long spawnY, long flagX, long flagY, int rows, int cols);
     virtual ~Level();
 
-<<<<<<< HEAD
     pair<long, long> getSpawn();
     pair<long, long> getflag();
-    Tile** getgrid();
+    Tile*** getgrid();
     vector<Enemy*> getenemy();
-    Tile getTileAt(int row, int col);
+    Tile* getTileAt(int row, int col);
+    int getRowCount() const { return rows; }
+    int getColCount() const { return cols; }
     QColor getBackgroundColor() const;
     QString getBackgroundImagePath() const;
     QColor getTileColor(Tile::Tiletype type) const;
-    
+    void setTile(int row, int col, Tile* newTile);
+
     virtual void createTiles() = 0;
     QColor* getTileColors() { return tileColors; }
-=======
-  Level(int rows, int cols);  // NEW: Simple constructor
-  Level(Tile** grid, long spawnX, long spawnY, long flagX, long flagY, int rows, int cols);
-
-  pair<long, long> getSpawn();
-  pair<long, long> getflag();
-  Tile** getgrid();
-  vector<Enemy*> getenemy();
-  Tile getTileAt(int row, int col);
-  void createTiles();
-  void createLevel3Tiles(); 
-  if (isLevel3) {
-    currentLevel->createLevel3Tiles();   
-} else {
-    currentLevel->createTiles();
-}
-
-
-
-
-
->>>>>>> 96a6d99e6202f04d821aa75f2423721c0ee77443
 };
+
+
 
 #endif
