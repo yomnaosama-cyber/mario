@@ -520,11 +520,11 @@ void GameController::updateGame() {
 
 bool GameController::checkCollisions() {
     for (size_t i = 0; i < enemies.size(); i++) {
+        
         Enemy* enemy = enemies[i];
-
         if (!enemy) continue;
        
-       //Piranha plant does NOT move like normal enemy
+       //Piranha plant mov
        PiranhaPlant* plant = dynamic_cast<PiranhaPlant*>(enemy);
 
         if (plant) {
@@ -532,43 +532,67 @@ bool GameController::checkCollisions() {
         } else {
             enemy->autoMove();
         }
-        
-        if (enemy && i < static_cast<size_t>(enemyGraphics.size()) && enemyGraphics[i]) {
+      
+        if (i >= enemyGrpahics.size() || !enemyGrpahics[i]) continue; 
             
             // Convert tile coordinates to pixel coordinates for graphics
             int pixelX = enemy->getX() * tileSize;
             int pixelY = enemy->getY() * tileSize;
-            int enemyHeight = static_cast<int>(enemyGraphics[i]->boundingRect().height());
             enemyGraphics[i]->setPos(pixelX, pixelY);            
-                        
-            QRectF marioRect = mario->sceneBoundingRect();
+                      
             QRectF enemyRect = enemyGraphics[i]->sceneBoundingRect();
+            QRectF marioRect = mario->sceneBoundingRect();
             
-            if (marioRect.intersects(enemyRect)) {
-                // Stomp detection
+            bool marioHit = marioRect.intersects(enemyRect);
+
+            QRectF luigiRect;
+            bool luigiHit = false;
+            if (luigi) {
+                luigiRect = luigi->sceneBoundingRect();
+                luigiHit = luigiRect.intersects(enemyRect);
+            }
+
+
+            // MARIO collision 
+            if (marioHit) {
+
                 qreal marioFeet = mario->y() + 80;
                 qreal enemyTop = enemyRect.top();
                 qreal enemyMid = enemyTop + enemyRect.height() / 2.0;
-                        
+            
                 if (marioFeet <= enemyMid && marioFeet >= enemyTop - 10) {
-                    // Stomp enemy
+                    // stomp enemy
                     delete enemyGraphics[i];
                     enemyGraphics.erase(enemyGraphics.begin() + i);
                     delete enemies[i];
                     enemies.erase(enemies.begin() + i);
                     i--;
+            
                     gamePlayer->addScore(100);
                     updateUI();
-                    qDebug() << "Enemy stomped! Score:" << gamePlayer->getScore();
-                    
+            
                     mario->setY(mario->y() - 20);
-                } else {
+                } 
+                else {
                     handleEnemyCollision(enemy);
                     return true;
                 }
             }
+
+            // LUIGI collision
+            if (luigiHit) {
+
+                qDebug() << "Luigi hit enemy! Score:" << gamePlayer->getScore();
+
+                // simple safe response - no life system shared
+                auto spawn = currentLevel->getSpawn();
+                int luigiHeight = static_cast<int>(luigi->boundingRect().height());
+                luigi->setPos(spawn.first + 100, spawn.second - luigiHeight);
+                luigi->setVelocityY(0);
+                luigi->setIsOnGround(false);
         }
     }
+
     return false;
 }
 
