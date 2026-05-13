@@ -3,6 +3,9 @@
 
 #include <QObject>
 #include <QGraphicsPixmapItem>
+#include <QCoreApplication>
+#include <QDir>
+#include <QStringList>
 
 class LuigiCharacter : public QObject, public QGraphicsPixmapItem {
     Q_OBJECT
@@ -12,6 +15,7 @@ public:
 
     // sPHYSICS
     void updatePhysics();
+    void showWinSprite();
 
     void setVelocityY(float v);
     float getVelocityY() const;

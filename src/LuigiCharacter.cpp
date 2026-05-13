@@ -1,5 +1,9 @@
 #include "LuigiCharacter.h"
 #include <QPixmap>
+#include <QCoreApplication>
+#include <QDir>
+#include <QStringList>
+
 
 static const float GRAVITY = 0.6f;
 
@@ -23,6 +27,45 @@ void LuigiCharacter::updatePhysics() {
         setY(1000);
         velocityY = 0;
         isOnGround = true;
+    }
+}
+void LuigiCharacter::showWinSprite()
+{
+    QString assetsPath;
+
+    QStringList possiblePaths = {
+        QCoreApplication::applicationDirPath() + "/assets",
+        QCoreApplication::applicationDirPath() + "/../assets",
+        QDir::currentPath() + "/assets"
+    };
+
+    for (const QString& path : possiblePaths) {
+
+        QDir dir(path);
+
+        if (dir.exists()) {
+            assetsPath = path;
+            break;
+        }
+    }
+
+    QPixmap winPixmap;
+
+    if (!assetsPath.isEmpty()) {
+
+        winPixmap.load(assetsPath + "/luigiwin.png");
+
+        if (!winPixmap.isNull()) {
+
+            QPixmap scaled = winPixmap.scaled(
+                80,
+                80,
+                Qt::KeepAspectRatio,
+                Qt::SmoothTransformation
+            );
+
+            setPixmap(scaled);
+        }
     }
 }
 
