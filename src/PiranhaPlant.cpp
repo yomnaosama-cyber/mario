@@ -1,11 +1,16 @@
 #include "PiranhaPlant.h"
 
-PiranhaPlant::PiranhaPlant(int x, int y) : Enemy(x, y) {}
+PiranhaPlant::PiranhaPlant(int x, int y)
+    : Enemy(x, y), baseY(y), goingUp(true) {}
 
 void PiranhaPlant::update() {
-    // simple up/down movement
-    if (getY() % 2 == 0)
-        setY(getY() + 1);
-    else
+    if (goingUp) {
         setY(getY() - 1);
+        if (getY() < baseY - 2)
+            goingUp = false;
+    } else {
+        setY(getY() + 1);
+        if (getY() > baseY)
+            goingUp = true;
+    }
 }

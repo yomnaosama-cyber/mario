@@ -16,6 +16,16 @@ GameController::GameController(QGraphicsScene* s, int worldWidth, int screenH, i
     : scene(s), mario(nullptr), luigi(nullptr), gamePlayer(nullptr), currentLevel(nullptr), finishItem(nullptr), scoreText(nullptr), livesText(nullptr),
       endMessageText(nullptr), tileSize(tileSize), screenHeight(screenH), worldWidth(worldWidth), gameEnded(false) , isLevel3(true) {
     
+    
+    luigiMoveLeft = false; 
+    luigiMoveRight = false; 
+    luigiJump = false; 
+
+    scene->installEventFilter(this);
+    scene->setFocus();
+    scene->setFocusItem(nullptr);
+
+
     qDebug() << "GameController constructor started";
     qDebug() << "Screen height:" << screenHeight << "Tile size:" << tileSize;
     qDebug() << "Rows:" << ((screenHeight + tileSize - 1) / tileSize) << "Cols:" << (worldWidth / tileSize);
@@ -65,17 +75,20 @@ GameController::GameController(QGraphicsScene* s, int worldWidth, int screenH, i
     
     // Create player at spawn position
     gamePlayer = new Player(spawn.first, spawn.second);
+
+    setupUI();
+    renderTiles();
     
     // Get enemies from level
     enemies = currentLevel->getenemy();
 
-// =============================
+//// =============================
 // LEVEL 3: ADD PIRANHA PLANT
 // =============================
 if (isLevel3) {
 
     QPixmap plantImg;
-    QString assetsPath;
+    QString plantAssetsPath;    
     QStringList possiblePaths = {
         QCoreApplication::applicationDirPath() + "/assets",
         QCoreApplication::applicationDirPath() + "/../assets",
@@ -83,100 +96,94 @@ if (isLevel3) {
     };
 
     for (const QString& path : possiblePaths) {
-        QDir dir(path);
-        if (dir.exists()) {
-            assetsPath = path;
-            break;
-        }
+    QDir dir(path);
+
+    if (dir.exists()) {
+        plantAssetsPath = path;
+        break;
+    }
+}
+
+    if (!plantAssetsPath.isEmpty()) {
+        plantImg.load(plantAssetsPath + "/piranha.png");
     }
 
-    if (!assetsPath.isEmpty()) {
-        plantImg.load(assetsPath + "/piranha.png");
-    }
-
-    // Example position (YOU CAN CHANGE LATER)
     int plantX = 25 * tileSize;
     int plantY = (screenHeight / tileSize - 2) * tileSize;
 
-   // Create PiranhaPLant enemy object
-   PiranhaPlant* plant =
-    new PiranhaPlant(plantX / tileSize,
-                     plantY / tileSize);
+    // creating LOGIC enemy FIRST
+    PiranhaPlant* plant =
+        new PiranhaPlant(plantX / tileSize, plantY / tileSize);
 
-    // Add to enemies list
+    plant->setPixelPos(plantX, plantY);
+
+    // Add to enemies 
     enemies.push_back(plant);
 
-    // Create graphics item
-    QGraphicsPixmapItem* plantItem;
+    // creating GRAPHICS item
+    QGraphicsPixmapItem* plantItem = nullptr;
 
     if (!plantImg.isNull()) {
-
-        QPixmap scaled =
-            plantImg.scaled(
-                tileSize,
-                tileSize * 2,
-                Qt::KeepAspectRatio,
-                Qt::SmoothTransformation
-            );
+        QPixmap scaled = plantImg.scaled(
+            tileSize,
+            tileSize * 2,
+            Qt::KeepAspectRatio,
+            Qt::SmoothTransformation
+        );
 
         plantItem = scene->addPixmap(scaled);
-
     } else {
-
         QPixmap fallback(tileSize, tileSize * 2);
         fallback.fill(Qt::darkGreen);
-
         plantItem = scene->addPixmap(fallback);
     }
 
     plantItem->setPos(plantX, plantY);
-    plantItem->setZValue(10);
+    plantItem->setZValue(20);
 
-
+    // push graphics AFTER creation 
     enemyGraphics.push_back(plantItem);
-
 
     qDebug() << "Piranha Plant added at:" << plantX << plantY;
 }
     
-    setupUI();
-    renderTiles();
-    
     // Load enemy image once for ALL enemies
     QPixmap enemyImage;
-    QString assetsPath;
+    QString enemyAssetsPath;
     QStringList possiblePaths = {
         QCoreApplication::applicationDirPath() + "/assets",
         QCoreApplication::applicationDirPath() + "/../assets",
-        "/home/yomna/mario/assets",
-        QDir::currentPath() + "/assets",
-        QDir::currentPath() + "/../assets"
+        QDir::currentPath() + "/assets"
     };
     
+
     for (const QString& path : possiblePaths) {
+
         QDir dir(path);
+
         if (dir.exists()) {
-            assetsPath = path;
+            enemyAssetsPath = path;
             break;
         }
     }
-    
-    if (!assetsPath.isEmpty()) {
-        enemyImage.load(assetsPath + "/enemy.png");
-        qDebug() << "Enemy image loaded from:" << assetsPath + "/enemy.png";
+
+    if (!enemyAssetsPath.isEmpty()) {
+
+        enemyImage.load(enemyAssetsPath + "/enemy.png");
+
+        qDebug() << "Enemy image loaded from:"
+                << enemyAssetsPath + "/enemy.png";
+
     } else {
+
         qDebug() << "No assets folder found, using fallback green square";
     }
-    
+
     // Create graphics for each enemy (ALL use the same picture)
     for (Enemy* enemy : enemies) {
             if (!enemy)
         continue;
 
-    // Skip Piranha Plant
-    if (dynamic_cast<PiranhaPlant*>(enemy)) {
-        continue;
-    }
 
     int pixelX =
         static_cast<int>(
@@ -206,9 +213,10 @@ if (isLevel3) {
             qDebug() << "Added enemy at tile:" << enemy->getX() << "," << enemy->getY() 
                      << "pixel:" << pixelX << "," << pixelY;
         }
-    
-    
+        
+        
     qDebug() << "GameController constructor finished";
+
 }
 
 GameController::~GameController() {
@@ -216,6 +224,7 @@ GameController::~GameController() {
     delete currentLevel;
     delete mario;
     delete luigi;
+   
     
     for (QGraphicsPixmapItem* enemy : enemyGraphics) {
         delete enemy;
@@ -273,7 +282,6 @@ void GameController::renderTiles() {
     QStringList possiblePaths = {
         QCoreApplication::applicationDirPath() + "/assets",
         QCoreApplication::applicationDirPath() + "/../assets",
-        "/home/yomna/mario/assets",
         QDir::currentPath() + "/assets",
         QDir::currentPath() + "/../assets"
     };
@@ -339,6 +347,24 @@ void GameController::updateGame() {
     if (!mario || mario->getIsDead() || gameEnded) return;
 
    mario->updatePhysics();
+
+    if (luigi) {
+
+        // Luigi mov 
+        if (luigiMoveLeft && !luigiMoveRight)
+            luigi->setX(luigi->x() - 3);
+        else if (luigiMoveRight && !luigiMoveLeft)
+            luigi->setX(luigi->x() + 3);
+        
+        // JUMP LOGIC
+        if (luigiJump && luigi->getIsOnGround()) {
+            luigi->setVelocityY(-12);   // jump strength
+            luigi->setIsOnGround(false);
+}
+
+        //  Luigi physics
+        luigi->updatePhysics();
+    }
 
     if (isLevel3) {
         qDebug() << "Level 3 active";
@@ -406,11 +432,6 @@ void GameController::updateGame() {
   if (!standingOnSomething) {
         mario->setIsOnGround(false);
     }
-
-    checkCollisions();
-    updateUI();
-    
-   
 
     // Allow Mario to stand on the top of the scaled finish image.
     if (finishItem) {
@@ -507,19 +528,19 @@ bool GameController::checkCollisions() {
        PiranhaPlant* plant = dynamic_cast<PiranhaPlant*>(enemy);
 
         if (plant) {
-            plant->update();   // only moves up/down
+            plant->update();   // ONLY plant moves vertically
         } else {
-            enemy->autoMove(); // normal enemies
+            enemy->autoMove();
         }
         
         if (enemy && i < static_cast<size_t>(enemyGraphics.size()) && enemyGraphics[i]) {
             
             // Convert tile coordinates to pixel coordinates for graphics
-            int pixelX = static_cast<int>(enemy->getPreciseX() * tileSize);
+            int pixelX = enemy->getX() * tileSize;
+            int pixelY = enemy->getY() * tileSize;
             int enemyHeight = static_cast<int>(enemyGraphics[i]->boundingRect().height());
-            int pixelY = enemy->getY() * tileSize - enemyHeight;
-            enemyGraphics[i]->setPos(pixelX, pixelY);
-            
+            enemyGraphics[i]->setPos(pixelX, pixelY);            
+                        
             QRectF marioRect = mario->sceneBoundingRect();
             QRectF enemyRect = enemyGraphics[i]->sceneBoundingRect();
             
@@ -528,13 +549,14 @@ bool GameController::checkCollisions() {
                 qreal marioFeet = mario->y() + 80;
                 qreal enemyTop = enemyRect.top();
                 qreal enemyMid = enemyTop + enemyRect.height() / 2.0;
-
+                        
                 if (marioFeet <= enemyMid && marioFeet >= enemyTop - 10) {
                     // Stomp enemy
                     delete enemyGraphics[i];
-                    enemyGraphics[i] = nullptr;
+                    enemyGraphics.erase(enemyGraphics.begin() + i);
                     delete enemies[i];
-                    enemies[i] = nullptr;
+                    enemies.erase(enemies.begin() + i);
+                    i--;
                     gamePlayer->addScore(100);
                     updateUI();
                     qDebug() << "Enemy stomped! Score:" << gamePlayer->getScore();
@@ -615,3 +637,53 @@ void GameController::updateOverlayPositions() {
     }
 }
 
+void GameController::keyPressEvent(QKeyEvent *event)
+{
+    if (event->key() == Qt::Key_A)
+        luigiMoveLeft = true;
+
+    if (event->key() == Qt::Key_D)
+        luigiMoveRight = true;
+}
+
+void GameController::keyReleaseEvent(QKeyEvent *event)
+{
+    if (event->key() == Qt::Key_A)
+        luigiMoveLeft = false;
+
+    if (event->key() == Qt::Key_D)
+        luigiMoveRight = false;
+}
+ 
+bool GameController::eventFilter(QObject *obj, QEvent *event)
+{
+    if (event->type() == QEvent::KeyPress) {
+
+        QKeyEvent *keyEvent = static_cast<QKeyEvent*>(event);
+
+        if (keyEvent->key() == Qt::Key_A)
+            luigiMoveLeft = true;
+
+        if (keyEvent->key() == Qt::Key_D)
+            luigiMoveRight = true;
+        
+            // JUMP
+        if (keyEvent->key() == Qt::Key_Space)
+            luigiJump = true;
+}
+    if (event->type() == QEvent::KeyRelease) {
+
+    QKeyEvent *keyEvent = static_cast<QKeyEvent*>(event);
+
+    if (keyEvent->key() == Qt::Key_A)
+        luigiMoveLeft = false;
+
+    if (keyEvent->key() == Qt::Key_D)
+        luigiMoveRight = false;
+
+    if (keyEvent->key() == Qt::Key_Space)
+        luigiJump = false;
+}
+
+    return QObject::eventFilter(obj, event);
+}

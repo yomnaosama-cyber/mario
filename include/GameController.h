@@ -15,6 +15,8 @@
 #include "Player.h"
 #include "Enemy.h"
 #include "Level.h"
+#include <QKeyEvent>
+
 
 
 class GameController : public QObject {
@@ -26,22 +28,32 @@ private:
     LuigiCharacter* luigi;   // Level 3 character
     Player* gamePlayer;
     Level* currentLevel;
+    
     QList<QGraphicsPixmapItem*> enemyGraphics;
     std::vector<Enemy*> enemies;
+
     QGraphicsPixmapItem* finishItem;
     QGraphicsTextItem* scoreText;
     QGraphicsTextItem* livesText;
     QGraphicsTextItem* endMessageText;
+    
+
     int tileSize;
     int screenHeight;
     int worldWidth;
     bool gameEnded;
     bool isLevel3;
+    bool luigiMoveLeft; 
+    bool luigiMoveRight; 
+    bool luigiJump;
     
     void setupUI();
     void renderTiles();
     void updateUI();
     void updateOverlayPositions();
+   
+protected:
+    bool eventFilter(QObject *obj, QEvent *event) override;
     
 public:
     GameController(QGraphicsScene* s, int worldWidth, int screenH, int tileSize);
