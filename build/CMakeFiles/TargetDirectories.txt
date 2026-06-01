@@ -1,5 +1,5 @@
-/home/yomna/mario/build/CMakeFiles/mario_scene.dir
-/home/yomna/mario/build/CMakeFiles/edit_cache.dir
-/home/yomna/mario/build/CMakeFiles/rebuild_cache.dir
-/home/yomna/mario/build/CMakeFiles/mario_scene_autogen_timestamp_deps.dir
-/home/yomna/mario/build/CMakeFiles/mario_scene_autogen.dir
+/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles/mario_scene.dir
+/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles/edit_cache.dir
+/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles/rebuild_cache.dir
+/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles/mario_scene_autogen_timestamp_deps.dir
+/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles/mario_scene_autogen.dir

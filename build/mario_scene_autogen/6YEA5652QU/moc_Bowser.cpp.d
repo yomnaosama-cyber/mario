@@ -1,5 +1,5 @@
-/home/yomna/mario/build/mario_scene_autogen/6YEA5652QU/moc_Bowser.cpp: /home/yomna/mario/include/Bowser.h \
-  /home/yomna/mario/build/mario_scene_autogen/moc_predefs.h \
+/home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/6YEA5652QU/moc_Bowser.cpp: /home/yomna/mariofinal/mariofinal/mario/include/Bowser.h \
+  /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/moc_predefs.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

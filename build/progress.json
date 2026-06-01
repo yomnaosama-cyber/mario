@@ -1,0 +1,12 @@
+{
+    "yomna": {
+        "level": 1,
+        "lives": 0,
+        "score": 100
+    },
+    "yoomna": {
+        "level": 5,
+        "lives": 2,
+        "score": 3400
+    }
+}

@@ -1,6 +1,7 @@
-CMakeFiles/mario_scene.dir/src/Enemy.cpp.o: \
- /home/yomna/mariofinal/mariofinal/mario/src/Enemy.cpp \
+CMakeFiles/mario_scene.dir/src/PiranhaPlant.cpp.o: \
+ /home/yomna/mariofinal/mariofinal/mario/src/PiranhaPlant.cpp \
  /usr/include/stdc-predef.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/PiranhaPlant.h \
  /home/yomna/mariofinal/mariofinal/mario/include/Enemy.h \
  /home/yomna/mariofinal/mariofinal/mario/include/Entity.h \
  /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \

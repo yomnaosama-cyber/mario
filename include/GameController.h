@@ -9,6 +9,7 @@
 #include <vector>
 #include <QTimer>
 #include <QString>
+#include <QKeyEvent>
 #include "MarioCharacter.h"
 #include "LuigiCharacter.h"
 #include "PiranhaPlant.h"
@@ -35,8 +36,8 @@ private:
     QList<QGraphicsPixmapItem*> enemyGraphics;
     std::vector<Enemy*> enemies;
     std::vector<QGraphicsPixmapItem*> crumblingGraphics;
-    std::vector<Coin*> coins;           // Ensure Coin.h is included
-    std::vector<Mushroom*> mushrooms;   // Ensure Mushroom.h is included
+    std::vector<Coin*> coins;
+    std::vector<Mushroom*> mushrooms;
     QList<QPair<MovingPlatform*, QGraphicsRectItem*>> movingPlatformGraphics;
     QGraphicsTextItem* keyText;
     QGraphicsRectItem* lockedDoorGraphic;
@@ -54,7 +55,11 @@ private:
     int totalLevels;
     int levelnum;
     int keysCollected;
-
+    
+    // Luigi movement flags (for Level 3)
+    bool luigiMoveLeft;
+    bool luigiMoveRight;
+    bool luigiJump;
     
     void setupUI();
     void renderTiles();
@@ -80,7 +85,7 @@ private:
     bool marioHitCooldown  = false;
 
 public:
-    GameController(QGraphicsScene* s, int worldWidth, int screenH, int tileSize,int levelNum, int startScore, int startLives);
+    GameController(QGraphicsScene* s, int worldWidth, int screenH, int tileSize, int levelNum, int startScore, int startLives);
     ~GameController();
 
     void loadLevel(int levelNumber);
@@ -98,6 +103,13 @@ public:
     void checkMushroomCollisions();
     void skipToNextLevel();
     LuigiCharacter* getLuigi() const { return luigi; }
+    Player* getGamePlayer() const { return gamePlayer; }
+    int getCurrentLevelNumber() const { return currentLevelNumber; }
+
+    // Event handling for Luigi input
+    bool eventFilter(QObject *obj, QEvent *event) override;
+    void keyPressEvent(QKeyEvent *event);
+    void keyReleaseEvent(QKeyEvent *event);
 };
 
-#endif
+#endif // GAME_CONTROLLER_H

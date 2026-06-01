@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yomna/mario
+CMAKE_SOURCE_DIR = /home/yomna/mariofinal/mariofinal/mario
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yomna/mario/build
+CMAKE_BINARY_DIR = /home/yomna/mariofinal/mariofinal/mario/build
 
 # Utility rule file for mario_scene_autogen_timestamp_deps.
 
@@ -66,9 +66,9 @@ include CMakeFiles/mario_scene_autogen_timestamp_deps.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/mario_scene_autogen_timestamp_deps.dir/progress.make
 
-CMakeFiles/mario_scene_autogen_timestamp_deps: /usr/lib/qt6/libexec/moc
 CMakeFiles/mario_scene_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
 CMakeFiles/mario_scene_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
+CMakeFiles/mario_scene_autogen_timestamp_deps: /usr/lib/qt6/libexec/moc
 
 mario_scene_autogen_timestamp_deps: CMakeFiles/mario_scene_autogen_timestamp_deps
 mario_scene_autogen_timestamp_deps: CMakeFiles/mario_scene_autogen_timestamp_deps.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/mario_scene_autogen_timestamp_deps.dir/clean:
 .PHONY : CMakeFiles/mario_scene_autogen_timestamp_deps.dir/clean
 
 CMakeFiles/mario_scene_autogen_timestamp_deps.dir/depend:
-	cd /home/yomna/mario/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yomna/mario /home/yomna/mario /home/yomna/mario/build /home/yomna/mario/build /home/yomna/mario/build/CMakeFiles/mario_scene_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/yomna/mariofinal/mariofinal/mario/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yomna/mariofinal/mariofinal/mario /home/yomna/mariofinal/mariofinal/mario /home/yomna/mariofinal/mariofinal/mario/build /home/yomna/mariofinal/mariofinal/mario/build /home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles/mario_scene_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/mario_scene_autogen_timestamp_deps.dir/depend
 

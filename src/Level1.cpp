@@ -75,7 +75,7 @@ void Level1::createTiles() {
         }
     }
 
-    // Descending staircase to flag
+    // Descending staircase to flag/win area
     for (int step = 0; step < 6; step++) {
         int r = groundLevel - step;
         int c = 60 + step * 3;
@@ -85,10 +85,10 @@ void Level1::createTiles() {
         }
     }
 
-    // Flag
-    flagX = 79;
-    flagY = groundLevel - 5;
-    if (flagY >= 0 && flagX < cols){
+    // Flag - rendered as win image by GameController (like Level 3)
+    flagX = cols - 4;
+    flagY = (groundLevel - 5 >= 0) ? groundLevel - 5 : groundLevel;
+    if (flagY >= 0 && flagX >= 0 && flagX < cols){
         delete grid[flagY][flagX];
         grid[flagY][flagX] = new Tile(flagX, flagY, Tile::Flag);
     }

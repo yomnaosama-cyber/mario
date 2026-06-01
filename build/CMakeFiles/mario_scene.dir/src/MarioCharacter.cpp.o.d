@@ -1,6 +1,7 @@
 CMakeFiles/mario_scene.dir/src/MarioCharacter.cpp.o: \
- /home/yomna/mario/src/MarioCharacter.cpp /usr/include/stdc-predef.h \
- /home/yomna/mario/include/MarioCharacter.h \
+ /home/yomna/mariofinal/mariofinal/mario/src/MarioCharacter.cpp \
+ /usr/include/stdc-predef.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/MarioCharacter.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qobject.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qobjectdefs.h \

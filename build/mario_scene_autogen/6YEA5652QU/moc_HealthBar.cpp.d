@@ -1,5 +1,5 @@
-/home/yomna/mario/build/mario_scene_autogen/6YEA5652QU/moc_HealthBar.cpp: /home/yomna/mario/include/HealthBar.h \
-  /home/yomna/mario/build/mario_scene_autogen/moc_predefs.h \
+/home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/6YEA5652QU/moc_HealthBar.cpp: /home/yomna/mariofinal/mariofinal/mario/include/HealthBar.h \
+  /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/moc_predefs.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

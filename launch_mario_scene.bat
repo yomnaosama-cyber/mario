@@ -2,15 +2,15 @@
 setlocal
 
 REM Launch mario_scene from Windows via WSL.
-REM This works even though mario_scene is a Linux ELF binary.
+REM This rebuilds the project cleanly before running the latest version.
 
-wsl bash -lc "cd /home/yomna/mario/build && ./mario_scene"
+wsl bash -lc "cd /home/yomna/mariofinal/mario/build && cmake .. && cmake --build . --clean-first && ./mario_scene"
 
 if errorlevel 1 (
   echo.
-  echo Failed to launch mario_scene.
-  echo Make sure it is built first:
-  echo   cd /home/yomna/mario/build ^&^& cmake .. ^&^& cmake --build .
+  echo Failed to build or launch mario_scene.
+  echo Make sure WSL and the project are set up correctly.
+  echo   cd /home/yomna/mariofinal/mario/build ^&^& cmake .. ^&^& cmake --build . --clean-first
   echo.
   pause
 )

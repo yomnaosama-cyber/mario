@@ -1,2 +1,0 @@
-set(__QT_DEPLOY_TARGET_mario_scene_FILE /Users/hanasoliman/SuperMario/mario/build/Qt_6_10_2_for_macOS-Debug/mario_scene)
-set(__QT_DEPLOY_TARGET_mario_scene_TYPE EXECUTABLE)

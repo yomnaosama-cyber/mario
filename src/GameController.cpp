@@ -8,6 +8,7 @@
 #include "Level4.h"
 #include "Level5.h"
 #include "Tile.h"
+#include "PiranhaPlant.h"
 #include <QBrush>
 #include <QColor>
 #include <QDebug>
@@ -44,7 +45,18 @@ GameController::GameController(QGraphicsScene* s, int worldWidth, int screenH, i
     bossFightActive(false),
     canDamageBowser(false),
     winZoneTimer(nullptr),
-    winZoneItem(nullptr) {
+    winZoneItem(nullptr),
+    bowserHitCooldown(false),
+    marioHitCooldown(false),
+    levelnum(levelNum),
+    keysCollected(0),
+    keyText(nullptr),
+    lockedDoorGraphic(nullptr) {
+    
+    // Initialize Luigi movement flags
+    luigiMoveLeft = false;
+    luigiMoveRight = false;
+    luigiJump = false;
 
     qDebug() << "GameController constructor started";
     qDebug() << "Screen height:" << screenHeight << "Tile size:" << tileSize;
@@ -52,6 +64,9 @@ GameController::GameController(QGraphicsScene* s, int worldWidth, int screenH, i
 
     mario = new MarioCharacter();
     scene->addItem(mario);
+    scene->installEventFilter(this);
+    scene->setFocus();
+    scene->setFocusItem(nullptr);
 
     gamePlayer = new Player(0, 0);
     if (startScore > 0) {
@@ -121,7 +136,6 @@ void GameController::setupUI() {
     levelText->setPos(10, 70);
     levelText->setZValue(100);
     levelText->setFont(font);
-
 
     updateUI();
 }
@@ -240,21 +254,14 @@ void GameController::renderTiles() {
                 }
 
                 if (dynamic_cast<LockedDoor*>(tile)) {
-                    // --- A. Scale the Door Picture: One block wide, TWO blocks tall ---
                     QPixmap tallDoor = px.scaled(tileSize, tileSize * 2, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
                     tile->setPixmap(tallDoor);
-
                     tile->setPos(j * tileSize, (i - 1) * tileSize);
-
                 } else {
-                    // --- A. Scale standard items (keys, crumbling bricks): 1x1 size ---
                     QPixmap standardItem = px.scaled(tileSize, tileSize, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
                     tile->setPixmap(standardItem);
-
-                    // --- B. Standard Position: Use original formula ---
                     tile->setPos(j * tileSize, i * tileSize);
                 }
-
 
                 tile->setPixmap(px);
                 tile->setPos(j * tileSize, i * tileSize);
@@ -403,15 +410,12 @@ void GameController::cleanupCurrentLevel() {
     bossFightActive = false;
 }
 
-
 void GameController::loadLevel(int levelNumber) {
     qDebug() << "Loading level" << levelNumber;
-
 
     if (currentLevel) {
         cleanupCurrentLevel();
     }
-
 
     if (mario) {
         mario->setIsDead(false);
@@ -447,10 +451,8 @@ void GameController::loadLevel(int levelNumber) {
 
     if (levelNumber == 5) {
         int bowserX = 60;
-        // Use ceiling division — same formula Level5::createTiles uses for groundLevel
         int rows = (screenHeight + tileSize - 1) / tileSize;
         int groundLevel = rows - 2;
-        // health=5 so exactly 5 jumps defeat Bowser
         bowser = new Bowser(bowserX, groundLevel, 50, 70, tileSize, 0.06f);
         scene->addItem(bowser);
 
@@ -470,29 +472,25 @@ void GameController::loadLevel(int levelNumber) {
         QString assetsPath = findAssetsPath();
         if (!assetsPath.isEmpty()) {
             QPixmap winImage;
-            // Try win2.jpg first, then win2.png as fallback
             winImage.load(assetsPath + "/win2.jpg");
             if (winImage.isNull()) winImage.load(assetsPath + "/win2.png");
             if (!winImage.isNull()) {
-                // Castle: large and visible — 6 tiles wide, 8 tiles tall
-                int castleW = 6 * tileSize;   // 300px at tileSize=50
-                int castleH = 8 * tileSize;   // 400px at tileSize=50
-                // groundLevel * tileSize = top of ground tile row; castle bottom sits on it
+                int castleW = 6 * tileSize;
+                int castleH = 8 * tileSize;
                 int castleX = 75 * tileSize;
                 int castleY = groundLevel * tileSize - castleH;
                 winZoneItem = scene->addPixmap(winImage.scaled(castleW, castleH, Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
                 winZoneItem->setPos(castleX, castleY);
                 winZoneItem->setZValue(6);
-                winZoneItem->hide();  // shown only after Bowser is defeated
+                winZoneItem->hide();
             }
         }
 
-        // Health bars: positioned at fixed scene coords; repositioned each frame in updateOverlayPositions
-        marioHealthBar = new HealthBar("Mario", 0, 10, 100);
+        marioHealthBar = new HealthBar("Mario", 0, 10, 2);
         bowserHealthBar = new HealthBar("Bowser", 0, 50, 5);
         scene->addItem(marioHealthBar);
         scene->addItem(bowserHealthBar);
-        marioHealthBar->updateHealth(100, 100);
+        marioHealthBar->updateHealth(2, 2);
         bowserHealthBar->updateHealth(5, 5);
         marioHealthBar->hide();
         bowserHealthBar->hide();
@@ -513,7 +511,7 @@ void GameController::loadLevel(int levelNumber) {
     mario->respawn();
 
     gamePlayer->setPosition(spawn.first, spawn.second);
-    gamePlayer->setHealth(100);
+    gamePlayer->setHealth(levelNumber == 5 ? 2 : 100);
 
     if (levelNumber == 3) {
         luigi = new LuigiCharacter();
@@ -581,7 +579,7 @@ void GameController::loadLevel(int levelNumber) {
         }
     }
 
-    if (levelNumber == 2) {
+    if (levelNumber == 2 || levelNumber == 5) {
         spawnCoins();
         spawnMushrooms();
     }
@@ -632,7 +630,7 @@ void GameController::updateBossFight() {
     }
 
     if (marioHealthBar) {
-        marioHealthBar->updateHealth(gamePlayer->getHealth(), 100);
+        marioHealthBar->updateHealth(gamePlayer->getHealth(), 2);
     }
     updateOverlayPositions();
 }
@@ -650,27 +648,24 @@ void GameController::checkBowserCollision() {
 
     qreal marioFeet = mario->y() + 80;
     qreal bowserTop = bowserRect.top();
-    // Mario jumped on Bowser if his feet are in the top 30% of Bowser's body and moving downward
     bool hitFromAbove = (marioFeet <= bowserTop + bowserRect.height() * 0.35)
                         && (mario->getVelocityY() > 0);
 
     if (hitFromAbove) {
         if (!bowserHitCooldown) {
-            // Jump always damages Bowser regardless of which way he faces
             bowserHitCooldown = true;
-            bowser->takeDamage(1);   // 5 hits total to defeat
+            bowser->takeDamage(1);
             mario->setY(mario->y() - 25);
             mario->bounceUp();
             qDebug() << "Mario jumped on Bowser!";
             QTimer::singleShot(400, this, [this]() { bowserHitCooldown = false; });
         }
     } else {
-        // Side collision: Mario takes damage, but with a cooldown to avoid instant-death
         if (!marioHitCooldown) {
             marioHitCooldown = true;
-            gamePlayer->takeDamage(20);
+            gamePlayer->takeDamage(1);
             if (marioHealthBar) {
-                marioHealthBar->updateHealth(gamePlayer->getHealth(), 100);
+                marioHealthBar->updateHealth(gamePlayer->getHealth(), 2);
             }
             qDebug() << "Mario hit by Bowser! Health:" << gamePlayer->getHealth();
 
@@ -705,10 +700,10 @@ void GameController::checkBowserCollision() {
                         mario->setIsDead(false);
                         mario->setPos(spawn.first, spawn.second - marioHeight);
                         gamePlayer->setPosition(spawn.first, spawn.second);
-                        gamePlayer->setHealth(100);
+                        gamePlayer->setHealth(2);
                         marioHitCooldown = false;
                         if (marioHealthBar) {
-                            marioHealthBar->updateHealth(100, 100);
+                            marioHealthBar->updateHealth(2, 2);
                         }
                         updateUI();
                     });
@@ -875,13 +870,26 @@ void GameController::updateGame() {
     if (!standingOnSomething) {
         mario->setIsOnGround(false);
     }
-    if (!standingOnSomething) {
-        mario->setIsOnGround(false);
-    }
+
     // Luigi physics (Level 3 only)
     if (luigi && currentLevelNumber == 3 && currentLevel) {
-        luigi->updatePhysics();
+        // Apply player input for Luigi using LuigiCharacter's methods
+        if (luigiMoveLeft) {
+            luigi->startMovingLeft();
+        } else if (luigiMoveRight) {
+            luigi->startMovingRight();
+        } else {
+            luigi->stopMovingLeft();
+            luigi->stopMovingRight();
+        }
 
+        // Handle jump using Luigi's jump() method
+        if (luigiJump && luigi->getIsOnGround()) {
+            luigi->jump();  // Use the existing jump method instead of setVelocityY
+            luigiJump = false; // consume so holding W doesn't re-trigger every frame
+        }
+
+        luigi->updatePhysics();
 
         int luigiHeight = 80, luigiWidth = 80;
         int luigiBottom = static_cast<int>(luigi->y()) + luigiHeight;
@@ -923,7 +931,8 @@ void GameController::updateGame() {
             }
         }
         if (!luigiOnGround) luigi->setIsOnGround(false);
-        // Ceiling check
+
+        // Ceiling check for Luigi
         int luigiTop = static_cast<int>(luigi->y());
         int ltopRow  = luigiTop / tileSize;
         for (int checkX : {luigiLeft + 10, luigiLeft + luigiWidth/2, luigiRight - 10}) {
@@ -937,16 +946,16 @@ void GameController::updateGame() {
                 }
             }
         }
-        // Boundary clamp + fall-off respawn
+
+        // Boundary clamp
         if (luigi->x() < 0) luigi->setX(0);
         if (luigi->x() > worldWidth - luigiWidth) luigi->setX(worldWidth - luigiWidth);
         if (luigi->y() > screenHeight) {
-            //auto spawn = currentLevel->getSpawnPoint();
-            //luigi->setPos(spawn.first + tileSize * 2, spawn.second - luigiHeight);
+            auto spawn = currentLevel->getSpawn();
+            luigi->setPos(spawn.first + tileSize * 2, spawn.second - luigiHeight);
             luigi->setIsOnGround(true);
         }
     }
-
 
     if (finishItem && currentLevelNumber != 5) {
         QRectF finishRect = finishItem->sceneBoundingRect();
@@ -984,7 +993,6 @@ void GameController::updateGame() {
         }
     }
 
-
     QList<QGraphicsItem*> collidingItems = mario->collidingItems();
 
     for(QGraphicsItem* item: collidingItems){
@@ -1003,6 +1011,7 @@ void GameController::updateGame() {
             }
         }
     }
+
     if (currentLevelNumber == 5 && bowser && !bowser->getIsDead() && !bossFightActive) {
         if (mario->x() > 60 * tileSize) {
             startBossFight();
@@ -1015,7 +1024,7 @@ void GameController::updateGame() {
 
     checkBowserCollision();
     checkCollisions();
-    if (currentLevelNumber == 4) {
+    if (currentLevelNumber == 4 || currentLevelNumber == 5) {
         checkCollisions4();
     }
     checkCoinCollisions();
@@ -1199,13 +1208,16 @@ bool GameController::checkCollisions() {
                         enemies[i] = nullptr;
                         gamePlayer->addScore(100);
                         updateUI();
-                        qDebug() << "Enemy stomped! Score:" << gamePlayer->getScore();
+                        qDebug() << "Enemy stomped by Luigi! Score:" << gamePlayer->getScore();
 
                         luigi->setY(luigi->y() - 20);
                     } else {
-
-                        handleEnemyCollision(enemy);
-                        return true;
+                        // Luigi respawn on contact with enemy side
+                        auto spawn = currentLevel->getSpawn();
+                        int luigiHeight = static_cast<int>(luigi->boundingRect().height());
+                        luigi->setPos(spawn.first + tileSize * 2, spawn.second - luigiHeight);
+                        luigi->setIsOnGround(true);
+                        qDebug() << "Luigi hit enemy! Respawning.";
                     }
                 }
             }
@@ -1217,7 +1229,6 @@ bool GameController::checkCollisions() {
 
 void GameController::handleEnemyCollision(Enemy* /* enemy */) {
     if (!mario->getIsDead() && !gameEnded && !levelCompleted) {
-        // Cancel any pending win-zone timer so dying never triggers "YOU BEAT THE GAME!"
         if (winZoneTimer) {
             winZoneTimer->stop();
             delete winZoneTimer;
@@ -1225,7 +1236,7 @@ void GameController::handleEnemyCollision(Enemy* /* enemy */) {
         }
         mario->die();
         gamePlayer->loseLife();
-        gamePlayer->setHealth(100);
+        gamePlayer->setHealth(currentLevelNumber == 5 ? 2 : 100);
         updateUI();
         qDebug() << "Hit! Lives:" << gamePlayer->getLives();
 
@@ -1258,7 +1269,10 @@ void GameController::handleEnemyCollision(Enemy* /* enemy */) {
                 mario->setVisible(true);
                 mario->setPos(spawn.first, spawn.second - marioHeight);
                 gamePlayer->setPosition(spawn.first, spawn.second);
-                gamePlayer->setHealth(100);
+                gamePlayer->setHealth(currentLevelNumber == 5 ? 2 : 100);
+                if (marioHealthBar && currentLevelNumber == 5) {
+                    marioHealthBar->updateHealth(2, 2);
+                }
                 updateUI();
                 updateOverlayPositions();
             });
@@ -1295,7 +1309,6 @@ void GameController::updateOverlayPositions() {
         levelText->setPos(topLeftX + 16, topLeftY + 68);
     }
 
-    // Stick health bars to top-right corner of viewport
     if (marioHealthBar && marioHealthBar->isVisible()) {
         qreal barX = topLeftX + viewportWidth - 320;
         marioHealthBar->setPos(barX - marioHealthBar->rect().x(), topLeftY + 10 - marioHealthBar->rect().y());
@@ -1313,28 +1326,53 @@ void GameController::updateOverlayPositions() {
             );
     }
 }
+
 void GameController::spawnCoins() {
-    if (currentLevelNumber != 2) {
+    if (currentLevelNumber != 2 && currentLevelNumber != 5) {
         return;
     }
 
     int rows = (screenHeight + tileSize - 1) / tileSize;
+    int cols = worldWidth / tileSize;
     int groundLevel = rows - 2;
 
-    const QList<QPair<int, int>> coinPositions = {
-        {14, groundLevel - 4}, {15, groundLevel - 4},
-        {26, groundLevel - 5}, {27, groundLevel - 5},
-        {42, groundLevel - 3}, {43, groundLevel - 3}, {44, groundLevel - 3},
-        {56, groundLevel - 6}, {57, groundLevel - 6},
-        {70, groundLevel - 2}, {71, groundLevel - 2},
-        {5, groundLevel - 2}, {6, groundLevel - 2},
-    };
+    QList<QPair<int, int>> coinPositions;
+
+    if (currentLevelNumber == 2) {
+        coinPositions = {
+            {14, groundLevel - 4}, {15, groundLevel - 4},
+            {26, groundLevel - 5}, {27, groundLevel - 5},
+            {42, groundLevel - 3}, {43, groundLevel - 3}, {44, groundLevel - 3},
+            {56, groundLevel - 6}, {57, groundLevel - 6},
+            {70, groundLevel - 2}, {71, groundLevel - 2},
+            {5, groundLevel - 2}, {6, groundLevel - 2},
+        };
+    } else if (currentLevelNumber == 5) {
+        // Coins placed throughout the challenging Level 5 (ON TOP of platforms)
+        coinPositions = {
+            // Early section coins - above platRow1
+            {8, groundLevel - 4}, {9, groundLevel - 4},
+            {10, groundLevel - 4}, {11, groundLevel - 4},
+            // Mid section coins - above platRow2
+            {19, groundLevel - 3}, {20, groundLevel - 3}, {21, groundLevel - 3},
+            // Crumbling section coins
+            {36, groundLevel - 1}, {38, groundLevel - 1}, {40, groundLevel - 1},
+            // Late section coins - above crumbling platform
+            {48, groundLevel - 1}, {49, groundLevel - 1},
+            {51, groundLevel - 1}, {52, groundLevel - 1},
+            {55, groundLevel - 1}, {58, groundLevel - 1},
+            {70, groundLevel - 1}, {80, groundLevel - 1},
+        };
+    }
 
     for (auto& pos : coinPositions) {
         int cx = pos.first;
         int cy = pos.second;
         if (cy < 0) {
             cy = 0;
+        }
+        if (cx < 0 || cx >= cols) {
+            continue;
         }
         Coin* coin = new Coin(cx, cy);
 
@@ -1360,23 +1398,37 @@ void GameController::spawnCoins() {
 }
 
 void GameController::spawnMushrooms() {
-    if (currentLevelNumber != 2) {
+    if (currentLevelNumber != 2 && currentLevelNumber != 5) {
         return;
     }
 
     int rows = (screenHeight + tileSize - 1) / tileSize;
+    int cols = worldWidth / tileSize;
     int groundLevel = rows - 2;
 
-    const QList<QPair<int, int>> shroomPositions = {
-        {22, groundLevel - 3},
-        {48, groundLevel - 3},
-    };
+    QList<QPair<int, int>> shroomPositions;
+
+    if (currentLevelNumber == 2) {
+        shroomPositions = {
+            {22, groundLevel - 3},
+            {48, groundLevel - 3},
+        };
+    } else if (currentLevelNumber == 5) {
+        // Mushrooms placed strategically in Level 5
+        shroomPositions = {
+            {15, groundLevel - 3},
+            {32, groundLevel - 4},
+        };
+    }
 
     for (auto& pos : shroomPositions) {
         int mx = pos.first;
         int my = pos.second;
         if (my < 0) {
             my = 0;
+        }
+        if (mx < 0 || mx >= cols) {
+            continue;
         }
         Mushroom* shroom = new Mushroom(mx, my);
 
@@ -1407,9 +1459,9 @@ void GameController::spawnMushrooms() {
         mushrooms.push_back(shroom);
     }
 }
+
 void GameController::checkCoinCollisions() {
     QRectF marioRect = mario->sceneBoundingRect();
-
 
     for (Coin* coin : coins) {
         if (coin->collected || !coin->graphic) continue;
@@ -1417,7 +1469,6 @@ void GameController::checkCoinCollisions() {
         if (marioRect.intersects(coinRect)) {
             coin->collected = true;
             coin->graphic->setVisible(false);
-            // also hide the "C" label child
             for (QGraphicsItem* child : coin->graphic->childItems())
                 child->setVisible(false);
             gamePlayer->addScore(50);
@@ -1427,7 +1478,6 @@ void GameController::checkCoinCollisions() {
     }
 }
 
-// ─── Mushroom collision ───────────────────────────────────────────────────────
 void GameController::checkMushroomCollisions() {
     QRectF marioRect = mario->sceneBoundingRect();
     for (Mushroom* shroom : mushrooms) {
@@ -1436,30 +1486,49 @@ void GameController::checkMushroomCollisions() {
         if (marioRect.intersects(shroomRect)) {
             shroom->collected = true;
             shroom->graphic->setVisible(false);
-            mario->growBig();
+            gamePlayer->setLives(gamePlayer->getLives() + 1);
             gamePlayer->addScore(200);
             updateUI();
-            qDebug() << "Mushroom collected! Mario is big.";
+            qDebug() << "Mushroom collected! +1 Life. Lives:" << gamePlayer->getLives();
         }
     }
 }
 
-/*void GameController::skipToNextLevel(){
-    if(levelnum >= 5){
-        qDebug()<<"Already at final level";
-        return;
+bool GameController::eventFilter(QObject *obj, QEvent *event)
+{
+    if (event->type() == QEvent::KeyPress) {
+        QKeyEvent *keyEvent = static_cast<QKeyEvent*>(event);
+        if (keyEvent->key() == Qt::Key_A)
+            luigiMoveLeft = true;
+        if (keyEvent->key() == Qt::Key_D)
+            luigiMoveRight = true;
+        if (keyEvent->key() == Qt::Key_W)
+            luigiJump = true;
     }
+    if (event->type() == QEvent::KeyRelease) {
+        QKeyEvent *keyEvent = static_cast<QKeyEvent*>(event);
+        if (keyEvent->key() == Qt::Key_A)
+            luigiMoveLeft = false;
+        if (keyEvent->key() == Qt::Key_D)
+            luigiMoveRight = false;
+        if (keyEvent->key() == Qt::Key_W)
+            luigiJump = false;
+    }
+    return QObject::eventFilter(obj, event);
+}
 
-    int nextLevel = levelnum+1;
+void GameController::keyPressEvent(QKeyEvent *event)
+{
+    if (event->key() == Qt::Key_A)
+        luigiMoveLeft = true;
+    if (event->key() == Qt::Key_D)
+        luigiMoveRight = true;
+}
 
-    scene->clear();
-    movingPlatformGraphics.clear();
-    crumblingGraphics.clear();
-    coins.clear();
-    mushrooms.clear();
-
-    this->levelnum = nextLevel;
-    loadLevel(levelnum);
-
-
-}*/
+void GameController::keyReleaseEvent(QKeyEvent *event)
+{
+    if (event->key() == Qt::Key_A)
+        luigiMoveLeft = false;
+    if (event->key() == Qt::Key_D)
+        luigiMoveRight = false;
+}
