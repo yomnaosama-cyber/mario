@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yomna/mario
+CMAKE_SOURCE_DIR = /home/yomna/mariofinal/mariofinal/mario
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yomna/mario/build
+CMAKE_BINARY_DIR = /home/yomna/mariofinal/mariofinal/mario/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/mario_scene.dir/depend.make
@@ -71,238 +71,295 @@ include CMakeFiles/mario_scene.dir/flags.make
 
 mario_scene_autogen/timestamp: /usr/lib/qt6/libexec/moc
 mario_scene_autogen/timestamp: CMakeFiles/mario_scene.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/yomna/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target mario_scene"
-	/usr/bin/cmake -E cmake_autogen /home/yomna/mario/build/CMakeFiles/mario_scene_autogen.dir/AutogenInfo.json ""
-	/usr/bin/cmake -E touch /home/yomna/mario/build/mario_scene_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target mario_scene"
+	/usr/bin/cmake -E cmake_autogen /home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles/mario_scene_autogen.dir/AutogenInfo.json ""
+	/usr/bin/cmake -E touch /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/timestamp
 
 CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.o: CMakeFiles/mario_scene.dir/flags.make
 CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.o: mario_scene_autogen/mocs_compilation.cpp
 CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.o: CMakeFiles/mario_scene.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.o -MF CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.o -c /home/yomna/mario/build/mario_scene_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.o -MF CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.o -c /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/mocs_compilation.cpp
 
 CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mario/build/mario_scene_autogen/mocs_compilation.cpp > CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/mocs_compilation.cpp > CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mario/build/mario_scene_autogen/mocs_compilation.cpp -o CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/mocs_compilation.cpp -o CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/mario_scene.dir/src/Bowser.cpp.o: CMakeFiles/mario_scene.dir/flags.make
-CMakeFiles/mario_scene.dir/src/Bowser.cpp.o: /home/yomna/mario/src/Bowser.cpp
+CMakeFiles/mario_scene.dir/src/Bowser.cpp.o: /home/yomna/mariofinal/mariofinal/mario/src/Bowser.cpp
 CMakeFiles/mario_scene.dir/src/Bowser.cpp.o: CMakeFiles/mario_scene.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/mario_scene.dir/src/Bowser.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/Bowser.cpp.o -MF CMakeFiles/mario_scene.dir/src/Bowser.cpp.o.d -o CMakeFiles/mario_scene.dir/src/Bowser.cpp.o -c /home/yomna/mario/src/Bowser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/mario_scene.dir/src/Bowser.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/Bowser.cpp.o -MF CMakeFiles/mario_scene.dir/src/Bowser.cpp.o.d -o CMakeFiles/mario_scene.dir/src/Bowser.cpp.o -c /home/yomna/mariofinal/mariofinal/mario/src/Bowser.cpp
 
 CMakeFiles/mario_scene.dir/src/Bowser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mario_scene.dir/src/Bowser.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mario/src/Bowser.cpp > CMakeFiles/mario_scene.dir/src/Bowser.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mariofinal/mariofinal/mario/src/Bowser.cpp > CMakeFiles/mario_scene.dir/src/Bowser.cpp.i
 
 CMakeFiles/mario_scene.dir/src/Bowser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mario_scene.dir/src/Bowser.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mario/src/Bowser.cpp -o CMakeFiles/mario_scene.dir/src/Bowser.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mariofinal/mariofinal/mario/src/Bowser.cpp -o CMakeFiles/mario_scene.dir/src/Bowser.cpp.s
+
+CMakeFiles/mario_scene.dir/src/CrumblingTile.cpp.o: CMakeFiles/mario_scene.dir/flags.make
+CMakeFiles/mario_scene.dir/src/CrumblingTile.cpp.o: /home/yomna/mariofinal/mariofinal/mario/src/CrumblingTile.cpp
+CMakeFiles/mario_scene.dir/src/CrumblingTile.cpp.o: CMakeFiles/mario_scene.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/mario_scene.dir/src/CrumblingTile.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/CrumblingTile.cpp.o -MF CMakeFiles/mario_scene.dir/src/CrumblingTile.cpp.o.d -o CMakeFiles/mario_scene.dir/src/CrumblingTile.cpp.o -c /home/yomna/mariofinal/mariofinal/mario/src/CrumblingTile.cpp
+
+CMakeFiles/mario_scene.dir/src/CrumblingTile.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mario_scene.dir/src/CrumblingTile.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mariofinal/mariofinal/mario/src/CrumblingTile.cpp > CMakeFiles/mario_scene.dir/src/CrumblingTile.cpp.i
+
+CMakeFiles/mario_scene.dir/src/CrumblingTile.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mario_scene.dir/src/CrumblingTile.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mariofinal/mariofinal/mario/src/CrumblingTile.cpp -o CMakeFiles/mario_scene.dir/src/CrumblingTile.cpp.s
 
 CMakeFiles/mario_scene.dir/src/Enemy.cpp.o: CMakeFiles/mario_scene.dir/flags.make
-CMakeFiles/mario_scene.dir/src/Enemy.cpp.o: /home/yomna/mario/src/Enemy.cpp
+CMakeFiles/mario_scene.dir/src/Enemy.cpp.o: /home/yomna/mariofinal/mariofinal/mario/src/Enemy.cpp
 CMakeFiles/mario_scene.dir/src/Enemy.cpp.o: CMakeFiles/mario_scene.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/mario_scene.dir/src/Enemy.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/Enemy.cpp.o -MF CMakeFiles/mario_scene.dir/src/Enemy.cpp.o.d -o CMakeFiles/mario_scene.dir/src/Enemy.cpp.o -c /home/yomna/mario/src/Enemy.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/mario_scene.dir/src/Enemy.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/Enemy.cpp.o -MF CMakeFiles/mario_scene.dir/src/Enemy.cpp.o.d -o CMakeFiles/mario_scene.dir/src/Enemy.cpp.o -c /home/yomna/mariofinal/mariofinal/mario/src/Enemy.cpp
 
 CMakeFiles/mario_scene.dir/src/Enemy.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mario_scene.dir/src/Enemy.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mario/src/Enemy.cpp > CMakeFiles/mario_scene.dir/src/Enemy.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mariofinal/mariofinal/mario/src/Enemy.cpp > CMakeFiles/mario_scene.dir/src/Enemy.cpp.i
 
 CMakeFiles/mario_scene.dir/src/Enemy.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mario_scene.dir/src/Enemy.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mario/src/Enemy.cpp -o CMakeFiles/mario_scene.dir/src/Enemy.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mariofinal/mariofinal/mario/src/Enemy.cpp -o CMakeFiles/mario_scene.dir/src/Enemy.cpp.s
 
 CMakeFiles/mario_scene.dir/src/Entity.cpp.o: CMakeFiles/mario_scene.dir/flags.make
-CMakeFiles/mario_scene.dir/src/Entity.cpp.o: /home/yomna/mario/src/Entity.cpp
+CMakeFiles/mario_scene.dir/src/Entity.cpp.o: /home/yomna/mariofinal/mariofinal/mario/src/Entity.cpp
 CMakeFiles/mario_scene.dir/src/Entity.cpp.o: CMakeFiles/mario_scene.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/mario_scene.dir/src/Entity.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/Entity.cpp.o -MF CMakeFiles/mario_scene.dir/src/Entity.cpp.o.d -o CMakeFiles/mario_scene.dir/src/Entity.cpp.o -c /home/yomna/mario/src/Entity.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/mario_scene.dir/src/Entity.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/Entity.cpp.o -MF CMakeFiles/mario_scene.dir/src/Entity.cpp.o.d -o CMakeFiles/mario_scene.dir/src/Entity.cpp.o -c /home/yomna/mariofinal/mariofinal/mario/src/Entity.cpp
 
 CMakeFiles/mario_scene.dir/src/Entity.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mario_scene.dir/src/Entity.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mario/src/Entity.cpp > CMakeFiles/mario_scene.dir/src/Entity.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mariofinal/mariofinal/mario/src/Entity.cpp > CMakeFiles/mario_scene.dir/src/Entity.cpp.i
 
 CMakeFiles/mario_scene.dir/src/Entity.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mario_scene.dir/src/Entity.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mario/src/Entity.cpp -o CMakeFiles/mario_scene.dir/src/Entity.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mariofinal/mariofinal/mario/src/Entity.cpp -o CMakeFiles/mario_scene.dir/src/Entity.cpp.s
 
 CMakeFiles/mario_scene.dir/src/GameController.cpp.o: CMakeFiles/mario_scene.dir/flags.make
-CMakeFiles/mario_scene.dir/src/GameController.cpp.o: /home/yomna/mario/src/GameController.cpp
+CMakeFiles/mario_scene.dir/src/GameController.cpp.o: /home/yomna/mariofinal/mariofinal/mario/src/GameController.cpp
 CMakeFiles/mario_scene.dir/src/GameController.cpp.o: CMakeFiles/mario_scene.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/mario_scene.dir/src/GameController.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/GameController.cpp.o -MF CMakeFiles/mario_scene.dir/src/GameController.cpp.o.d -o CMakeFiles/mario_scene.dir/src/GameController.cpp.o -c /home/yomna/mario/src/GameController.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/mario_scene.dir/src/GameController.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/GameController.cpp.o -MF CMakeFiles/mario_scene.dir/src/GameController.cpp.o.d -o CMakeFiles/mario_scene.dir/src/GameController.cpp.o -c /home/yomna/mariofinal/mariofinal/mario/src/GameController.cpp
 
 CMakeFiles/mario_scene.dir/src/GameController.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mario_scene.dir/src/GameController.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mario/src/GameController.cpp > CMakeFiles/mario_scene.dir/src/GameController.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mariofinal/mariofinal/mario/src/GameController.cpp > CMakeFiles/mario_scene.dir/src/GameController.cpp.i
 
 CMakeFiles/mario_scene.dir/src/GameController.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mario_scene.dir/src/GameController.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mario/src/GameController.cpp -o CMakeFiles/mario_scene.dir/src/GameController.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mariofinal/mariofinal/mario/src/GameController.cpp -o CMakeFiles/mario_scene.dir/src/GameController.cpp.s
 
 CMakeFiles/mario_scene.dir/src/HealthBar.cpp.o: CMakeFiles/mario_scene.dir/flags.make
-CMakeFiles/mario_scene.dir/src/HealthBar.cpp.o: /home/yomna/mario/src/HealthBar.cpp
+CMakeFiles/mario_scene.dir/src/HealthBar.cpp.o: /home/yomna/mariofinal/mariofinal/mario/src/HealthBar.cpp
 CMakeFiles/mario_scene.dir/src/HealthBar.cpp.o: CMakeFiles/mario_scene.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/mario_scene.dir/src/HealthBar.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/HealthBar.cpp.o -MF CMakeFiles/mario_scene.dir/src/HealthBar.cpp.o.d -o CMakeFiles/mario_scene.dir/src/HealthBar.cpp.o -c /home/yomna/mario/src/HealthBar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/mario_scene.dir/src/HealthBar.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/HealthBar.cpp.o -MF CMakeFiles/mario_scene.dir/src/HealthBar.cpp.o.d -o CMakeFiles/mario_scene.dir/src/HealthBar.cpp.o -c /home/yomna/mariofinal/mariofinal/mario/src/HealthBar.cpp
 
 CMakeFiles/mario_scene.dir/src/HealthBar.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mario_scene.dir/src/HealthBar.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mario/src/HealthBar.cpp > CMakeFiles/mario_scene.dir/src/HealthBar.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mariofinal/mariofinal/mario/src/HealthBar.cpp > CMakeFiles/mario_scene.dir/src/HealthBar.cpp.i
 
 CMakeFiles/mario_scene.dir/src/HealthBar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mario_scene.dir/src/HealthBar.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mario/src/HealthBar.cpp -o CMakeFiles/mario_scene.dir/src/HealthBar.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mariofinal/mariofinal/mario/src/HealthBar.cpp -o CMakeFiles/mario_scene.dir/src/HealthBar.cpp.s
 
 CMakeFiles/mario_scene.dir/src/Level.cpp.o: CMakeFiles/mario_scene.dir/flags.make
-CMakeFiles/mario_scene.dir/src/Level.cpp.o: /home/yomna/mario/src/Level.cpp
+CMakeFiles/mario_scene.dir/src/Level.cpp.o: /home/yomna/mariofinal/mariofinal/mario/src/Level.cpp
 CMakeFiles/mario_scene.dir/src/Level.cpp.o: CMakeFiles/mario_scene.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/mario_scene.dir/src/Level.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/Level.cpp.o -MF CMakeFiles/mario_scene.dir/src/Level.cpp.o.d -o CMakeFiles/mario_scene.dir/src/Level.cpp.o -c /home/yomna/mario/src/Level.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/mario_scene.dir/src/Level.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/Level.cpp.o -MF CMakeFiles/mario_scene.dir/src/Level.cpp.o.d -o CMakeFiles/mario_scene.dir/src/Level.cpp.o -c /home/yomna/mariofinal/mariofinal/mario/src/Level.cpp
 
 CMakeFiles/mario_scene.dir/src/Level.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mario_scene.dir/src/Level.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mario/src/Level.cpp > CMakeFiles/mario_scene.dir/src/Level.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mariofinal/mariofinal/mario/src/Level.cpp > CMakeFiles/mario_scene.dir/src/Level.cpp.i
 
 CMakeFiles/mario_scene.dir/src/Level.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mario_scene.dir/src/Level.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mario/src/Level.cpp -o CMakeFiles/mario_scene.dir/src/Level.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mariofinal/mariofinal/mario/src/Level.cpp -o CMakeFiles/mario_scene.dir/src/Level.cpp.s
 
 CMakeFiles/mario_scene.dir/src/Level1.cpp.o: CMakeFiles/mario_scene.dir/flags.make
-CMakeFiles/mario_scene.dir/src/Level1.cpp.o: /home/yomna/mario/src/Level1.cpp
+CMakeFiles/mario_scene.dir/src/Level1.cpp.o: /home/yomna/mariofinal/mariofinal/mario/src/Level1.cpp
 CMakeFiles/mario_scene.dir/src/Level1.cpp.o: CMakeFiles/mario_scene.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/mario_scene.dir/src/Level1.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/Level1.cpp.o -MF CMakeFiles/mario_scene.dir/src/Level1.cpp.o.d -o CMakeFiles/mario_scene.dir/src/Level1.cpp.o -c /home/yomna/mario/src/Level1.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/mario_scene.dir/src/Level1.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/Level1.cpp.o -MF CMakeFiles/mario_scene.dir/src/Level1.cpp.o.d -o CMakeFiles/mario_scene.dir/src/Level1.cpp.o -c /home/yomna/mariofinal/mariofinal/mario/src/Level1.cpp
 
 CMakeFiles/mario_scene.dir/src/Level1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mario_scene.dir/src/Level1.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mario/src/Level1.cpp > CMakeFiles/mario_scene.dir/src/Level1.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mariofinal/mariofinal/mario/src/Level1.cpp > CMakeFiles/mario_scene.dir/src/Level1.cpp.i
 
 CMakeFiles/mario_scene.dir/src/Level1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mario_scene.dir/src/Level1.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mario/src/Level1.cpp -o CMakeFiles/mario_scene.dir/src/Level1.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mariofinal/mariofinal/mario/src/Level1.cpp -o CMakeFiles/mario_scene.dir/src/Level1.cpp.s
 
 CMakeFiles/mario_scene.dir/src/Level2.cpp.o: CMakeFiles/mario_scene.dir/flags.make
-CMakeFiles/mario_scene.dir/src/Level2.cpp.o: /home/yomna/mario/src/Level2.cpp
+CMakeFiles/mario_scene.dir/src/Level2.cpp.o: /home/yomna/mariofinal/mariofinal/mario/src/Level2.cpp
 CMakeFiles/mario_scene.dir/src/Level2.cpp.o: CMakeFiles/mario_scene.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/mario_scene.dir/src/Level2.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/Level2.cpp.o -MF CMakeFiles/mario_scene.dir/src/Level2.cpp.o.d -o CMakeFiles/mario_scene.dir/src/Level2.cpp.o -c /home/yomna/mario/src/Level2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/mario_scene.dir/src/Level2.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/Level2.cpp.o -MF CMakeFiles/mario_scene.dir/src/Level2.cpp.o.d -o CMakeFiles/mario_scene.dir/src/Level2.cpp.o -c /home/yomna/mariofinal/mariofinal/mario/src/Level2.cpp
 
 CMakeFiles/mario_scene.dir/src/Level2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mario_scene.dir/src/Level2.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mario/src/Level2.cpp > CMakeFiles/mario_scene.dir/src/Level2.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mariofinal/mariofinal/mario/src/Level2.cpp > CMakeFiles/mario_scene.dir/src/Level2.cpp.i
 
 CMakeFiles/mario_scene.dir/src/Level2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mario_scene.dir/src/Level2.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mario/src/Level2.cpp -o CMakeFiles/mario_scene.dir/src/Level2.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mariofinal/mariofinal/mario/src/Level2.cpp -o CMakeFiles/mario_scene.dir/src/Level2.cpp.s
 
 CMakeFiles/mario_scene.dir/src/Level3.cpp.o: CMakeFiles/mario_scene.dir/flags.make
-CMakeFiles/mario_scene.dir/src/Level3.cpp.o: /home/yomna/mario/src/Level3.cpp
+CMakeFiles/mario_scene.dir/src/Level3.cpp.o: /home/yomna/mariofinal/mariofinal/mario/src/Level3.cpp
 CMakeFiles/mario_scene.dir/src/Level3.cpp.o: CMakeFiles/mario_scene.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/mario_scene.dir/src/Level3.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/Level3.cpp.o -MF CMakeFiles/mario_scene.dir/src/Level3.cpp.o.d -o CMakeFiles/mario_scene.dir/src/Level3.cpp.o -c /home/yomna/mario/src/Level3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/mario_scene.dir/src/Level3.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/Level3.cpp.o -MF CMakeFiles/mario_scene.dir/src/Level3.cpp.o.d -o CMakeFiles/mario_scene.dir/src/Level3.cpp.o -c /home/yomna/mariofinal/mariofinal/mario/src/Level3.cpp
 
 CMakeFiles/mario_scene.dir/src/Level3.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mario_scene.dir/src/Level3.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mario/src/Level3.cpp > CMakeFiles/mario_scene.dir/src/Level3.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mariofinal/mariofinal/mario/src/Level3.cpp > CMakeFiles/mario_scene.dir/src/Level3.cpp.i
 
 CMakeFiles/mario_scene.dir/src/Level3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mario_scene.dir/src/Level3.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mario/src/Level3.cpp -o CMakeFiles/mario_scene.dir/src/Level3.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mariofinal/mariofinal/mario/src/Level3.cpp -o CMakeFiles/mario_scene.dir/src/Level3.cpp.s
 
 CMakeFiles/mario_scene.dir/src/Level4.cpp.o: CMakeFiles/mario_scene.dir/flags.make
-CMakeFiles/mario_scene.dir/src/Level4.cpp.o: /home/yomna/mario/src/Level4.cpp
+CMakeFiles/mario_scene.dir/src/Level4.cpp.o: /home/yomna/mariofinal/mariofinal/mario/src/Level4.cpp
 CMakeFiles/mario_scene.dir/src/Level4.cpp.o: CMakeFiles/mario_scene.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/mario_scene.dir/src/Level4.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/Level4.cpp.o -MF CMakeFiles/mario_scene.dir/src/Level4.cpp.o.d -o CMakeFiles/mario_scene.dir/src/Level4.cpp.o -c /home/yomna/mario/src/Level4.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/mario_scene.dir/src/Level4.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/Level4.cpp.o -MF CMakeFiles/mario_scene.dir/src/Level4.cpp.o.d -o CMakeFiles/mario_scene.dir/src/Level4.cpp.o -c /home/yomna/mariofinal/mariofinal/mario/src/Level4.cpp
 
 CMakeFiles/mario_scene.dir/src/Level4.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mario_scene.dir/src/Level4.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mario/src/Level4.cpp > CMakeFiles/mario_scene.dir/src/Level4.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mariofinal/mariofinal/mario/src/Level4.cpp > CMakeFiles/mario_scene.dir/src/Level4.cpp.i
 
 CMakeFiles/mario_scene.dir/src/Level4.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mario_scene.dir/src/Level4.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mario/src/Level4.cpp -o CMakeFiles/mario_scene.dir/src/Level4.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mariofinal/mariofinal/mario/src/Level4.cpp -o CMakeFiles/mario_scene.dir/src/Level4.cpp.s
 
 CMakeFiles/mario_scene.dir/src/Level5.cpp.o: CMakeFiles/mario_scene.dir/flags.make
-CMakeFiles/mario_scene.dir/src/Level5.cpp.o: /home/yomna/mario/src/Level5.cpp
+CMakeFiles/mario_scene.dir/src/Level5.cpp.o: /home/yomna/mariofinal/mariofinal/mario/src/Level5.cpp
 CMakeFiles/mario_scene.dir/src/Level5.cpp.o: CMakeFiles/mario_scene.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/mario_scene.dir/src/Level5.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/Level5.cpp.o -MF CMakeFiles/mario_scene.dir/src/Level5.cpp.o.d -o CMakeFiles/mario_scene.dir/src/Level5.cpp.o -c /home/yomna/mario/src/Level5.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/mario_scene.dir/src/Level5.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/Level5.cpp.o -MF CMakeFiles/mario_scene.dir/src/Level5.cpp.o.d -o CMakeFiles/mario_scene.dir/src/Level5.cpp.o -c /home/yomna/mariofinal/mariofinal/mario/src/Level5.cpp
 
 CMakeFiles/mario_scene.dir/src/Level5.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mario_scene.dir/src/Level5.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mario/src/Level5.cpp > CMakeFiles/mario_scene.dir/src/Level5.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mariofinal/mariofinal/mario/src/Level5.cpp > CMakeFiles/mario_scene.dir/src/Level5.cpp.i
 
 CMakeFiles/mario_scene.dir/src/Level5.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mario_scene.dir/src/Level5.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mario/src/Level5.cpp -o CMakeFiles/mario_scene.dir/src/Level5.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mariofinal/mariofinal/mario/src/Level5.cpp -o CMakeFiles/mario_scene.dir/src/Level5.cpp.s
+
+CMakeFiles/mario_scene.dir/src/LuigiCharacter.cpp.o: CMakeFiles/mario_scene.dir/flags.make
+CMakeFiles/mario_scene.dir/src/LuigiCharacter.cpp.o: /home/yomna/mariofinal/mariofinal/mario/src/LuigiCharacter.cpp
+CMakeFiles/mario_scene.dir/src/LuigiCharacter.cpp.o: CMakeFiles/mario_scene.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/mario_scene.dir/src/LuigiCharacter.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/LuigiCharacter.cpp.o -MF CMakeFiles/mario_scene.dir/src/LuigiCharacter.cpp.o.d -o CMakeFiles/mario_scene.dir/src/LuigiCharacter.cpp.o -c /home/yomna/mariofinal/mariofinal/mario/src/LuigiCharacter.cpp
+
+CMakeFiles/mario_scene.dir/src/LuigiCharacter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mario_scene.dir/src/LuigiCharacter.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mariofinal/mariofinal/mario/src/LuigiCharacter.cpp > CMakeFiles/mario_scene.dir/src/LuigiCharacter.cpp.i
+
+CMakeFiles/mario_scene.dir/src/LuigiCharacter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mario_scene.dir/src/LuigiCharacter.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mariofinal/mariofinal/mario/src/LuigiCharacter.cpp -o CMakeFiles/mario_scene.dir/src/LuigiCharacter.cpp.s
 
 CMakeFiles/mario_scene.dir/src/MarioCharacter.cpp.o: CMakeFiles/mario_scene.dir/flags.make
-CMakeFiles/mario_scene.dir/src/MarioCharacter.cpp.o: /home/yomna/mario/src/MarioCharacter.cpp
+CMakeFiles/mario_scene.dir/src/MarioCharacter.cpp.o: /home/yomna/mariofinal/mariofinal/mario/src/MarioCharacter.cpp
 CMakeFiles/mario_scene.dir/src/MarioCharacter.cpp.o: CMakeFiles/mario_scene.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/mario_scene.dir/src/MarioCharacter.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/MarioCharacter.cpp.o -MF CMakeFiles/mario_scene.dir/src/MarioCharacter.cpp.o.d -o CMakeFiles/mario_scene.dir/src/MarioCharacter.cpp.o -c /home/yomna/mario/src/MarioCharacter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/mario_scene.dir/src/MarioCharacter.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/MarioCharacter.cpp.o -MF CMakeFiles/mario_scene.dir/src/MarioCharacter.cpp.o.d -o CMakeFiles/mario_scene.dir/src/MarioCharacter.cpp.o -c /home/yomna/mariofinal/mariofinal/mario/src/MarioCharacter.cpp
 
 CMakeFiles/mario_scene.dir/src/MarioCharacter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mario_scene.dir/src/MarioCharacter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mario/src/MarioCharacter.cpp > CMakeFiles/mario_scene.dir/src/MarioCharacter.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mariofinal/mariofinal/mario/src/MarioCharacter.cpp > CMakeFiles/mario_scene.dir/src/MarioCharacter.cpp.i
 
 CMakeFiles/mario_scene.dir/src/MarioCharacter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mario_scene.dir/src/MarioCharacter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mario/src/MarioCharacter.cpp -o CMakeFiles/mario_scene.dir/src/MarioCharacter.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mariofinal/mariofinal/mario/src/MarioCharacter.cpp -o CMakeFiles/mario_scene.dir/src/MarioCharacter.cpp.s
+
+CMakeFiles/mario_scene.dir/src/PiranhaPlant.cpp.o: CMakeFiles/mario_scene.dir/flags.make
+CMakeFiles/mario_scene.dir/src/PiranhaPlant.cpp.o: /home/yomna/mariofinal/mariofinal/mario/src/PiranhaPlant.cpp
+CMakeFiles/mario_scene.dir/src/PiranhaPlant.cpp.o: CMakeFiles/mario_scene.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/mario_scene.dir/src/PiranhaPlant.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/PiranhaPlant.cpp.o -MF CMakeFiles/mario_scene.dir/src/PiranhaPlant.cpp.o.d -o CMakeFiles/mario_scene.dir/src/PiranhaPlant.cpp.o -c /home/yomna/mariofinal/mariofinal/mario/src/PiranhaPlant.cpp
+
+CMakeFiles/mario_scene.dir/src/PiranhaPlant.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mario_scene.dir/src/PiranhaPlant.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mariofinal/mariofinal/mario/src/PiranhaPlant.cpp > CMakeFiles/mario_scene.dir/src/PiranhaPlant.cpp.i
+
+CMakeFiles/mario_scene.dir/src/PiranhaPlant.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mario_scene.dir/src/PiranhaPlant.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mariofinal/mariofinal/mario/src/PiranhaPlant.cpp -o CMakeFiles/mario_scene.dir/src/PiranhaPlant.cpp.s
 
 CMakeFiles/mario_scene.dir/src/Player.cpp.o: CMakeFiles/mario_scene.dir/flags.make
-CMakeFiles/mario_scene.dir/src/Player.cpp.o: /home/yomna/mario/src/Player.cpp
+CMakeFiles/mario_scene.dir/src/Player.cpp.o: /home/yomna/mariofinal/mariofinal/mario/src/Player.cpp
 CMakeFiles/mario_scene.dir/src/Player.cpp.o: CMakeFiles/mario_scene.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/mario_scene.dir/src/Player.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/Player.cpp.o -MF CMakeFiles/mario_scene.dir/src/Player.cpp.o.d -o CMakeFiles/mario_scene.dir/src/Player.cpp.o -c /home/yomna/mario/src/Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/mario_scene.dir/src/Player.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/Player.cpp.o -MF CMakeFiles/mario_scene.dir/src/Player.cpp.o.d -o CMakeFiles/mario_scene.dir/src/Player.cpp.o -c /home/yomna/mariofinal/mariofinal/mario/src/Player.cpp
 
 CMakeFiles/mario_scene.dir/src/Player.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mario_scene.dir/src/Player.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mario/src/Player.cpp > CMakeFiles/mario_scene.dir/src/Player.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mariofinal/mariofinal/mario/src/Player.cpp > CMakeFiles/mario_scene.dir/src/Player.cpp.i
 
 CMakeFiles/mario_scene.dir/src/Player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mario_scene.dir/src/Player.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mario/src/Player.cpp -o CMakeFiles/mario_scene.dir/src/Player.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mariofinal/mariofinal/mario/src/Player.cpp -o CMakeFiles/mario_scene.dir/src/Player.cpp.s
 
 CMakeFiles/mario_scene.dir/src/Tile.cpp.o: CMakeFiles/mario_scene.dir/flags.make
-CMakeFiles/mario_scene.dir/src/Tile.cpp.o: /home/yomna/mario/src/Tile.cpp
+CMakeFiles/mario_scene.dir/src/Tile.cpp.o: /home/yomna/mariofinal/mariofinal/mario/src/Tile.cpp
 CMakeFiles/mario_scene.dir/src/Tile.cpp.o: CMakeFiles/mario_scene.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/mario_scene.dir/src/Tile.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/Tile.cpp.o -MF CMakeFiles/mario_scene.dir/src/Tile.cpp.o.d -o CMakeFiles/mario_scene.dir/src/Tile.cpp.o -c /home/yomna/mario/src/Tile.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/mario_scene.dir/src/Tile.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/Tile.cpp.o -MF CMakeFiles/mario_scene.dir/src/Tile.cpp.o.d -o CMakeFiles/mario_scene.dir/src/Tile.cpp.o -c /home/yomna/mariofinal/mariofinal/mario/src/Tile.cpp
 
 CMakeFiles/mario_scene.dir/src/Tile.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mario_scene.dir/src/Tile.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mario/src/Tile.cpp > CMakeFiles/mario_scene.dir/src/Tile.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mariofinal/mariofinal/mario/src/Tile.cpp > CMakeFiles/mario_scene.dir/src/Tile.cpp.i
 
 CMakeFiles/mario_scene.dir/src/Tile.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mario_scene.dir/src/Tile.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mario/src/Tile.cpp -o CMakeFiles/mario_scene.dir/src/Tile.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mariofinal/mariofinal/mario/src/Tile.cpp -o CMakeFiles/mario_scene.dir/src/Tile.cpp.s
 
 CMakeFiles/mario_scene.dir/src/main.cpp.o: CMakeFiles/mario_scene.dir/flags.make
-CMakeFiles/mario_scene.dir/src/main.cpp.o: /home/yomna/mario/src/main.cpp
+CMakeFiles/mario_scene.dir/src/main.cpp.o: /home/yomna/mariofinal/mariofinal/mario/src/main.cpp
 CMakeFiles/mario_scene.dir/src/main.cpp.o: CMakeFiles/mario_scene.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/mario_scene.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/main.cpp.o -MF CMakeFiles/mario_scene.dir/src/main.cpp.o.d -o CMakeFiles/mario_scene.dir/src/main.cpp.o -c /home/yomna/mario/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/mario_scene.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/main.cpp.o -MF CMakeFiles/mario_scene.dir/src/main.cpp.o.d -o CMakeFiles/mario_scene.dir/src/main.cpp.o -c /home/yomna/mariofinal/mariofinal/mario/src/main.cpp
 
 CMakeFiles/mario_scene.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mario_scene.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mario/src/main.cpp > CMakeFiles/mario_scene.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mariofinal/mariofinal/mario/src/main.cpp > CMakeFiles/mario_scene.dir/src/main.cpp.i
 
 CMakeFiles/mario_scene.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mario_scene.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mario/src/main.cpp -o CMakeFiles/mario_scene.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mariofinal/mariofinal/mario/src/main.cpp -o CMakeFiles/mario_scene.dir/src/main.cpp.s
+
+CMakeFiles/mario_scene.dir/src/movingplatform.cpp.o: CMakeFiles/mario_scene.dir/flags.make
+CMakeFiles/mario_scene.dir/src/movingplatform.cpp.o: /home/yomna/mariofinal/mariofinal/mario/src/movingplatform.cpp
+CMakeFiles/mario_scene.dir/src/movingplatform.cpp.o: CMakeFiles/mario_scene.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/mario_scene.dir/src/movingplatform.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_scene.dir/src/movingplatform.cpp.o -MF CMakeFiles/mario_scene.dir/src/movingplatform.cpp.o.d -o CMakeFiles/mario_scene.dir/src/movingplatform.cpp.o -c /home/yomna/mariofinal/mariofinal/mario/src/movingplatform.cpp
+
+CMakeFiles/mario_scene.dir/src/movingplatform.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mario_scene.dir/src/movingplatform.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yomna/mariofinal/mariofinal/mario/src/movingplatform.cpp > CMakeFiles/mario_scene.dir/src/movingplatform.cpp.i
+
+CMakeFiles/mario_scene.dir/src/movingplatform.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mario_scene.dir/src/movingplatform.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yomna/mariofinal/mariofinal/mario/src/movingplatform.cpp -o CMakeFiles/mario_scene.dir/src/movingplatform.cpp.s
 
 # Object files for target mario_scene
 mario_scene_OBJECTS = \
 "CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/mario_scene.dir/src/Bowser.cpp.o" \
+"CMakeFiles/mario_scene.dir/src/CrumblingTile.cpp.o" \
 "CMakeFiles/mario_scene.dir/src/Enemy.cpp.o" \
 "CMakeFiles/mario_scene.dir/src/Entity.cpp.o" \
 "CMakeFiles/mario_scene.dir/src/GameController.cpp.o" \
@@ -313,16 +370,20 @@ mario_scene_OBJECTS = \
 "CMakeFiles/mario_scene.dir/src/Level3.cpp.o" \
 "CMakeFiles/mario_scene.dir/src/Level4.cpp.o" \
 "CMakeFiles/mario_scene.dir/src/Level5.cpp.o" \
+"CMakeFiles/mario_scene.dir/src/LuigiCharacter.cpp.o" \
 "CMakeFiles/mario_scene.dir/src/MarioCharacter.cpp.o" \
+"CMakeFiles/mario_scene.dir/src/PiranhaPlant.cpp.o" \
 "CMakeFiles/mario_scene.dir/src/Player.cpp.o" \
 "CMakeFiles/mario_scene.dir/src/Tile.cpp.o" \
-"CMakeFiles/mario_scene.dir/src/main.cpp.o"
+"CMakeFiles/mario_scene.dir/src/main.cpp.o" \
+"CMakeFiles/mario_scene.dir/src/movingplatform.cpp.o"
 
 # External object files for target mario_scene
 mario_scene_EXTERNAL_OBJECTS =
 
 mario_scene: CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.o
 mario_scene: CMakeFiles/mario_scene.dir/src/Bowser.cpp.o
+mario_scene: CMakeFiles/mario_scene.dir/src/CrumblingTile.cpp.o
 mario_scene: CMakeFiles/mario_scene.dir/src/Enemy.cpp.o
 mario_scene: CMakeFiles/mario_scene.dir/src/Entity.cpp.o
 mario_scene: CMakeFiles/mario_scene.dir/src/GameController.cpp.o
@@ -333,10 +394,13 @@ mario_scene: CMakeFiles/mario_scene.dir/src/Level2.cpp.o
 mario_scene: CMakeFiles/mario_scene.dir/src/Level3.cpp.o
 mario_scene: CMakeFiles/mario_scene.dir/src/Level4.cpp.o
 mario_scene: CMakeFiles/mario_scene.dir/src/Level5.cpp.o
+mario_scene: CMakeFiles/mario_scene.dir/src/LuigiCharacter.cpp.o
 mario_scene: CMakeFiles/mario_scene.dir/src/MarioCharacter.cpp.o
+mario_scene: CMakeFiles/mario_scene.dir/src/PiranhaPlant.cpp.o
 mario_scene: CMakeFiles/mario_scene.dir/src/Player.cpp.o
 mario_scene: CMakeFiles/mario_scene.dir/src/Tile.cpp.o
 mario_scene: CMakeFiles/mario_scene.dir/src/main.cpp.o
+mario_scene: CMakeFiles/mario_scene.dir/src/movingplatform.cpp.o
 mario_scene: CMakeFiles/mario_scene.dir/build.make
 mario_scene: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
 mario_scene: /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2
@@ -344,10 +408,10 @@ mario_scene: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
 mario_scene: /usr/lib/x86_64-linux-gnu/libGLX.so
 mario_scene: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 mario_scene: CMakeFiles/mario_scene.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/yomna/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable mario_scene"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX executable mario_scene"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mario_scene.dir/link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying assets to build directory..."
-	/usr/bin/cmake -E copy_directory /home/yomna/mario/assets /home/yomna/mario/build/assets
+	/usr/bin/cmake -E copy_directory /home/yomna/mariofinal/mariofinal/mario/assets /home/yomna/mariofinal/mariofinal/mario/build/assets
 
 # Rule to build all files generated by this target.
 CMakeFiles/mario_scene.dir/build: mario_scene
@@ -358,6 +422,6 @@ CMakeFiles/mario_scene.dir/clean:
 .PHONY : CMakeFiles/mario_scene.dir/clean
 
 CMakeFiles/mario_scene.dir/depend: mario_scene_autogen/timestamp
-	cd /home/yomna/mario/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yomna/mario /home/yomna/mario /home/yomna/mario/build /home/yomna/mario/build /home/yomna/mario/build/CMakeFiles/mario_scene.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/yomna/mariofinal/mariofinal/mario/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yomna/mariofinal/mariofinal/mario /home/yomna/mariofinal/mariofinal/mario /home/yomna/mariofinal/mariofinal/mario/build /home/yomna/mariofinal/mariofinal/mario/build /home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles/mario_scene.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/mario_scene.dir/depend
 

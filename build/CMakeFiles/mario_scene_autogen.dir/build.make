@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yomna/mario
+CMAKE_SOURCE_DIR = /home/yomna/mariofinal/mariofinal/mario
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yomna/mario/build
+CMAKE_BINARY_DIR = /home/yomna/mariofinal/mariofinal/mario/build
 
 # Utility rule file for mario_scene_autogen.
 
@@ -70,9 +70,9 @@ CMakeFiles/mario_scene_autogen: mario_scene_autogen/timestamp
 
 mario_scene_autogen/timestamp: /usr/lib/qt6/libexec/moc
 mario_scene_autogen/timestamp: CMakeFiles/mario_scene_autogen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/yomna/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target mario_scene"
-	/usr/bin/cmake -E cmake_autogen /home/yomna/mario/build/CMakeFiles/mario_scene_autogen.dir/AutogenInfo.json ""
-	/usr/bin/cmake -E touch /home/yomna/mario/build/mario_scene_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target mario_scene"
+	/usr/bin/cmake -E cmake_autogen /home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles/mario_scene_autogen.dir/AutogenInfo.json ""
+	/usr/bin/cmake -E touch /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/timestamp
 
 mario_scene_autogen: CMakeFiles/mario_scene_autogen
 mario_scene_autogen: mario_scene_autogen/timestamp
@@ -88,6 +88,6 @@ CMakeFiles/mario_scene_autogen.dir/clean:
 .PHONY : CMakeFiles/mario_scene_autogen.dir/clean
 
 CMakeFiles/mario_scene_autogen.dir/depend:
-	cd /home/yomna/mario/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yomna/mario /home/yomna/mario /home/yomna/mario/build /home/yomna/mario/build /home/yomna/mario/build/CMakeFiles/mario_scene_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/yomna/mariofinal/mariofinal/mario/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yomna/mariofinal/mariofinal/mario /home/yomna/mariofinal/mariofinal/mario /home/yomna/mariofinal/mariofinal/mario/build /home/yomna/mariofinal/mariofinal/mario/build /home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles/mario_scene_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/mario_scene_autogen.dir/depend
 

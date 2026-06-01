@@ -1,6 +1,7 @@
 CMakeFiles/mario_scene.dir/src/Bowser.cpp.o: \
- /home/yomna/mario/src/Bowser.cpp /usr/include/stdc-predef.h \
- /home/yomna/mario/include/Bowser.h \
+ /home/yomna/mariofinal/mariofinal/mario/src/Bowser.cpp \
+ /usr/include/stdc-predef.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/Bowser.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qobject.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qobjectdefs.h \

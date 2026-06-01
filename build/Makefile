@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yomna/mario
+CMAKE_SOURCE_DIR = /home/yomna/mariofinal/mariofinal/mario
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yomna/mario/build
+CMAKE_BINARY_DIR = /home/yomna/mariofinal/mariofinal/mario/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yomna/mario/build/CMakeFiles /home/yomna/mario/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles /home/yomna/mariofinal/mariofinal/mario/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yomna/mario/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -202,6 +202,30 @@ src/Bowser.s: src/Bowser.cpp.s
 src/Bowser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/Bowser.cpp.s
 .PHONY : src/Bowser.cpp.s
+
+src/CrumblingTile.o: src/CrumblingTile.cpp.o
+.PHONY : src/CrumblingTile.o
+
+# target to build an object file
+src/CrumblingTile.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/CrumblingTile.cpp.o
+.PHONY : src/CrumblingTile.cpp.o
+
+src/CrumblingTile.i: src/CrumblingTile.cpp.i
+.PHONY : src/CrumblingTile.i
+
+# target to preprocess a source file
+src/CrumblingTile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/CrumblingTile.cpp.i
+.PHONY : src/CrumblingTile.cpp.i
+
+src/CrumblingTile.s: src/CrumblingTile.cpp.s
+.PHONY : src/CrumblingTile.s
+
+# target to generate assembly for a file
+src/CrumblingTile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/CrumblingTile.cpp.s
+.PHONY : src/CrumblingTile.cpp.s
 
 src/Enemy.o: src/Enemy.cpp.o
 .PHONY : src/Enemy.o
@@ -443,6 +467,30 @@ src/Level5.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/Level5.cpp.s
 .PHONY : src/Level5.cpp.s
 
+src/LuigiCharacter.o: src/LuigiCharacter.cpp.o
+.PHONY : src/LuigiCharacter.o
+
+# target to build an object file
+src/LuigiCharacter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/LuigiCharacter.cpp.o
+.PHONY : src/LuigiCharacter.cpp.o
+
+src/LuigiCharacter.i: src/LuigiCharacter.cpp.i
+.PHONY : src/LuigiCharacter.i
+
+# target to preprocess a source file
+src/LuigiCharacter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/LuigiCharacter.cpp.i
+.PHONY : src/LuigiCharacter.cpp.i
+
+src/LuigiCharacter.s: src/LuigiCharacter.cpp.s
+.PHONY : src/LuigiCharacter.s
+
+# target to generate assembly for a file
+src/LuigiCharacter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/LuigiCharacter.cpp.s
+.PHONY : src/LuigiCharacter.cpp.s
+
 src/MarioCharacter.o: src/MarioCharacter.cpp.o
 .PHONY : src/MarioCharacter.o
 
@@ -466,6 +514,30 @@ src/MarioCharacter.s: src/MarioCharacter.cpp.s
 src/MarioCharacter.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/MarioCharacter.cpp.s
 .PHONY : src/MarioCharacter.cpp.s
+
+src/PiranhaPlant.o: src/PiranhaPlant.cpp.o
+.PHONY : src/PiranhaPlant.o
+
+# target to build an object file
+src/PiranhaPlant.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/PiranhaPlant.cpp.o
+.PHONY : src/PiranhaPlant.cpp.o
+
+src/PiranhaPlant.i: src/PiranhaPlant.cpp.i
+.PHONY : src/PiranhaPlant.i
+
+# target to preprocess a source file
+src/PiranhaPlant.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/PiranhaPlant.cpp.i
+.PHONY : src/PiranhaPlant.cpp.i
+
+src/PiranhaPlant.s: src/PiranhaPlant.cpp.s
+.PHONY : src/PiranhaPlant.s
+
+# target to generate assembly for a file
+src/PiranhaPlant.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/PiranhaPlant.cpp.s
+.PHONY : src/PiranhaPlant.cpp.s
 
 src/Player.o: src/Player.cpp.o
 .PHONY : src/Player.o
@@ -539,6 +611,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/movingplatform.o: src/movingplatform.cpp.o
+.PHONY : src/movingplatform.o
+
+# target to build an object file
+src/movingplatform.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/movingplatform.cpp.o
+.PHONY : src/movingplatform.cpp.o
+
+src/movingplatform.i: src/movingplatform.cpp.i
+.PHONY : src/movingplatform.i
+
+# target to preprocess a source file
+src/movingplatform.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/movingplatform.cpp.i
+.PHONY : src/movingplatform.cpp.i
+
+src/movingplatform.s: src/movingplatform.cpp.s
+.PHONY : src/movingplatform.s
+
+# target to generate assembly for a file
+src/movingplatform.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_scene.dir/build.make CMakeFiles/mario_scene.dir/src/movingplatform.cpp.s
+.PHONY : src/movingplatform.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -556,6 +652,9 @@ help:
 	@echo "... src/Bowser.o"
 	@echo "... src/Bowser.i"
 	@echo "... src/Bowser.s"
+	@echo "... src/CrumblingTile.o"
+	@echo "... src/CrumblingTile.i"
+	@echo "... src/CrumblingTile.s"
 	@echo "... src/Enemy.o"
 	@echo "... src/Enemy.i"
 	@echo "... src/Enemy.s"
@@ -586,9 +685,15 @@ help:
 	@echo "... src/Level5.o"
 	@echo "... src/Level5.i"
 	@echo "... src/Level5.s"
+	@echo "... src/LuigiCharacter.o"
+	@echo "... src/LuigiCharacter.i"
+	@echo "... src/LuigiCharacter.s"
 	@echo "... src/MarioCharacter.o"
 	@echo "... src/MarioCharacter.i"
 	@echo "... src/MarioCharacter.s"
+	@echo "... src/PiranhaPlant.o"
+	@echo "... src/PiranhaPlant.i"
+	@echo "... src/PiranhaPlant.s"
 	@echo "... src/Player.o"
 	@echo "... src/Player.i"
 	@echo "... src/Player.s"
@@ -598,6 +703,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/movingplatform.o"
+	@echo "... src/movingplatform.i"
+	@echo "... src/movingplatform.s"
 .PHONY : help
 
 

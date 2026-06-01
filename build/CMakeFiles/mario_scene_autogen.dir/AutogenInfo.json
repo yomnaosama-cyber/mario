@@ -1,15 +1,15 @@
 {
-	"BUILD_DIR" : "/home/yomna/mario/build/mario_scene_autogen",
-	"CMAKE_BINARY_DIR" : "/home/yomna/mario/build",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/yomna/mario/build",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/yomna/mario",
+	"BUILD_DIR" : "/home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen",
+	"CMAKE_BINARY_DIR" : "/home/yomna/mariofinal/mariofinal/mario/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/yomna/mariofinal/mariofinal/mario/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/yomna/mariofinal/mariofinal/mario",
 	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/home/yomna/mario/CMakeLists.txt",
+		"/home/yomna/mariofinal/mariofinal/mario/CMakeLists.txt",
 		"/usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeSystem.cmake.in",
-		"/home/yomna/mario/build/CMakeFiles/3.28.3/CMakeSystem.cmake",
+		"/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles/3.28.3/CMakeSystem.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeUnixFindMake.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake",
 		"/usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake",
@@ -64,7 +64,7 @@
 		"/usr/share/cmake-3.28/Modules/CMakeFindBinUtils.cmake",
 		"/usr/share/cmake-3.28/Modules/Compiler/GNU-FindBinUtils.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeCCompiler.cmake.in",
-		"/home/yomna/mario/build/CMakeFiles/3.28.3/CMakeCCompiler.cmake",
+		"/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles/3.28.3/CMakeCCompiler.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeDetermineCompiler.cmake",
 		"/usr/share/cmake-3.28/Modules/Platform/Linux-Determine-CXX.cmake",
@@ -115,7 +115,7 @@
 		"/usr/share/cmake-3.28/Modules/CMakeFindBinUtils.cmake",
 		"/usr/share/cmake-3.28/Modules/Compiler/GNU-FindBinUtils.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in",
-		"/home/yomna/mario/build/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake",
+		"/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake",
@@ -140,7 +140,7 @@
 		"/usr/share/cmake-3.28/Modules/CMakeDetermineCompileFeatures.cmake",
 		"/usr/share/cmake-3.28/Modules/Internal/FeatureTesting.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeCCompiler.cmake.in",
-		"/home/yomna/mario/build/CMakeFiles/3.28.3/CMakeCCompiler.cmake",
+		"/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles/3.28.3/CMakeCCompiler.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake",
 		"/usr/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake",
@@ -159,7 +159,7 @@
 		"/usr/share/cmake-3.28/Modules/CMakeDetermineCompileFeatures.cmake",
 		"/usr/share/cmake-3.28/Modules/Internal/FeatureTesting.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in",
-		"/home/yomna/mario/build/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake",
+		"/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersion.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersionImpl.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Config.cmake",
@@ -305,99 +305,135 @@
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "/home/yomna/mario",
-	"DEP_FILE" : "/home/yomna/mario/build/mario_scene_autogen/deps",
+	"CMAKE_SOURCE_DIR" : "/home/yomna/mariofinal/mariofinal/mario",
+	"DEP_FILE" : "/home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "mario_scene_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"/home/yomna/mario/include/Bowser.h",
+			"/home/yomna/mariofinal/mariofinal/mario/include/Bowser.h",
 			"Mu",
 			"6YEA5652QU/moc_Bowser.cpp",
 			null
 		],
 		[
-			"/home/yomna/mario/include/Enemy.h",
+			"/home/yomna/mariofinal/mariofinal/mario/include/Coin.h",
+			"Mu",
+			"6YEA5652QU/moc_Coin.cpp",
+			null
+		],
+		[
+			"/home/yomna/mariofinal/mariofinal/mario/include/CrumblingTile.h",
+			"Mu",
+			"6YEA5652QU/moc_CrumblingTile.cpp",
+			null
+		],
+		[
+			"/home/yomna/mariofinal/mariofinal/mario/include/Enemy.h",
 			"Mu",
 			"6YEA5652QU/moc_Enemy.cpp",
 			null
 		],
 		[
-			"/home/yomna/mario/include/Entity.h",
+			"/home/yomna/mariofinal/mariofinal/mario/include/Entity.h",
 			"Mu",
 			"6YEA5652QU/moc_Entity.cpp",
 			null
 		],
 		[
-			"/home/yomna/mario/include/GameController.h",
+			"/home/yomna/mariofinal/mariofinal/mario/include/GameController.h",
 			"Mu",
 			"6YEA5652QU/moc_GameController.cpp",
 			null
 		],
 		[
-			"/home/yomna/mario/include/HealthBar.h",
+			"/home/yomna/mariofinal/mariofinal/mario/include/HealthBar.h",
 			"Mu",
 			"6YEA5652QU/moc_HealthBar.cpp",
 			null
 		],
 		[
-			"/home/yomna/mario/include/Level.h",
+			"/home/yomna/mariofinal/mariofinal/mario/include/Level.h",
 			"Mu",
 			"6YEA5652QU/moc_Level.cpp",
 			null
 		],
 		[
-			"/home/yomna/mario/include/Level1.h",
+			"/home/yomna/mariofinal/mariofinal/mario/include/Level1.h",
 			"Mu",
 			"6YEA5652QU/moc_Level1.cpp",
 			null
 		],
 		[
-			"/home/yomna/mario/include/Level2.h",
+			"/home/yomna/mariofinal/mariofinal/mario/include/Level2.h",
 			"Mu",
 			"6YEA5652QU/moc_Level2.cpp",
 			null
 		],
 		[
-			"/home/yomna/mario/include/Level3.h",
+			"/home/yomna/mariofinal/mariofinal/mario/include/Level3.h",
 			"Mu",
 			"6YEA5652QU/moc_Level3.cpp",
 			null
 		],
 		[
-			"/home/yomna/mario/include/Level4.h",
+			"/home/yomna/mariofinal/mariofinal/mario/include/Level4.h",
 			"Mu",
 			"6YEA5652QU/moc_Level4.cpp",
 			null
 		],
 		[
-			"/home/yomna/mario/include/Level5.h",
+			"/home/yomna/mariofinal/mariofinal/mario/include/Level5.h",
 			"Mu",
 			"6YEA5652QU/moc_Level5.cpp",
 			null
 		],
 		[
-			"/home/yomna/mario/include/MarioCharacter.h",
+			"/home/yomna/mariofinal/mariofinal/mario/include/LuigiCharacter.h",
+			"Mu",
+			"6YEA5652QU/moc_LuigiCharacter.cpp",
+			null
+		],
+		[
+			"/home/yomna/mariofinal/mariofinal/mario/include/MarioCharacter.h",
 			"Mu",
 			"6YEA5652QU/moc_MarioCharacter.cpp",
 			null
 		],
 		[
-			"/home/yomna/mario/include/Player.h",
+			"/home/yomna/mariofinal/mariofinal/mario/include/Mushroom.h",
+			"Mu",
+			"6YEA5652QU/moc_Mushroom.cpp",
+			null
+		],
+		[
+			"/home/yomna/mariofinal/mariofinal/mario/include/PiranhaPlant.h",
+			"Mu",
+			"6YEA5652QU/moc_PiranhaPlant.cpp",
+			null
+		],
+		[
+			"/home/yomna/mariofinal/mariofinal/mario/include/Player.h",
 			"Mu",
 			"6YEA5652QU/moc_Player.cpp",
 			null
 		],
 		[
-			"/home/yomna/mario/include/Tile.h",
+			"/home/yomna/mariofinal/mariofinal/mario/include/Tile.h",
 			"Mu",
 			"6YEA5652QU/moc_Tile.cpp",
+			null
+		],
+		[
+			"/home/yomna/mariofinal/mariofinal/mario/include/movingplatform.h",
+			"Mu",
+			"6YEA5652QU/moc_movingplatform.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/yomna/mario/build/mario_scene_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/yomna/mario/build/mario_scene_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_NO_DEBUG", "QT_WIDGETS_LIB" ],
 	"MOC_DEPEND_FILTERS" : 
 	[
@@ -408,7 +444,7 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/home/yomna/mario/include",
+		"/home/yomna/mariofinal/mariofinal/mario/include",
 		"/usr/include/x86_64-linux-gnu/qt6/QtCore",
 		"/usr/include/x86_64-linux-gnu/qt6",
 		"/usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++",
@@ -441,34 +477,66 @@
 		"-c",
 		"/usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/yomna/mario/build/mario_scene_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 6,
-	"PARSE_CACHE_FILE" : "/home/yomna/mario/build/CMakeFiles/mario_scene_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles/mario_scene_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt6/libexec/moc",
 	"QT_UIC_EXECUTABLE" : "",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 4,
-	"SETTINGS_FILE" : "/home/yomna/mario/build/CMakeFiles/mario_scene_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/yomna/mariofinal/mariofinal/mario/build/CMakeFiles/mario_scene_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "/home/yomna/mario/src/Bowser.cpp", "Mu", null ],
-		[ "/home/yomna/mario/src/Enemy.cpp", "Mu", null ],
-		[ "/home/yomna/mario/src/Entity.cpp", "Mu", null ],
-		[ "/home/yomna/mario/src/GameController.cpp", "Mu", null ],
-		[ "/home/yomna/mario/src/HealthBar.cpp", "Mu", null ],
-		[ "/home/yomna/mario/src/Level.cpp", "Mu", null ],
-		[ "/home/yomna/mario/src/Level1.cpp", "Mu", null ],
-		[ "/home/yomna/mario/src/Level2.cpp", "Mu", null ],
-		[ "/home/yomna/mario/src/Level3.cpp", "Mu", null ],
-		[ "/home/yomna/mario/src/Level4.cpp", "Mu", null ],
-		[ "/home/yomna/mario/src/Level5.cpp", "Mu", null ],
-		[ "/home/yomna/mario/src/MarioCharacter.cpp", "Mu", null ],
-		[ "/home/yomna/mario/src/Player.cpp", "Mu", null ],
-		[ "/home/yomna/mario/src/Tile.cpp", "Mu", null ],
-		[ "/home/yomna/mario/src/main.cpp", "Mu", null ]
+		[ "/home/yomna/mariofinal/mariofinal/mario/src/Bowser.cpp", "Mu", null ],
+		[
+			"/home/yomna/mariofinal/mariofinal/mario/src/CrumblingTile.cpp",
+			"Mu",
+			null
+		],
+		[ "/home/yomna/mariofinal/mariofinal/mario/src/Enemy.cpp", "Mu", null ],
+		[ "/home/yomna/mariofinal/mariofinal/mario/src/Entity.cpp", "Mu", null ],
+		[
+			"/home/yomna/mariofinal/mariofinal/mario/src/GameController.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/yomna/mariofinal/mariofinal/mario/src/HealthBar.cpp",
+			"Mu",
+			null
+		],
+		[ "/home/yomna/mariofinal/mariofinal/mario/src/Level.cpp", "Mu", null ],
+		[ "/home/yomna/mariofinal/mariofinal/mario/src/Level1.cpp", "Mu", null ],
+		[ "/home/yomna/mariofinal/mariofinal/mario/src/Level2.cpp", "Mu", null ],
+		[ "/home/yomna/mariofinal/mariofinal/mario/src/Level3.cpp", "Mu", null ],
+		[ "/home/yomna/mariofinal/mariofinal/mario/src/Level4.cpp", "Mu", null ],
+		[ "/home/yomna/mariofinal/mariofinal/mario/src/Level5.cpp", "Mu", null ],
+		[
+			"/home/yomna/mariofinal/mariofinal/mario/src/LuigiCharacter.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/yomna/mariofinal/mariofinal/mario/src/MarioCharacter.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/yomna/mariofinal/mariofinal/mario/src/PiranhaPlant.cpp",
+			"Mu",
+			null
+		],
+		[ "/home/yomna/mariofinal/mariofinal/mario/src/Player.cpp", "Mu", null ],
+		[ "/home/yomna/mariofinal/mariofinal/mario/src/Tile.cpp", "Mu", null ],
+		[ "/home/yomna/mariofinal/mariofinal/mario/src/main.cpp", "Mu", null ],
+		[
+			"/home/yomna/mariofinal/mariofinal/mario/src/movingplatform.cpp",
+			"Mu",
+			null
+		]
 	],
 	"VERBOSITY" : 0
 }

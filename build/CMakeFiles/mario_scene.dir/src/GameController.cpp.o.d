@@ -1,6 +1,7 @@
 CMakeFiles/mario_scene.dir/src/GameController.cpp.o: \
- /home/yomna/mario/src/GameController.cpp /usr/include/stdc-predef.h \
- /home/yomna/mario/include/GameController.h \
+ /home/yomna/mariofinal/mariofinal/mario/src/GameController.cpp \
+ /usr/include/stdc-predef.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/GameController.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsScene \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsscene.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h \
@@ -338,37 +339,76 @@ CMakeFiles/mario_scene.dir/src/GameController.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasictimer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
- /home/yomna/mario/include/MarioCharacter.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QKeyEvent \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qevent.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreevent.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevice.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qpointer.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qeventpoint.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qvector2d.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qvectornd.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qpointingdevice.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qinputdevice.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qscreen.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qobject.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QRect \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qrect.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QSize \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qsize.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QTransform \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qtransform.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qnativeinterface.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qkeysequence.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/MarioCharacter.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QPixmap \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpixmap.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QDebug \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qdebug.h \
- /home/yomna/mario/include/Player.h /home/yomna/mario/include/Entity.h \
- /home/yomna/mario/include/Enemy.h /home/yomna/mario/include/Level.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/LuigiCharacter.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/PiranhaPlant.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/Enemy.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/Entity.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/Player.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/Level.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QColor \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qcolor.h \
- /home/yomna/mario/include/Tile.h /home/yomna/mario/include/Bowser.h \
- /home/yomna/mario/include/HealthBar.h /home/yomna/mario/include/Level1.h \
- /home/yomna/mario/include/Level2.h /home/yomna/mario/include/Level3.h \
- /home/yomna/mario/include/Level4.h /home/yomna/mario/include/Level5.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/Tile.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/Bowser.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/HealthBar.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/Coin.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsEllipseItem \
+ /home/yomna/mariofinal/mariofinal/mario/include/Mushroom.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsItem \
+ /home/yomna/mariofinal/mariofinal/mario/include/movingplatform.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/movingplatform.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/CrumblingTile.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/LuigiCharacter.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/Level1.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/Level2.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/Level3.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/Level4.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/CrumblingTile.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/Level5.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/Tile.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/PiranhaPlant.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QBrush \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qbrush.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QPen \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpen.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QCoreApplication \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreapplication.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreevent.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qeventloop.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qnativeinterface.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreapplication_platform.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreapplication.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QDir \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qdir.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qfile.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qfiledevice.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevice.h \
  /usr/include/c++/13/filesystem /usr/include/c++/13/bits/fs_fwd.h \
  /usr/include/c++/13/bits/fs_path.h /usr/include/c++/13/locale \
  /usr/include/c++/13/bits/locale_facets.h /usr/include/c++/13/cwctype \
@@ -402,13 +442,4 @@ CMakeFiles/mario_scene.dir/src/GameController.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qinputmethod.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qguiapplication_platform.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QScreen \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qscreen.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QRect \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qrect.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QSize \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qsize.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/QTransform \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qtransform.h
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qscreen.h

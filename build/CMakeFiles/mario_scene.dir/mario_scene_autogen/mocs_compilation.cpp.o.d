@@ -1,7 +1,7 @@
 CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.o: \
- /home/yomna/mario/build/mario_scene_autogen/mocs_compilation.cpp \
+ /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/mocs_compilation.cpp \
  /usr/include/stdc-predef.h \
- /home/yomna/mario/build/mario_scene_autogen/6YEA5652QU/moc_Bowser.cpp \
+ /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/6YEA5652QU/moc_Bowser.cpp \
  /usr/include/c++/13/memory /usr/include/c++/13/bits/memoryfwd.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -116,7 +116,7 @@ CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
  /usr/include/c++/13/pstl/execution_defs.h \
- /home/yomna/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/Bowser.h \
+ /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/Bowser.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qobject.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qobjectdefs.h \
@@ -339,8 +339,8 @@ CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasictimer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qlist.h \
- /home/yomna/mario/build/mario_scene_autogen/6YEA5652QU/moc_GameController.cpp \
- /home/yomna/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/GameController.h \
+ /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/6YEA5652QU/moc_GameController.cpp \
+ /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/GameController.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsScene \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsscene.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qbrush.h \
@@ -350,19 +350,53 @@ CMakeFiles/mario_scene.dir/mario_scene_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsTextItem \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
- /home/yomna/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/MarioCharacter.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QKeyEvent \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qevent.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreevent.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevice.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qpointer.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qeventpoint.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qvector2d.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qvectornd.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qpointingdevice.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qinputdevice.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qscreen.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QRect \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qrect.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QSize \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qsize.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QTransform \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qtransform.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qnativeinterface.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qkeysequence.h \
+ /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/MarioCharacter.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QDebug \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qdebug.h \
- /home/yomna/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/Player.h \
- /home/yomna/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/Entity.h \
- /home/yomna/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/Enemy.h \
- /home/yomna/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/Level.h \
+ /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/LuigiCharacter.h \
+ /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/PiranhaPlant.h \
+ /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/Enemy.h \
+ /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/Entity.h \
+ /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/Player.h \
+ /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/Level.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QColor \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qcolor.h \
- /home/yomna/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/Tile.h \
- /home/yomna/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/Bowser.h \
- /home/yomna/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/HealthBar.h \
- /home/yomna/mario/build/mario_scene_autogen/6YEA5652QU/moc_HealthBar.cpp \
- /home/yomna/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/HealthBar.h \
- /home/yomna/mario/build/mario_scene_autogen/6YEA5652QU/moc_MarioCharacter.cpp \
- /home/yomna/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/MarioCharacter.h
+ /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/Tile.h \
+ /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/Bowser.h \
+ /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/HealthBar.h \
+ /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/Coin.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsEllipseItem \
+ /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/Mushroom.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsItem \
+ /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/movingplatform.h \
+ /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/6YEA5652QU/moc_HealthBar.cpp \
+ /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/HealthBar.h \
+ /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/6YEA5652QU/moc_LuigiCharacter.cpp \
+ /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/LuigiCharacter.h \
+ /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/6YEA5652QU/moc_MarioCharacter.cpp \
+ /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/MarioCharacter.h \
+ /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/6YEA5652QU/moc_Tile.cpp \
+ /home/yomna/mariofinal/mariofinal/mario/build/mario_scene_autogen/6YEA5652QU/../../../include/Tile.h

@@ -1,4 +1,5 @@
-CMakeFiles/mario_scene.dir/src/main.cpp.o: /home/yomna/mario/src/main.cpp \
+CMakeFiles/mario_scene.dir/src/main.cpp.o: \
+ /home/yomna/mariofinal/mariofinal/mario/src/main.cpp \
  /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qapplication.h \
@@ -415,21 +416,90 @@ CMakeFiles/mario_scene.dir/src/main.cpp.o: /home/yomna/mario/src/main.cpp \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QCoreApplication \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreapplication.h \
- /home/yomna/mario/include/MarioCharacter.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QDialog \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdialog.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlabel.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qpicture.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextdocument.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLineEdit \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlineedit.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextcursor.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextformat.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QListWidget \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlistwidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlistview.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemview.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qabstractitemmodel.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qitemselectionmodel.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemdelegate.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyleoption.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractspinbox.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qvalidator.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qregularexpression.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qslider.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractslider.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyle.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabbar.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qrubberband.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QSettings \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qsettings.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonObject \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qjsonobject.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qjsonvalue.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qcborvalue.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qcborcommon.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/quuid.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonDocument \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qjsondocument.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonArray \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qjsonarray.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QFile \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qfile.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMessageBox \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmessagebox.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdialog.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFrame \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qframe.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QFont \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qfont.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/MarioCharacter.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsPixmapItem \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsitem.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpainterpath.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
- /home/yomna/mario/include/GameController.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/GameController.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsRectItem \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsTextItem \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
- /home/yomna/mario/include/MarioCharacter.h \
- /home/yomna/mario/include/Player.h /home/yomna/mario/include/Entity.h \
- /home/yomna/mario/include/Enemy.h /home/yomna/mario/include/Level.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/MarioCharacter.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/LuigiCharacter.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/PiranhaPlant.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/Enemy.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/Entity.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/Player.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/Level.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QColor \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qcolor.h \
- /home/yomna/mario/include/Tile.h /home/yomna/mario/include/Bowser.h \
- /home/yomna/mario/include/HealthBar.h
+ /home/yomna/mariofinal/mariofinal/mario/include/Tile.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/Bowser.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/HealthBar.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/Coin.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsEllipseItem \
+ /home/yomna/mariofinal/mariofinal/mario/include/Mushroom.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsItem \
+ /home/yomna/mariofinal/mariofinal/mario/include/movingplatform.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/LuigiCharacter.h

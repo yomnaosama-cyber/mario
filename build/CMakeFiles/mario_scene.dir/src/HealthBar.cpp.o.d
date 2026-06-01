@@ -1,6 +1,7 @@
 CMakeFiles/mario_scene.dir/src/HealthBar.cpp.o: \
- /home/yomna/mario/src/HealthBar.cpp /usr/include/stdc-predef.h \
- /home/yomna/mario/include/HealthBar.h \
+ /home/yomna/mariofinal/mariofinal/mario/src/HealthBar.cpp \
+ /usr/include/stdc-predef.h \
+ /home/yomna/mariofinal/mariofinal/mario/include/HealthBar.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsRectItem \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsitem.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h \

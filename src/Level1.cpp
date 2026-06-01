@@ -2,81 +2,105 @@
 #include <QDebug>
 
 Level1::Level1(int rows, int cols) : Level(rows, cols) {
-    backgroundImagePath = "sky1.jpg";
+    backgroundImagePath = QStringLiteral("sky1.jpg");
+    backgroundColor = QColor(173, 216, 230); // light blue if sky image is missing
 }
 
 void Level1::createTiles() {
-    // Allocate grid
-    grid = new Tile*[rows];
-    for(int i = 0; i < rows; i++) {
-        grid[i] = new Tile[cols];
-    }
-
-    // Initialize all tiles to empty
-    for(int i = 0; i < rows; i++) {
-        for(int n = 0; n < cols; n++) {
-            grid[i][n] = Tile(n, i, Tile::Empty);
+    grid = new Tile**[rows];
+    for (int i = 0; i < rows; i++) {
+        grid[i] = new Tile*[cols];
+        for (int n = 0; n < cols; n++){
+            grid[i][n] = new Tile(n, i, Tile::Empty);
         }
     }
 
     int groundLevel = rows - 2;
     if (groundLevel < 1) groundLevel = 1;
-
-    // Ground with gaps
-    for(int n = 0; n < cols; n++) {
-        bool isGap = (n >= 15 && n <= 18) || (n >= 32 && n <= 35);
-        if (!isGap) {
-            grid[groundLevel][n] = Tile(n, groundLevel, Tile::Grass);
-        }
-    }
-
-    // Mud layer
     int mudRow = groundLevel + 1;
+
+    // --- LEVEL 1 floor with DIFFERENT gap positions ---
     for (int n = 0; n < cols; n++) {
-        bool isGap = (n >= 15 && n <= 18) || (n >= 32 && n <= 35);
+        // Three gaps: early, mid, late
+        bool isGap = (n >= 10 && n <= 13) ||   // early gap
+                     (n >= 28 && n <= 30) ||   // mid gap
+                     (n >= 48 && n <= 52);     // wide late gap
+
         if (!isGap) {
-            grid[mudRow][n] = Tile(n, mudRow, Tile::Mud);
+            delete grid[groundLevel][n];
+            grid[groundLevel][n] = new Tile(n, groundLevel, Tile::Grass);
+
+            delete grid[mudRow][n];
+            grid[mudRow][n] = new Tile(n, mudRow,  Tile::Mud);
         }
     }
 
-    // Platforms
-    if (groundLevel-3 >= 0) {
-        grid[groundLevel-3][8] = Tile(8, groundLevel-3, Tile::Brick);
-        grid[groundLevel-3][9] = Tile(9, groundLevel-3, Tile::Brick);
-        grid[groundLevel-3][10] = Tile(10, groundLevel-3, Tile::Brick);
-    }
-    
-    if (groundLevel-1 >= 0) {
-        grid[groundLevel-1][20] = Tile(20, groundLevel-1, Tile::Brick);
-        grid[groundLevel-1][21] = Tile(21, groundLevel-1, Tile::Brick);
-        grid[groundLevel-1][22] = Tile(22, groundLevel-1, Tile::Brick);
-    }
-    
-    if (groundLevel-3 >= 0) {
-        grid[groundLevel-3][35] = Tile(35, groundLevel-3, Tile::Brick);
-        grid[groundLevel-3][36] = Tile(36, groundLevel-3, Tile::Brick);
-        grid[groundLevel-3][37] = Tile(37, groundLevel-3, Tile::Brick);
-        grid[groundLevel-3][38] = Tile(38, groundLevel-3, Tile::Brick);
+    // --- Platforms (different layout from Level 0) ---
+    // Stepping stones over the early gap
+
+    delete grid[groundLevel-2][11];
+    grid[groundLevel-2][11] = new Tile(11, groundLevel-2, Tile::Brick);
+
+    delete grid[groundLevel-2][12];
+    grid[groundLevel-2][12] = new Tile(12, groundLevel-2, Tile::Brick);
+
+    // Floating island after first gap
+    int platA = groundLevel - 4;
+    if (platA >= 0) {
+        for (int n = 17; n <= 21; n++){
+            delete grid[platA][n];
+            grid[platA][n] = new Tile(n, platA, Tile::Brick);
+        }
     }
 
-    // Staircase
-    if (groundLevel-1 >= 0) grid[groundLevel-1][55] = Tile(55, groundLevel-1, Tile::Brick);
-    if (groundLevel-2 >= 0) grid[groundLevel-2][58] = Tile(58, groundLevel-2, Tile::Brick);
-    if (groundLevel-3 >= 0) grid[groundLevel-3][61] = Tile(61, groundLevel-3, Tile::Brick);
-    if (groundLevel-4 >= 0) grid[groundLevel-4][64] = Tile(64, groundLevel-4, Tile::Brick);
-    if (groundLevel-5 >= 0) grid[groundLevel-5][67] = Tile(67, groundLevel-5, Tile::Brick);
-
-    flagX = 69;
-    flagY = groundLevel - 5;
-    if (flagY >= 0 && flagX >= 0 && flagX < cols) {
-        grid[flagY][flagX] = Tile(flagX, flagY, Tile::Flag);
+    // Mid-level platform with coins above (coins placed in GameController)
+    int platB = groundLevel - 3;
+    if (platB >= 0) {
+        for (int n = 33; n <= 37; n++){
+            delete grid[platB][n];
+            grid[platB][n] = new Tile(n, platB, Tile::Brick);
+        }
     }
 
+    // High platform bridging the wide gap
+    int platC = groundLevel - 5;
+    if (platC >= 0) {
+        for (int n = 43; n <= 46; n++){
+            delete grid[platC][n];
+            grid[platC][n] = new Tile(n, platC, Tile::Brick);
+        }
+        for (int n = 53; n <= 56; n++){
+                delete grid[platC][n];
+            grid[platC][n] = new Tile(n, platC, Tile::Brick);
+        }
+    }
+
+    // Descending staircase to flag/win area
+    for (int step = 0; step < 6; step++) {
+        int r = groundLevel - step;
+        int c = 60 + step * 3;
+        if (r >= 0 && c < cols){
+            delete grid[r][c];
+            grid[r][c] = new Tile(c, r, Tile::Brick);
+        }
+    }
+
+    // Flag - rendered as win image by GameController (like Level 3)
+    flagX = cols - 4;
+    flagY = (groundLevel - 5 >= 0) ? groundLevel - 5 : groundLevel;
+    if (flagY >= 0 && flagX >= 0 && flagX < cols){
+        delete grid[flagY][flagX];
+        grid[flagY][flagX] = new Tile(flagX, flagY, Tile::Flag);
+    }
+
+    // Spawn
     spawnX = 2;
     spawnY = groundLevel;
 
-    enemy.push_back(new Enemy(12, groundLevel, 8, 14, 0.1f));
-    enemy.push_back(new Enemy(42, groundLevel, 36, 50, 0.25f));
+    // Enemies - different patrol zones than Level 0
+    enemy.push_back(new Enemy(7,  groundLevel, 4,  9,  0.15f));
+    enemy.push_back(new Enemy(22, groundLevel, 14, 27, 0.2f));
+    enemy.push_back(new Enemy(40, groundLevel, 35, 47, 0.18f));
 
-    qDebug() << "Level 1 created - Ground row:" << groundLevel;
+    qDebug() << "Level1 created. Ground:" << groundLevel;
 }

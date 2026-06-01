@@ -1,9 +1,16 @@
 #ifndef TILE_H
 #define TILE_H
 
-class Tile{
+#include <QObject>
+#include <QGraphicsPixmapItem>
+#include <QPixmap>
+
+
+class Tile : public QObject, public QGraphicsPixmapItem{
+    Q_OBJECT
   public:
-  long long x, y;
+    int gridX;
+    int gridY;
   enum Tiletype {
     Brick,
     Grass,
@@ -12,6 +19,7 @@ class Tile{
     MysteryBox,
     Flag,
     Empty,
+    Door
   };
 
   enum TileEffect {
@@ -19,10 +27,15 @@ class Tile{
     Deadly,
     Prize,
     Next_Level,
+    Key_Collected
   };
    
   Tiletype type;
   
+  void setupAppearance() {
+      setPixmap(QPixmap(":/assets/brick.png"));
+      setPos(gridX * 32, gridY * 32); // Maps Grid to Pixels
+  }
   Tile(long long x, long long y, Tiletype type);
   Tile();
   virtual ~Tile() = default;
@@ -58,6 +71,38 @@ class EndTile : public Tile{
   public:
   EndTile(long long x, long long y, Tiletype type);
   TileEffect touch() override;
+};
+
+class LockedDoor : public Tile{
+  public:
+    int keys;
+    LockedDoor(long long x, long long y, Tiletype type, int Coinsneeded);
+    TileEffect touch() override;
+    void opendoor(int x);
+    void addKey();
+    int getkeyscollected();
+    int getkeysneeded();
+    bool isOpen();
+    int getrow();
+    int getcol();
+    void opendoor();
+
+  private:
+
+  int CoinsNeeded;
+  bool isDOpen;
+
+
+};
+
+class SecretCoinTile : public Tile{
+private:
+    bool collected;
+public:
+    SecretCoinTile(long long x, long long y);
+    TileEffect touch() override;
+
+
 };
 
 #endif

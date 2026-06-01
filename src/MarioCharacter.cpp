@@ -3,8 +3,8 @@
 #include <QDir>
 #include <QCoreApplication>
 
-MarioCharacter::MarioCharacter() : QObject(), QGraphicsPixmapItem(), currentFrame(0), isMovingLeft(false), isMovingRight(false), 
-                   isJumping(false), isDead(false), velocityY(0), isOnGround(true) {
+MarioCharacter::MarioCharacter() : QObject(), QGraphicsPixmapItem(), currentFrame(0), isMovingLeft(false), isMovingRight(false),
+    isJumping(false), isDead(false), velocityY(0), isOnGround(true) ,isBig(false){
     
     // Determine the assets path (works from both build and source directories)
     QString assetsPath;
@@ -60,6 +60,12 @@ MarioCharacter::MarioCharacter() : QObject(), QGraphicsPixmapItem(), currentFram
     if (!dying.isNull()) {
         dyingFrame = dying.scaled(80, 80, Qt::KeepAspectRatio, Qt::SmoothTransformation);
         qDebug() << "Loaded dying.png";
+    }
+
+    //Load BIG frame
+    QPixmap bigStanding(assetsPath + "/big_standing.png");
+    if (!bigStanding.isNull()) {
+        bigStandingFrame = bigStanding.scaled(80, 120, Qt::KeepAspectRatio, Qt::SmoothTransformation);
     }
     
     // Fallback if no images found - create colored rectangles
@@ -276,4 +282,27 @@ void MarioCharacter::bounceUp() {
     velocityY = -10;
     isOnGround = false;
     isJumping = true;
+    if(!jumpingFrame.isNull()){
+        setPixmap(jumpingFrame);
+    }
+}
+
+void MarioCharacter::growBig() {
+    if (!isBig) {
+        isBig = true;
+        // Adjust Y so Mario's feet stay at same position
+        setY(y() - 30);
+        setPixmap(bigStandingFrame);
+        currentState = "standing";
+        qDebug() << "Mario grew big!";
+    }
+}
+void MarioCharacter::shrink() {
+    if (isBig) {
+        isBig = false;
+        setY(y() + 30);
+        setPixmap(standingFrame);
+        currentState = "standing";
+        qDebug() << "Mario shrunk!";
+    }
 }

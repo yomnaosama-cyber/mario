@@ -1,71 +1,114 @@
 #include "Level3.h"
 #include <QDebug>
+#include "PiranhaPlant.h"
 
 Level3::Level3(int rows, int cols) : Level(rows, cols) {
-    backgroundImagePath = "sky1.jpg";
+    backgroundImagePath.clear();
+    backgroundColor = QColor(60, 110, 150); // fallback under level3.png
 }
 
 void Level3::createTiles() {
-    grid = new Tile*[rows];
-    for(int i = 0; i < rows; i++) {
-        grid[i] = new Tile[cols];
+
+    // Allocate grid
+    grid = new Tile** [rows];
+    for (int i = 0; i < rows; i++) {
+        grid[i] = new Tile*[cols];
     }
 
-    for(int i = 0; i < rows; i++) {
-        for(int n = 0; n < cols; n++) {
-            grid[i][n] = Tile(n, i, Tile::Empty);
+    // Fill empty
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            grid[i][j] = new Tile(j, i, Tile::Empty);
         }
     }
 
-    int groundLevel = rows - 2;
-    if (groundLevel < 1) groundLevel = 1;
-
-    // Solid ground
-    for(int n = 0; n < cols; n++) {
-        grid[groundLevel][n] = Tile(n, groundLevel, Tile::Grass);
-        grid[groundLevel+1][n] = Tile(n, groundLevel+1, Tile::Mud);
+    // Ground (solid throughout — Level 3 has no floor gaps)
+    int ground = rows - 2;
+    for (int j = 0; j < cols; j++) {
+        delete grid[ground][j];
+        grid[ground][j] = new Tile(j, ground, Tile::Grass);
+        if (ground + 1 < rows) {
+            delete grid[ground + 1][j];
+            grid[ground + 1][j] = new Tile(j, ground + 1, Tile::Mud);
+        }
     }
 
-    // Floating platforms
-    for(int i = 0; i < 5; i++) {
-        if (groundLevel-3 >= 0)
-            grid[groundLevel-3][12 + i] = Tile(12 + i, groundLevel-3, Tile::Brick);
-    }
-    
-    for(int i = 0; i < 4; i++) {
-        if (groundLevel-4 >= 0)
-            grid[groundLevel-4][25 + i] = Tile(25 + i, groundLevel-4, Tile::Brick);
-    }
-    
-    for(int i = 0; i < 6; i++) {
-        if (groundLevel-2 >= 0)
-            grid[groundLevel-2][40 + i] = Tile(40 + i, groundLevel-2, Tile::Brick);
-    }
-    
-    for(int i = 0; i < 3; i++) {
-        if (groundLevel-5 >= 0)
-            grid[groundLevel-5][55 + i] = Tile(55 + i, groundLevel-5, Tile::Brick);
+    // ── Platform layout — progressively higher, matching Incorporate design ──
+
+    // Platform 1: low stepping stone (early game)
+    for (int j = 6; j < 12; j++) {
+        if (ground - 3 >= 0) {
+            delete grid[ground - 3][j];
+            grid[ground - 3][j] = new Tile(j, ground - 3, Tile::Brick);
+        }
     }
 
-    // Staircase
-    for(int i = 0; i < 6; i++) {
-        int stepRow = groundLevel - i;
-        if (stepRow >= 0)
-            grid[stepRow][68 + i] = Tile(68 + i, stepRow, Tile::Brick);
+    // Platform 2: mid-height jump
+    for (int j = 18; j < 24; j++) {
+        if (ground - 5 >= 0) {
+            delete grid[ground - 5][j];
+            grid[ground - 5][j] = new Tile(j, ground - 5, Tile::Brick);
+        }
     }
 
-    flagX = 74;
-    flagY = groundLevel - 6;
-    if (flagY >= 0 && flagX < cols) {
-        grid[flagY][flagX] = Tile(flagX, flagY, Tile::Flag);
+    // Platform 3: same height as platform 1, gap to leap
+    for (int j = 30; j < 36; j++) {
+        if (ground - 3 >= 0) {
+            delete grid[ground - 3][j];
+            grid[ground - 3][j] = new Tile(j, ground - 3, Tile::Brick);
+        }
     }
 
+    // Platform 4: high platform above the piranha pipe area
+    for (int j = 42; j < 48; j++) {
+        if (ground - 5 >= 0) {
+            delete grid[ground - 5][j];
+            grid[ground - 5][j] = new Tile(j, ground - 5, Tile::Brick);
+        }
+    }
+
+    // Platform 5: approach to the flag
+    for (int j = 55; j < 62; j++) {
+        if (ground - 3 >= 0) {
+            delete grid[ground - 3][j];
+            grid[ground - 3][j] = new Tile(j, ground - 3, Tile::Brick);
+        }
+    }
+
+    // Staircase leading up to the flag
+    for (int step = 0; step < 5; step++) {
+        int r = ground - step;
+        int c = 65 + step * 2;
+        if (r >= 0 && c < cols) {
+            delete grid[r][c];
+            grid[r][c] = new Tile(c, r, Tile::Brick);
+        }
+    }
+
+    // Spawn
     spawnX = 2;
-    spawnY = groundLevel;
+    spawnY = ground;
 
-    enemy.push_back(new Enemy(10, groundLevel, 5, 20, 0.12f));
-    enemy.push_back(new Enemy(30, groundLevel, 25, 38, 0.15f));
-    enemy.push_back(new Enemy(50, groundLevel, 42, 60, 0.2f));
+    // Flag — at the top of the staircase
+    flagX = cols - 4;
+    flagY = (ground - 5 >= 0) ? ground - 5 : ground;
+    if (flagX >= 0 && flagX < cols && flagY >= 0 && flagY < rows) {
+        delete grid[flagY][flagX];
+        grid[flagY][flagX] = new Tile(flagX, flagY, Tile::Flag);
+    }
 
-    qDebug() << "Level 3 created";
+    // ── Enemies ──────────────────────────────────────────────────────────
+
+    enemy.clear();
+
+    // Ground patrol enemies distributed across the level
+    enemy.push_back(new Enemy(9,  ground, 6,  14, 0.20f));
+    enemy.push_back(new Enemy(21, ground, 16, 28, 0.22f));
+    enemy.push_back(new Enemy(33, ground, 28, 40, 0.25f));
+    enemy.push_back(new Enemy(50, ground, 44, 58, 0.28f));
+
+    // Piranha Plant at column 25 (matching original Incorporate.cpp position)
+    enemy.push_back(new PiranhaPlant(25, rows - 2));
+
+    qDebug() << "Level 3 created. Ground:" << ground;
 }
